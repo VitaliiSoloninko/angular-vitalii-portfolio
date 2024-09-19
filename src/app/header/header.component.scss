@@ -1,3 +1,7 @@
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
 .header {
   position: fixed;
   width: 100%;
@@ -6,6 +10,8 @@
   z-index: 100;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: rgba(230, 230, 230, 0.75);
 
   // .header__container
@@ -49,7 +55,7 @@
         color: var(--white-color);
       }
     }
-    @media (max-width: 767.98px) {
+    @media (max-width: $mobile) {
       padding: 10px 15px;
       color: var(--white-color);
       border: 1px solid var(--main-color);
@@ -72,7 +78,7 @@
 
   // .menu__body
   &__body {
-    @media (max-width: 767.98px) {
+    @media (max-width: $mobile) {
       position: fixed;
       display: flex;
       justify-content: end;
@@ -83,7 +89,7 @@
       height: 100%;
       overflow: auto;
       transition: all 0.3s ease 0s;
-      background-color: #7e74f1;
+      background-color: var(--purple-color);
       padding: 90px 15px 15px 15px;
       &::before {
         content: "";
@@ -92,8 +98,8 @@
         right: -100%;
         transition: all 0.3s ease 0s;
         width: 100%;
-        height: 60px;
-        background-color: #b9b5e6;
+        height: 80px;
+        background-color: var(--purple-medium-color);
         z-index: 2;
       }
       .menu-open & {
@@ -108,7 +114,7 @@
   // .menu__list
   &__list {
     flex-wrap: wrap;
-    @media (min-width: 767.98px) {
+    @media (min-width: $mobile) {
       display: flex;
       justify-content: center;
       row-gap: 0.5rem;
@@ -120,7 +126,7 @@
   &__item {
     transition: color 0.3s ease 0s;
     text-align: right;
-    @media (max-width: 767.98px) {
+    @media (max-width: $mobile) {
       &:not(:last-child) {
         margin-bottom: 20px;
       }
@@ -134,11 +140,11 @@
     transition: all 0.3s ease 0s;
     @media (any-hover: hover) {
       &:hover {
-        color: var(--purple-color);
+        color: var(--purple-dark-color);
         text-decoration: underline;
       }
     }
-    @media (max-width: 767.98px) {
+    @media (max-width: $mobile) {
       color: var(--white-color);
       font-size: 32px;
     }
@@ -149,10 +155,9 @@
 }
 
 // Burger
-
 .icon-menu {
   display: none;
-  @media (max-width: 767.98px) {
+  @media (max-width: $mobile) {
     display: block;
     position: relative;
     width: 30px;
