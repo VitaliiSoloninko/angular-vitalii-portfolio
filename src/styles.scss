@@ -1,33 +1,15 @@
+@use "sass:math";
+@import "ui/null";
+@import "ui/mixins.scss";
+@import "ui/shared";
+
 @import url("https://fonts.googleapis.com/css?family=Inter:regular,500&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:500,700&display=swap");
 
-* {
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
-}
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-:focus,
-:active {
-  // outline: none;
-}
-a:focus,
-a:active {
-  // outline: none;
-}
-html,
-body {
-  height: 100%;
-}
 body {
   font-family: Inter;
   font-size: medium;
   line-height: 1;
-
   --main-color: #232e35;
   --grey-color: #656d72;
   --grey-light-color: #d9d9d9;
@@ -37,143 +19,53 @@ body {
   --purple-light-color: #eae6fe;
   --white-color: #fff;
   --main-bg-color: #fbfbfb;
-
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-input,
-button,
-textarea {
-  font-family: Inter;
-  font-size: inherit;
-  line-height: inherit;
-}
-button {
-  cursor: pointer;
-  color: inherit;
-  background-color: transparent;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
-ul li {
-  list-style: none;
-}
-img {
-  vertical-align: top;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: inherit;
-  font-size: inherit;
 }
 
-.container {
-  max-width: 1200px;
-  padding: 0 15px 0 15px;
-}
+$minWidth: 320;
+$maxWidth: 1440;
+$maxWidthContainer: 1200;
+$containerPadding: 30;
+$containerWidth: $maxWidthContainer + $containerPadding;
 
-.title {
-  // .title__label
-  &__label {
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 2; /* 24/12 */
-    letter-spacing: em(7.5, 12);
-    color: var(--grey-color);
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    &::before {
-      content: "";
-      width: 16px;
-      height: 2px;
-      background-color: var(--grey-light-color);
-    }
-  }
-  &:not(:last-child) {
-    margin-bottom: em(9, 12);
-  }
+$pc: em($containerWidth);
+$tablet: em(991.98);
+$mobile: em(767.98);
+$mobileSmall: em(479.98);
 
-  // .title__value
-  &__value {
-    font-family: "Plus Jakarta Sans";
-    font-weight: 700;
-    line-height: 1.25; /* 45/36 */
-    color: var(--main-color);
-    font-size: 36px;
-    span {
-      color: var(--purple-color);
-    }
-    &_big {
-      line-height: 1.5;
-      font-size: 44px;
-    }
-  }
-}
-
-.text {
-  line-height: 2;
-  p {
-    &:not(:last-child) {
-      margin-bottom: 15px;
-    }
-  }
-}
-
-.social {
+.wrapper {
+  min-height: 100%;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  row-gap: 5px;
-  column-gap: 34px;
-  &__link {
-    display: block;
-    width: 22px;
-    height: 22px;
-    transition: color 0.3s ease 0s;
-    @media (any-hover: hover) {
-      &:hover {
-        color: var(--purple-color);
-      }
-    }
+  flex-direction: column;
+  overflow: hidden;
+  @supports (overflow: clip) {
+    overflow: clip;
+  }
+  // footer down
+  > main {
+    flex: 1 1 auto;
   }
 }
 
-.category-link {
-  display: inline-block;
-  border: 1px solid var(--grey-color);
-  border-radius: 5px;
-  color: var(--grey-color);
-  font-size: 12px;
-  line-height: 1.25;
-  padding: 4px 8px;
-  transition: all 0.3s ease 0s;
-  @media (any-hover: hover) {
-    &:hover {
-      background-color: var(--purple-color);
-      border: 1px solid var(--purple-color);
-      color: var(--white-color);
+[class*="__container"] {
+  min-height: 100%;
+  @if ($maxWidthContainer>0) {
+    max-width: rem($containerWidth);
+    margin: 0 auto;
+  }
+  @if ($containerPadding>0) {
+    @if ($maxWidthContainer>0) {
+      padding: 0 rem(math.div($containerPadding, 2));
+    } @else {
+      @include adaptiveValue(
+        "padding-left",
+        math.div($containerPadding, 2),
+        15
+      );
+      @include adaptiveValue(
+        "padding-right",
+        math.div($containerPadding, 2),
+        15
+      );
     }
   }
-}
-
-.date {
-  font-size: 12px;
-  font-weight: 500;
-  border-radius: 4px;
-  background-color: var(--main-bg-color);
-  display: inline-block;
-  padding: 4px 8px;
-  color: var(--grey-color);
-  line-height: 1.2;
 }
