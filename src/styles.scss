@@ -30,17 +30,13 @@ body {
 
   --main-color: #232e35;
   --grey-color: #656d72;
-  --grey-light-color: #eeeeee;
+  --grey-light-color: #d9d9d9;
   --purple-color: #7e74f1;
   --purple-dark-color: #443bad;
   --purple-medium-color: #cbc2fc;
   --purple-light-color: #eae6fe;
   --white-color: #fff;
   --main-bg-color: #fbfbfb;
-
-  --tablet: 991.98px;
-  --mobile: 767.98px;
-  --mobile-small: 479.98px;
 
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -83,4 +79,101 @@ h6 {
 .container {
   max-width: 1200px;
   padding: 0 15px 0 15px;
+}
+
+.title {
+  // .title__label
+  &__label {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 2; /* 24/12 */
+    letter-spacing: em(7.5, 12);
+    color: var(--grey-color);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    &::before {
+      content: "";
+      width: 16px;
+      height: 2px;
+      background-color: var(--grey-light-color);
+    }
+  }
+  &:not(:last-child) {
+    margin-bottom: em(9, 12);
+  }
+
+  // .title__value
+  &__value {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 700;
+    line-height: 1.25; /* 45/36 */
+    color: var(--main-color);
+    font-size: 36px;
+    span {
+      color: var(--purple-color);
+    }
+    &_big {
+      line-height: 1.5;
+      font-size: 44px;
+    }
+  }
+}
+
+.text {
+  line-height: 2;
+  p {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 5px;
+  column-gap: 34px;
+  &__link {
+    display: block;
+    width: 22px;
+    height: 22px;
+    transition: color 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--purple-color);
+      }
+    }
+  }
+}
+
+.category-link {
+  display: inline-block;
+  border: 1px solid var(--grey-color);
+  border-radius: 5px;
+  color: var(--grey-color);
+  font-size: 12px;
+  line-height: 1.25;
+  padding: 4px 8px;
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--purple-color);
+      border: 1px solid var(--purple-color);
+      color: var(--white-color);
+    }
+  }
+}
+
+.date {
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 4px;
+  background-color: var(--main-bg-color);
+  display: inline-block;
+  padding: 4px 8px;
+  color: var(--grey-color);
+  line-height: 1.2;
 }
