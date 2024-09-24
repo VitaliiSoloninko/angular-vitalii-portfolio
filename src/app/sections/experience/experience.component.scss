@@ -1,0 +1,16 @@
+.career {
+  // .career__container
+  background-color: var(--bg-color);
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  &__title {
+    &:not(:last-child) {
+      padding-bottom: 20px;
+    }
+  }
+}
