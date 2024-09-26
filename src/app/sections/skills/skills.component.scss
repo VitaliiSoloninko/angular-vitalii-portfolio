@@ -12,7 +12,6 @@ $mobileSmall: em(479.98);
     padding-bottom: 50px;
   }
   // .testimonials__title
-
   &__title {
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -20,29 +19,30 @@ $mobileSmall: em(479.98);
   }
 
   // .skills__body
-
   &__body {
     display: grid;
     gap: 100px;
+    @media (min-width: $tablet) {
+      gap: 50px;
+    }
     @media (min-width: 850px) {
       grid-template-columns: 0.5fr 1fr;
     }
   }
 
   // .skills__timeline
-
   &__timeline {
   }
 
   // .skills__content
-
   &__content {
   }
 }
+
 .timeline {
   // .timeline__item
   display: grid;
-  gap: 10px;
+  gap: 14px;
   position: relative;
   &::before {
     content: "";
@@ -82,27 +82,24 @@ $mobileSmall: em(479.98);
   }
 
   // .timeline__title
-
   &__title {
     line-height: 1.3;
     font-weight: 500;
     &:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
   }
-
   // .timeline__text
 
   &__text {
     font-size: 14px;
-    line-height: 1.2;
+    line-height: 1;
     &:not(:last-child) {
-      margin-bottom: 18px;
+      margin-bottom: 8px;
     }
   }
 
   // .timeline__date
-
   &__date {
     font-size: 14px;
     line-height: 1.2;
@@ -120,8 +117,11 @@ $mobileSmall: em(479.98);
     }
   }
 
-  // .content-skills__items
+  &__padding {
+    padding-top: 10px;
+  }
 
+  // .content-skills__items
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -129,7 +129,7 @@ $mobileSmall: em(479.98);
     row-gap: 10px;
     align-items: end;
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     @media (max-width: $mobile) {
       grid-template-columns: repeat(2, 1fr);
@@ -165,26 +165,36 @@ $mobileSmall: em(479.98);
       height: 15px;
       border-radius: 50%;
       background-color: var(--purple-medium-color);
-      &--dark {
+      &--purple {
         background: var(--purple-color);
+      }
+      &--dark {
+        background: var(--grey-color);
+      }
+    }
+    &--purple {
+      &::before {
+        background-color: var(--purple-color);
       }
     }
     &--dark {
       &::before {
-        background-color: var(--purple-color);
+        background: var(--grey-color);
       }
     }
   }
 
   // .content-skills__line
-
   &__line {
     width: 100%;
     padding-left: 25px;
     height: 1px;
     background: var(--purple-medium-color);
-    &--dark {
+    &--purple {
       background: var(--purple-color);
+    }
+    &--dark {
+      background: var(--grey-color);
     }
   }
 }
