@@ -20,14 +20,12 @@ $mobileSmall: 479.98px;
       grid-template-columns: 1fr 1fr;
     }
   }
-
   // .contacts__form
   &__form {
     &:not(:last-child) {
       margin-bottom: 20px;
     }
   }
-
   // .contacts__content
   &__content {
     @media (max-width: $tablet) {
@@ -37,11 +35,11 @@ $mobileSmall: 479.98px;
       padding-left: 100px;
     }
   }
-
   // .contacts__list
   &__list {
   }
 }
+
 .form {
   // .form__item
   display: flex;
@@ -67,7 +65,7 @@ $mobileSmall: 479.98px;
   &__item-textarea {
     height: 140px;
     &:not(:last-child) {
-      margin-bottom: 24;
+      margin-bottom: 16px;
     }
   }
 
@@ -91,7 +89,7 @@ $mobileSmall: 479.98px;
 
   // .form__button
   &__button {
-    background-color: var(--purple-light-color);
+    background-color: var(--purple-color);
     display: flex;
     justify-content: center;
     align-items: center;
