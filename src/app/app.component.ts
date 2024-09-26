@@ -5,6 +5,7 @@ import { MainComponent } from './sections/main/main.component';
 import { PortfolioComponent } from './sections/portfolio/portfolio.component';
 import { ExperienceComponent } from './sections/experience/experience.component';
 import { SkillsComponent } from './sections/skills/skills.component';
+import { ContactsComponent } from './sections/contacts/contacts.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { SkillsComponent } from './sections/skills/skills.component';
     PortfolioComponent,
     ExperienceComponent,
     SkillsComponent,
+    ContactsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
