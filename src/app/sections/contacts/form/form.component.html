@@ -1,35 +1,42 @@
-<form action="#" class="contacts__form form">
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="contacts__form form">
   <div class="form__item form__item-name">
     <input
-      autocomplete="off"
+      id="name"
       type="text"
-      name="form[]"
-      data-error="Enter your name"
-      data-required
       placeholder="Name"
       class="form__input"
+      [formControl]="form.controls.name"
     />
   </div>
+  @if (nameIsInvalid) {
+  <p class="form__error">Please enter your name</p>
+  }
+
   <div class="form__item form__item-email">
     <input
-      autocomplete="off"
-      type="text"
-      name="form[]"
-      data-error="Enter your E-mail"
-      data-required="email"
+      id="email"
+      type="email"
       placeholder="Email"
       class="form__input"
+      [formControl]="form.controls.email"
     />
   </div>
+  @if (emailIsInvalid) {
+  <p class="form__error">Please enter your E-mail</p>
+  }
+
   <div class="form__item form__item-textarea">
     <textarea
-      autocomplete="off"
-      name="form[]"
+      id="textarea"
       placeholder="Message"
-      data-error="Error"
       class="form__input"
+      [formControl]="form.controls.textarea"
     ></textarea>
   </div>
+  @if (textareaIsInvalid) {
+  <p class="form__error">Please enter your message</p>
+  }
+
   <div class="form__item">
     <button type="submit" class="form__button">Send Message</button>
   </div>
