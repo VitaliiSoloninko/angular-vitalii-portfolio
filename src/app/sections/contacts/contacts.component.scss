@@ -15,9 +15,12 @@ $mobileSmall: 479.98px;
   }
   // .contacts__body
   &__body {
-    @media (min-width: 850px) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    @media (max-width: 850px) {
+      grid-template-columns: auto;
+      gap: 30px;
     }
   }
   // .contacts__form
@@ -45,12 +48,9 @@ $mobileSmall: 479.98px;
   &__item {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 30px;
     &:not(:last-child) {
       margin-bottom: 48px;
-      @media (max-width: $mobile) {
-        padding-left: 20px;
-      }
     }
   }
 
