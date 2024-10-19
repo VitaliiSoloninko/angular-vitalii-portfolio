@@ -47,9 +47,10 @@ $mobileSmall: 479.98px;
 
   // .item-portfolio__body
   &__body {
-    padding: 24px;
+    padding: 20px 24px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     gap: 16px;
     flex: 1 1 auto;
   }
@@ -72,6 +73,7 @@ $mobileSmall: 479.98px;
   }
 
   &__footer {
+    padding: 0px 24px 20px 24px;
     display: flex;
     align-items: center;
     gap: 16px;
@@ -91,4 +93,9 @@ $mobileSmall: 479.98px;
       }
     }
   }
+}
+
+.title__label {
+  margin-bottom: 16px;
+  margin-top: 16px;
 }

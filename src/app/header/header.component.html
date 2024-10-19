@@ -4,20 +4,8 @@
     <div class="header__menu menu">
       <nav class="menu__body">
         <ul class="menu__list">
-          <li class="menu__item">
-            <a href="#" class="menu__link">About me</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link">Portfolio</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link">Experience</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link">Skills</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link">Contacts</a>
+          <li class="menu__item" *ngFor="let menuItem of menuItems">
+            <a href="#" class="menu__link">{{ menuItem.name }}</a>
           </li>
         </ul>
       </nav>
