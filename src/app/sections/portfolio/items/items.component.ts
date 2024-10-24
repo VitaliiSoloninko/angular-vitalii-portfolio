@@ -29,6 +29,14 @@ export class ItemsComponent {
     },
     {
       id: 3,
+      name: 'Food Mine',
+      description: 'Food cafe',
+      img: 'assets/portfolio/foodmine.jpg',
+      link: 'https://vitaliisoloninko.github.io/foodmine/',
+      stack: ['Angular', 'Express.js', 'MongoDB'],
+    },
+    {
+      id: 4,
       name: 'HomePro',
       description: 'Home services',
       img: 'assets/portfolio/homepro.jpg',
@@ -36,7 +44,7 @@ export class ItemsComponent {
       stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack'],
     },
     {
-      id: 4,
+      id: 5,
       name: 'Furino',
       description: 'Furniture shop',
       img: 'assets/portfolio/furino.jpg',
@@ -44,7 +52,7 @@ export class ItemsComponent {
       stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack'],
     },
     {
-      id: 5,
+      id: 6,
       name: 'FarmVest',
       description: 'Investment company',
       img: 'assets/portfolio/farmvest.jpg',
@@ -52,7 +60,7 @@ export class ItemsComponent {
       stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack'],
     },
     {
-      id: 6,
+      id: 7,
       name: 'TeaLand',
       description: 'Cafe',
       img: 'assets/portfolio/tealand.jpg',
@@ -60,7 +68,7 @@ export class ItemsComponent {
       stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack'],
     },
     {
-      id: 7,
+      id: 8,
       name: 'Growfy',
       description: 'Marketing agency',
       img: 'assets/portfolio/growfy.jpg',
@@ -68,7 +76,7 @@ export class ItemsComponent {
       stack: ['JS', 'CSS', 'HTML', 'Responsive Web Design'],
     },
     {
-      id: 8,
+      id: 9,
       name: 'Rhythm',
       description: 'Guitar shop',
       img: 'assets/portfolio/guitar.jpg',
@@ -76,7 +84,7 @@ export class ItemsComponent {
       stack: ['JS', 'CSS', 'HTML', 'Responsive Web Design'],
     },
     {
-      id: 9,
+      id: 10,
       name: 'Relvise',
       description: 'Finance and Consultancy',
       img: 'assets/portfolio/relvise.jpg',
@@ -84,7 +92,7 @@ export class ItemsComponent {
       stack: ['JS', 'CSS', 'HTML', 'Responsive Web Design'],
     },
     {
-      id: 10,
+      id: 11,
       name: 'SmartSpace',
       description: 'Real Estate',
       img: 'assets/portfolio/smartspace.jpg',
