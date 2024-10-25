@@ -76,6 +76,8 @@ $mobileSmall: 479.98px;
     padding: 0px 20px 20px 20px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
   }
 
@@ -86,6 +88,8 @@ $mobileSmall: 479.98px;
   // .item-portfolio__link
   &__link {
     font-size: 10px;
+    display: block;
+    height: 14px;
     transition: color 0.3s ease 0s;
     @media (any-hover: hover) {
       &:hover {

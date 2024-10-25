@@ -73,7 +73,7 @@ export class ItemsComponent {
       description: 'Marketing agency',
       img: 'assets/portfolio/growfy.jpg',
       link: 'https://vitaliisoloninko.github.io/growfy/',
-      stack: ['JS', 'CSS', 'HTML', 'Responsive Web Design'],
+      stack: ['JavaScript', 'CSS', 'HTML', 'Responsive Web Design'],
     },
     {
       id: 9,
@@ -81,7 +81,7 @@ export class ItemsComponent {
       description: 'Guitar shop',
       img: 'assets/portfolio/guitar.jpg',
       link: 'https://vitaliisoloninko.github.io/guitar/',
-      stack: ['JS', 'CSS', 'HTML', 'Responsive Web Design'],
+      stack: ['JavaScript', 'CSS', 'HTML', 'Responsive Web Design'],
     },
     {
       id: 10,
@@ -89,7 +89,7 @@ export class ItemsComponent {
       description: 'Finance and Consultancy',
       img: 'assets/portfolio/relvise.jpg',
       link: 'https://vitaliisoloninko.github.io/relvise/',
-      stack: ['JS', 'CSS', 'HTML', 'Responsive Web Design'],
+      stack: ['JavaScript', 'CSS', 'HTML', 'Responsive Web Design'],
     },
     {
       id: 11,
@@ -97,7 +97,22 @@ export class ItemsComponent {
       description: 'Real Estate',
       img: 'assets/portfolio/smartspace.jpg',
       link: 'https://vitaliisoloninko.github.io/smartspace/',
-      stack: ['JS', 'CSS', 'HTML', 'Responsive Web Design'],
+      stack: ['JavaScript', 'CSS', 'HTML', 'Responsive Web Design'],
+    },
+    {
+      id: 12,
+      name: 'NestJS',
+      description: 'Full REST API',
+      img: 'assets/portfolio/nestjs-full.jpg',
+      link: 'https://github.com/VitaliiSoloninko/nestjs-full-rest-api',
+      stack: [
+        'NestJS',
+        'Typescript',
+        'REST API',
+        'PostgreSQL',
+        'Sequelize',
+        'Swagger',
+      ],
     },
   ];
 }
