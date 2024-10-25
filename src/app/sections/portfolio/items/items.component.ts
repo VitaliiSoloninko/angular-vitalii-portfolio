@@ -25,7 +25,7 @@ export class ItemsComponent {
       description: 'My works',
       img: 'assets/portfolio/portfolio.jpg',
       link: 'https://soloninko-portfolio.web.app/',
-      stack: ['Angular', 'TypeScript'],
+      stack: ['Angular', 'TypeScript', 'Responsive Web Design'],
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ export class ItemsComponent {
       description: 'Food cafe',
       img: 'assets/portfolio/foodmine.jpg',
       link: 'https://vitaliisoloninko.github.io/foodmine/',
-      stack: ['Angular', 'Express.js', 'MongoDB'],
+      stack: ['Angular', 'Express.js', 'MongoDB', 'Mongoose'],
     },
     {
       id: 4,
@@ -41,7 +41,7 @@ export class ItemsComponent {
       description: 'Home services',
       img: 'assets/portfolio/homepro.jpg',
       link: 'https://vitaliisoloninko.github.io/homepro/',
-      stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack'],
+      stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack', 'Responsive Web Design'],
     },
     {
       id: 5,
@@ -49,7 +49,7 @@ export class ItemsComponent {
       description: 'Furniture shop',
       img: 'assets/portfolio/furino.jpg',
       link: 'https://vitaliisoloninko.github.io/furino/',
-      stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack'],
+      stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack', 'Responsive Web Design'],
     },
     {
       id: 6,
@@ -57,7 +57,7 @@ export class ItemsComponent {
       description: 'Investment company',
       img: 'assets/portfolio/farmvest.jpg',
       link: 'https://vitaliisoloninko.github.io/farmvest/',
-      stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack'],
+      stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack', 'Responsive Web Design'],
     },
     {
       id: 7,
@@ -65,7 +65,7 @@ export class ItemsComponent {
       description: 'Cafe',
       img: 'assets/portfolio/tealand.jpg',
       link: 'https://vitaliisoloninko.github.io/tealand/',
-      stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack'],
+      stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack', 'Responsive Web Design'],
     },
     {
       id: 8,
@@ -112,6 +112,28 @@ export class ItemsComponent {
         'PostgreSQL',
         'Sequelize',
         'Swagger',
+      ],
+    },
+    {
+      id: 13,
+      name: 'NestJS',
+      description: 'REST API CRUD',
+      img: 'assets/portfolio/nestjs-crud.jpg',
+      link: 'https://github.com/VitaliiSoloninko/nest-rest-api-template-dev',
+      stack: ['NestJS', 'Typescript', 'REST API', 'MongoDB', 'Mongoose'],
+    },
+    {
+      id: 14,
+      name: 'Express.js',
+      description: 'Online store REST API',
+      img: 'assets/portfolio/express.jpg',
+      link: 'https://github.com/VitaliiSoloninko/online-store-express-rest-api',
+      stack: [
+        'Express.js',
+        'JavaScript',
+        'REST API',
+        'PostgreSQL',
+        'Sequelize',
       ],
     },
   ];
