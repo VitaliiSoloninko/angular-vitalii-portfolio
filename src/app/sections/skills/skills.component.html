@@ -3,38 +3,38 @@
     <div class="skills__body">
       <div class="skills__education">
         <div class="skills__title title">
-          <div class="title__label">LEARNING PATH</div>
           <h2 class="title__value">Education</h2>
         </div>
+        <div class="title__label">Languages</div>
         <div class="skills__timeline timeline">
-          <div class="timeline__item">
-            <div class="timeline__title">
-              National university of water and environmental engineering
+          <div class="timeline__item" *ngFor="let item of language">
+            <div class="timeline__content">
+              <div class="timeline__date">{{ item.year }}</div>
+              <div class="timeline__level">{{ item.level }}</div>
             </div>
-            <div class="timeline__text">Master's degree - Civil engineer</div>
-            <div class="timeline__date">2008 - 2009</div>
+            <div class="timeline__institution">
+              {{ item.institution }}
+            </div>
           </div>
-          <div class="timeline__item">
-            <div class="timeline__title">
-              National university of water and environmental engineering
+        </div>
+        <div class="title__label">University</div>
+        <div class="skills__timeline timeline">
+          <div class="timeline__item" *ngFor="let item of education">
+            <div class="timeline__content">
+              <div class="timeline__date">{{ item.year }}</div>
+              <div class="timeline__level">{{ item.level }}</div>
             </div>
-            <div class="timeline__text">Bachelor's degree - Civil engineer</div>
-            <div class="timeline__date">2004 - 2008</div>
-          </div>
-          <div class="timeline__item">
-            <div class="timeline__title">School</div>
-            <div class="timeline__text">
-              Diploma's degree - High school diploma
+            <div class="timeline__institution">
+              {{ item.institution }}
             </div>
-            <div class="timeline__date">1993 - 2004</div>
           </div>
         </div>
       </div>
       <div class="skills__content content-skills">
         <div class="skills__title title">
-          <div class="title__label">frontend</div>
           <h2 class="title__value">Skills</h2>
         </div>
+        <div class="title__label">frontend</div>
         <div class="content-skills__items">
           <div
             class="content-skills__item"

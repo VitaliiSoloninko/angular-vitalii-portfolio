@@ -2,6 +2,10 @@ $tablet: 991.98px;
 $mobile: 767.98px;
 $mobileSmall: 479.98px;
 
+.title__label {
+  margin-bottom: 16px;
+}
+
 .skills {
   // .skills__container
   &__container {
@@ -50,6 +54,9 @@ $mobileSmall: 479.98px;
   display: grid;
   gap: 14px;
   position: relative;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -86,20 +93,10 @@ $mobileSmall: 479.98px;
       }
     }
   }
-
-  // .timeline__title
-  &__title {
-    line-height: 1.3;
-    font-weight: 500;
-    &:not(:last-child) {
-      margin-bottom: 8px;
-    }
-  }
-  // .timeline__text
-
-  &__text {
-    font-size: 14px;
-    line-height: 1;
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     &:not(:last-child) {
       margin-bottom: 8px;
     }
@@ -107,9 +104,24 @@ $mobileSmall: 479.98px;
 
   // .timeline__date
   &__date {
-    font-size: 14px;
-    line-height: 1.2;
+    line-height: 1.3;
+    font-weight: 400;
+  }
+  // .timeline__text
+  &__level {
+    line-height: 1.3;
     font-weight: 500;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+  // .timeline__title
+  &__institution {
+    font-size: 14px;
+    line-height: 1.3;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
   }
 }
 .content-skills {
