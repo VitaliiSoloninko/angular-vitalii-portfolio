@@ -36,106 +36,34 @@
           <h2 class="title__value">Skills</h2>
         </div>
         <div class="content-skills__items">
-          <div class="content-skills__item">
+          <div
+            class="content-skills__item"
+            *ngFor="let skill of frontendSkills"
+          >
             <div class="content-skills__label content-skills__label--purple">
-              Angular
+              {{ skill }}
             </div>
             <div
               class="content-skills__line content-skills__line--purple"
             ></div>
           </div>
-          <div class="content-skills__item">
-            <div class="content-skills__label content-skills__label--purple">
-              TypeScript
-            </div>
-            <div
-              class="content-skills__line content-skills__line--purple"
-            ></div>
-          </div>
-          <div class="content-skills__item">
-            <div class="content-skills__label content-skills__label--purple">
-              REST APIs
-            </div>
-            <div
-              class="content-skills__line content-skills__line--purple"
-            ></div>
-          </div>
-          <div class="content-skills__item">
-            <div class="content-skills__label content-skills__label--purple">
-              Javascript
-            </div>
-            <div
-              class="content-skills__line content-skills__line--purple"
-            ></div>
-          </div>
-          <div class="content-skills__item">
-            <div class="content-skills__label content-skills__label--purple">
-              CSS/SCSS
-            </div>
-            <div
-              class="content-skills__line content-skills__line--purple"
-            ></div>
-          </div>
-          <div class="content-skills__item">
-            <div class="content-skills__label content-skills__label--purple">
-              HTML
-            </div>
-            <div
-              class="content-skills__line content-skills__line--purple"
-            ></div>
-          </div>
-
-          <div class="content-skills__item">
-            <div class="content-skills__label">Front-End Development</div>
-            <div class="content-skills__line"></div>
-          </div>
-          <div class="content-skills__item">
-            <div class="content-skills__label">Responsive Web Design</div>
-            <div class="content-skills__line"></div>
-          </div>
-          <div class="content-skills__item">
-            <div class="content-skills__label">Front-End Design</div>
-            <div class="content-skills__line"></div>
-          </div>
-          <div class="content-skills__item">
-            <div class="content-skills__label">Web Applications</div>
-            <div class="content-skills__line"></div>
-          </div>
-          <div class="content-skills__item">
-            <div class="content-skills__label">User Interface Design (UI)</div>
-            <div class="content-skills__line"></div>
-          </div>
-          <div class="content-skills__item">
-            <div class="content-skills__label">User Experience (UX)</div>
-            <div class="content-skills__line"></div>
-          </div>
-          <div class="content-skills__item">
-            <div class="content-skills__label">Git/GitHub</div>
+          <div
+            class="content-skills__item"
+            *ngFor="let skill of additionalSkills"
+          >
+            <div class="content-skills__label">{{ skill }}</div>
             <div class="content-skills__line"></div>
           </div>
         </div>
-        <div class="title__label">backend</div>
+        <div class="title__label">backend skills</div>
         <div class="content-skills__padding">
           <div class="content-skills__items">
-            <div class="content-skills__item">
+            <div
+              class="content-skills__item"
+              *ngFor="let skill of backendSkills"
+            >
               <div class="content-skills__label content-skills__label--dark">
-                NestJS
-              </div>
-              <div
-                class="content-skills__line content-skills__line--dark"
-              ></div>
-            </div>
-            <div class="content-skills__item">
-              <div class="content-skills__label content-skills__label--dark">
-                Express
-              </div>
-              <div
-                class="content-skills__line content-skills__line--dark"
-              ></div>
-            </div>
-            <div class="content-skills__item">
-              <div class="content-skills__label content-skills__label--dark">
-                REST APIs
+                {{ skill }}
               </div>
               <div
                 class="content-skills__line content-skills__line--dark"
