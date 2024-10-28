@@ -83,14 +83,15 @@ $mobileSmall: 479.98px;
       display: flex;
       justify-content: end;
       align-items: center;
-      top: 0;
+      bottom: 0;
       right: -100%;
-      width: 70%;
-      height: 100%;
+      width: 60%;
+      height: 93%;
       overflow: auto;
       transition: all 0.3s ease 0s;
       background-color: var(--purple-color);
       padding: 90px 15px 15px 15px;
+      border-radius: 1rem 0 0 1rem;
       &::before {
         content: "";
         position: fixed;
@@ -99,7 +100,6 @@ $mobileSmall: 479.98px;
         transition: all 0.4s ease 0s;
         width: 100%;
         height: 67px;
-        background-color: var(--purple-medium-color);
         z-index: 2;
       }
       .menu-open & {

@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { AboutComponent } from './sections/about/about.component';
-import { ContactsComponent } from './sections/contacts/contacts.component';
-import { ExperienceComponent } from './sections/experience/experience.component';
-import { PortfolioComponent } from './sections/portfolio/portfolio.component';
-import { SkillsComponent } from './sections/skills/skills.component';
-import { MainComponent } from './pages/main/main.component';
+import { AboutComponent } from './pages/home-page/sections/about/about.component';
+import { ContactsComponent } from './pages/home-page/sections/contacts/contacts.component';
+import { ExperienceComponent } from './pages/home-page/sections/experience/experience.component';
+import { PortfolioComponent } from './pages/home-page/sections/portfolio/portfolio.component';
+import { SkillsComponent } from './pages/home-page/sections/skills/skills.component';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +20,6 @@ import { MainComponent } from './pages/main/main.component';
     SkillsComponent,
     ContactsComponent,
     FooterComponent,
-    MainComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

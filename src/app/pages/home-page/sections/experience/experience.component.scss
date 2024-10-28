@@ -1,6 +1,16 @@
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
 .career {
   // .career__container
+  padding-top: 100px;
+  padding-bottom: 50px;
   background-color: var(--bg-color);
+  @media (max-width: $mobile) {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
   &__container {
     display: flex;
     flex-direction: column;

@@ -7,6 +7,12 @@ $mobileSmall: 479.98px;
 }
 
 .skills {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  @media (max-width: $mobile) {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
   // .skills__container
   &__container {
     display: flex;
