@@ -32,7 +32,7 @@ export class ItemsComponent {
       name: 'Food Mine',
       description: 'Food cafe',
       img: 'assets/portfolio/foodmine.jpg',
-      link: 'https://vitaliisoloninko.github.io/foodmine/',
+      link: 'https://github.com/VitaliiSoloninko/angular-food-cafe',
       stack: ['Angular', 'Express.js', 'MongoDB', 'Mongoose'],
     },
     {
