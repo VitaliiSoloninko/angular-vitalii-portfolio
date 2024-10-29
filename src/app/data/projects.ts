@@ -3,7 +3,7 @@ import { Project } from './project.interface';
 export const projects: Project[] = [
   {
     id: 1,
-    name: 'Tik Talk',
+    name: 'Tik Talk (Angular)',
     description: 'Programmers network',
     img: 'assets/portfolio/tiktalk.jpg',
     link: 'https://tik-talk-network.web.app',
@@ -11,7 +11,7 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    name: 'Portfolio',
+    name: 'Portfolio (Angular)',
     description: 'My works',
     img: 'assets/portfolio/portfolio.jpg',
     link: 'https://soloninko-portfolio.web.app/',
@@ -19,7 +19,7 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    name: 'Food Mine',
+    name: 'Food Mine (Angular)',
     description: 'Food cafe',
     img: 'assets/portfolio/foodmine.jpg',
     link: 'https://github.com/VitaliiSoloninko/angular-food-cafe',
@@ -27,7 +27,7 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    name: 'HomePro',
+    name: 'HomePro (JavaScript)',
     description: 'Home services',
     img: 'assets/portfolio/homepro.jpg',
     link: 'https://vitaliisoloninko.github.io/homepro/',
@@ -35,7 +35,7 @@ export const projects: Project[] = [
   },
   {
     id: 5,
-    name: 'Furino',
+    name: 'Furino (JavaScript)',
     description: 'Furniture shop',
     img: 'assets/portfolio/furino.jpg',
     link: 'https://vitaliisoloninko.github.io/furino/',
@@ -43,7 +43,7 @@ export const projects: Project[] = [
   },
   {
     id: 6,
-    name: 'FarmVest',
+    name: 'FarmVest (JavaScript)',
     description: 'Investment company',
     img: 'assets/portfolio/farmvest.jpg',
     link: 'https://vitaliisoloninko.github.io/farmvest/',
@@ -51,7 +51,7 @@ export const projects: Project[] = [
   },
   {
     id: 7,
-    name: 'TeaLand',
+    name: 'TeaLand (JavaScript)',
     description: 'Cafe',
     img: 'assets/portfolio/tealand.jpg',
     link: 'https://vitaliisoloninko.github.io/tealand/',
@@ -59,7 +59,7 @@ export const projects: Project[] = [
   },
   {
     id: 8,
-    name: 'Growfy',
+    name: 'Growfy (Layout)',
     description: 'Marketing agency',
     img: 'assets/portfolio/growfy.jpg',
     link: 'https://vitaliisoloninko.github.io/growfy/',
@@ -67,7 +67,7 @@ export const projects: Project[] = [
   },
   {
     id: 9,
-    name: 'Rhythm',
+    name: 'Rhythm (Layout)',
     description: 'Guitar shop',
     img: 'assets/portfolio/guitar.jpg',
     link: 'https://vitaliisoloninko.github.io/guitar/',
@@ -75,7 +75,7 @@ export const projects: Project[] = [
   },
   {
     id: 10,
-    name: 'Relvise',
+    name: 'Relvise (Layout)',
     description: 'Finance and Consultancy',
     img: 'assets/portfolio/relvise.jpg',
     link: 'https://vitaliisoloninko.github.io/relvise/',
@@ -83,7 +83,7 @@ export const projects: Project[] = [
   },
   {
     id: 11,
-    name: 'SmartSpace',
+    name: 'SmartSpace (Layout)',
     description: 'Real Estate',
     img: 'assets/portfolio/smartspace.jpg',
     link: 'https://vitaliisoloninko.github.io/smartspace/',
