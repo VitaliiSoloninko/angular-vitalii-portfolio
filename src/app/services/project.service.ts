@@ -11,4 +11,14 @@ export class ProjectService {
   getAll(): Project[] {
     return projects;
   }
+
+  getAllProjectsBySearchTerm(searchTerm: string) {
+    return this.getAll().filter((project) =>
+      project.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }
+
+  // getProjectById(projectId: string): Project {
+  //   return this.getAll().find((project) => project.id == projectId);
+  // }
 }
