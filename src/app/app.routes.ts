@@ -17,4 +17,5 @@ export const routes: Routes = [
   { path: 'projects', component: ProjectsPageComponent },
 
   { path: 'search/:searchTerm', component: PortfolioComponent },
+  { path: 'tag/:tag', component: PortfolioComponent },
 ];
