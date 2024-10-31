@@ -96,6 +96,7 @@ export const projects: Project[] = [
     img: 'assets/portfolio/nestjs-full.jpg',
     link: 'https://github.com/VitaliiSoloninko/nestjs-full-rest-api',
     stack: [
+      'Backend',
       'NestJS',
       'Typescript',
       'REST API',
@@ -110,7 +111,14 @@ export const projects: Project[] = [
     description: 'REST API CRUD',
     img: 'assets/portfolio/nestjs-crud.jpg',
     link: 'https://github.com/VitaliiSoloninko/nest-rest-api-template-dev',
-    stack: ['NestJS', 'Typescript', 'REST API', 'MongoDB', 'Mongoose'],
+    stack: [
+      'Backend',
+      'NestJS',
+      'Typescript',
+      'REST API',
+      'MongoDB',
+      'Mongoose',
+    ],
   },
   {
     id: 14,
@@ -118,6 +126,13 @@ export const projects: Project[] = [
     description: 'Online store REST API',
     img: 'assets/portfolio/express.jpg',
     link: 'https://github.com/VitaliiSoloninko/online-store-express-rest-api',
-    stack: ['Express.js', 'JavaScript', 'REST API', 'PostgreSQL', 'Sequelize'],
+    stack: [
+      'Backend',
+      'Express.js',
+      'JavaScript',
+      'REST API',
+      'PostgreSQL',
+      'Sequelize',
+    ],
   },
 ];
