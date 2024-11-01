@@ -8,6 +8,7 @@ export const projects: Project[] = [
     img: 'assets/portfolio/tiktalk.jpg',
     link: 'https://tik-talk-network.web.app',
     stack: ['Angular', 'TypeScript', 'REST API'],
+    features: [],
   },
   {
     id: '2',
@@ -16,6 +17,7 @@ export const projects: Project[] = [
     img: 'assets/portfolio/portfolio.jpg',
     link: 'https://soloninko-portfolio.web.app/',
     stack: ['Angular', 'TypeScript', 'Responsive Web Design'],
+    features: ['Adaptive pictures'],
   },
   {
     id: '3',
@@ -24,6 +26,7 @@ export const projects: Project[] = [
     img: 'assets/portfolio/foodmine.jpg',
     link: 'https://github.com/VitaliiSoloninko/angular-food-cafe',
     stack: ['Angular', 'Express.js', 'MongoDB', 'Mongoose'],
+    features: [],
   },
   {
     id: '4',
@@ -32,6 +35,13 @@ export const projects: Project[] = [
     img: 'assets/portfolio/homepro.jpg',
     link: 'https://vitaliisoloninko.github.io/homepro/',
     stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack', 'Responsive Web Design'],
+    features: [
+      'Adaptive pictures',
+      'Animation',
+      'Scroll watcher',
+      'Show more',
+      'Spoilers',
+    ],
   },
   {
     id: '5',
@@ -40,6 +50,7 @@ export const projects: Project[] = [
     img: 'assets/portfolio/furino.jpg',
     link: 'https://vitaliisoloninko.github.io/furino/',
     stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack', 'Responsive Web Design'],
+    features: ['Spoilers', 'Slider swiper', 'Gallery', 'Adaptive pictures'],
   },
   {
     id: '6',
@@ -48,6 +59,13 @@ export const projects: Project[] = [
     img: 'assets/portfolio/farmvest.jpg',
     link: 'https://vitaliisoloninko.github.io/farmvest/',
     stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack', 'Responsive Web Design'],
+    features: [
+      'Spoilers',
+      'Dynamic header',
+      'Mouse parallax',
+      'Scrolling parallax',
+      'Adaptive pictures',
+    ],
   },
   {
     id: '7',
@@ -56,6 +74,7 @@ export const projects: Project[] = [
     img: 'assets/portfolio/tealand.jpg',
     link: 'https://vitaliisoloninko.github.io/tealand/',
     stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack', 'Responsive Web Design'],
+    features: ['Background image', 'Slider swiper', 'Adaptive pictures'],
   },
   {
     id: '8',
@@ -64,6 +83,7 @@ export const projects: Project[] = [
     img: 'assets/portfolio/growfy.jpg',
     link: 'https://vitaliisoloninko.github.io/growfy/',
     stack: ['JavaScript', 'CSS', 'HTML', 'Responsive Web Design'],
+    features: ['Adaptive pictures', 'Animation', 'Navigation by id'],
   },
   {
     id: '9',
@@ -72,6 +92,7 @@ export const projects: Project[] = [
     img: 'assets/portfolio/guitar.jpg',
     link: 'https://vitaliisoloninko.github.io/guitar/',
     stack: ['JavaScript', 'CSS', 'HTML', 'Responsive Web Design'],
+    features: ['Adaptive pictures', 'Slider swiper'],
   },
   {
     id: '10',
@@ -80,6 +101,7 @@ export const projects: Project[] = [
     img: 'assets/portfolio/relvise.jpg',
     link: 'https://vitaliisoloninko.github.io/relvise/',
     stack: ['JavaScript', 'CSS', 'HTML', 'Responsive Web Design'],
+    features: ['Adaptive pictures', 'Background picture'],
   },
   {
     id: '11',
@@ -88,6 +110,7 @@ export const projects: Project[] = [
     img: 'assets/portfolio/smartspace.jpg',
     link: 'https://vitaliisoloninko.github.io/smartspace/',
     stack: ['JavaScript', 'CSS', 'HTML', 'Responsive Web Design'],
+    features: ['Adaptive pictures', 'Filtration', 'Animation hover', 'Tabs'],
   },
   {
     id: '12',
@@ -104,6 +127,7 @@ export const projects: Project[] = [
       'Sequelize',
       'Swagger',
     ],
+    features: [],
   },
   {
     id: '13',
@@ -119,6 +143,7 @@ export const projects: Project[] = [
       'MongoDB',
       'Mongoose',
     ],
+    features: [],
   },
   {
     id: '14',
@@ -134,5 +159,6 @@ export const projects: Project[] = [
       'PostgreSQL',
       'Sequelize',
     ],
+    features: [],
   },
 ];

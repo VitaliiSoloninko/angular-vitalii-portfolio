@@ -5,4 +5,5 @@ export class Project {
   img!: string;
   link!: string;
   stack!: string[];
+  features!: string[];
 }

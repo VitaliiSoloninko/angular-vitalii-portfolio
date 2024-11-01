@@ -1,17 +1,19 @@
+import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Project } from '../../data/project.model';
-import { ActivatedRoute } from '@angular/router';
 import { ProjectService } from '../../services/project.service';
 
 @Component({
   selector: 'app-project-page',
   standalone: true,
-  imports: [],
+  imports: [NgFor, RouterLink],
   templateUrl: './project-page.component.html',
   styleUrl: './project-page.component.scss',
 })
 export class ProjectPageComponent {
   project!: Project;
+  projects: any;
 
   constructor(activatedRoute: ActivatedRoute, projectService: ProjectService) {
     activatedRoute.params.subscribe((params) => {

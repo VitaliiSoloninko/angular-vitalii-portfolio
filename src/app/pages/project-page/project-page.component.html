@@ -1,3 +1,21 @@
-<div class="container">
-  <img [src]="project.img" [alt]="project.name" />
+<div class="project__container">
+  <article class="item">
+    <a routerLink="/project/{{ project.id }}" class="item__image-ibg">
+      <img [src]="project.img" alt="{{ project.name }}" />
+    </a>
+    <div class="item__body">
+      <h4 class="item__title">
+        <a href="{{ project.link }}" class="item__link-title"
+          >{{ project.name }} - {{ project.description }}
+        </a>
+      </h4>
+    </div>
+    <div class="item__footer">
+      <span
+        *ngFor="let skill of project.stack"
+        class="item__category category-link"
+        >{{ skill }}</span
+      >
+    </div>
+  </article>
 </div>
