@@ -3,7 +3,7 @@
 
 <div class="items">
   <article class="item" *ngFor="let project of projects">
-    <a href="{{ project.link }}" class="item__image-ibg">
+    <a routerLink="/project/{{ project.id }}" class="item__image-ibg">
       <img [src]="project.img" alt="{{ project.name }}" />
     </a>
     <div class="item__body">
