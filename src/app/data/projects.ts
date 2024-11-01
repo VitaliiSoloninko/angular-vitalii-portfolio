@@ -1,8 +1,8 @@
-import { Project } from './project.interface';
+import { Project } from './project.model';
 
 export const projects: Project[] = [
   {
-    id: 1,
+    id: '1',
     name: 'Tik Talk (Angular)',
     description: 'Programmers network',
     img: 'assets/portfolio/tiktalk.jpg',
@@ -10,7 +10,7 @@ export const projects: Project[] = [
     stack: ['Angular', 'TypeScript', 'REST API'],
   },
   {
-    id: 2,
+    id: '2',
     name: 'Portfolio (Angular)',
     description: 'My works',
     img: 'assets/portfolio/portfolio.jpg',
@@ -18,7 +18,7 @@ export const projects: Project[] = [
     stack: ['Angular', 'TypeScript', 'Responsive Web Design'],
   },
   {
-    id: 3,
+    id: '3',
     name: 'Food Mine (Angular)',
     description: 'Food cafe',
     img: 'assets/portfolio/foodmine.jpg',
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     stack: ['Angular', 'Express.js', 'MongoDB', 'Mongoose'],
   },
   {
-    id: 4,
+    id: '4',
     name: 'HomePro (JavaScript)',
     description: 'Home services',
     img: 'assets/portfolio/homepro.jpg',
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack', 'Responsive Web Design'],
   },
   {
-    id: 5,
+    id: '5',
     name: 'Furino (JavaScript)',
     description: 'Furniture shop',
     img: 'assets/portfolio/furino.jpg',
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack', 'Responsive Web Design'],
   },
   {
-    id: 6,
+    id: '6',
     name: 'FarmVest (JavaScript)',
     description: 'Investment company',
     img: 'assets/portfolio/farmvest.jpg',
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack', 'Responsive Web Design'],
   },
   {
-    id: 7,
+    id: '7',
     name: 'TeaLand (JavaScript)',
     description: 'Cafe',
     img: 'assets/portfolio/tealand.jpg',
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack', 'Responsive Web Design'],
   },
   {
-    id: 8,
+    id: '8',
     name: 'Growfy (Layout)',
     description: 'Marketing agency',
     img: 'assets/portfolio/growfy.jpg',
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     stack: ['JavaScript', 'CSS', 'HTML', 'Responsive Web Design'],
   },
   {
-    id: 9,
+    id: '9',
     name: 'Rhythm (Layout)',
     description: 'Guitar shop',
     img: 'assets/portfolio/guitar.jpg',
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     stack: ['JavaScript', 'CSS', 'HTML', 'Responsive Web Design'],
   },
   {
-    id: 10,
+    id: '10',
     name: 'Relvise (Layout)',
     description: 'Finance and Consultancy',
     img: 'assets/portfolio/relvise.jpg',
@@ -82,7 +82,7 @@ export const projects: Project[] = [
     stack: ['JavaScript', 'CSS', 'HTML', 'Responsive Web Design'],
   },
   {
-    id: 11,
+    id: '11',
     name: 'SmartSpace (Layout)',
     description: 'Real Estate',
     img: 'assets/portfolio/smartspace.jpg',
@@ -90,7 +90,7 @@ export const projects: Project[] = [
     stack: ['JavaScript', 'CSS', 'HTML', 'Responsive Web Design'],
   },
   {
-    id: 12,
+    id: '12',
     name: 'NestJS',
     description: 'Full REST API',
     img: 'assets/portfolio/nestjs-full.jpg',
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 13,
+    id: '13',
     name: 'NestJS',
     description: 'REST API CRUD',
     img: 'assets/portfolio/nestjs-crud.jpg',
@@ -121,7 +121,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 14,
+    id: '14',
     name: 'Express.js',
     description: 'Online store REST API',
     img: 'assets/portfolio/express.jpg',

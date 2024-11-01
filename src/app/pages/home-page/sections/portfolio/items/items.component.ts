@@ -1,7 +1,7 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { Project } from '../../../../../data/project.interface';
+import { Project } from '../../../../../data/project.model';
 import { ProjectService } from '../../../../../services/project.service';
 import { SearchComponent } from '../../../../../shared/search/search.component';
 import { TagsComponent } from '../../../../../shared/tags/tags.component';

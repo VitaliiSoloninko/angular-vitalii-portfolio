@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Project } from '../data/project.interface';
+import { Project } from '../data/project.model';
 import { projects } from '../data/projects';
 import { Tag } from '../data/tag.interface';
 import { tags } from '../data/tags';
@@ -30,7 +30,9 @@ export class ProjectService {
       : this.getAll().filter((project) => project.stack.includes(tag));
   }
 
-  // getProjectById(projectId: string): Project {
-  //   return this.getAll().find((project) => project.id == projectId);
-  // }
+  getProjectById(projectId: string): Project {
+    return (
+      this.getAll().find((project) => project.id == projectId) ?? new Project()
+    );
+  }
 }

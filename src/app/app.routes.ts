@@ -5,7 +5,7 @@ import { ContactsComponent } from './pages/home-page/sections/contacts/contacts.
 import { ExperienceComponent } from './pages/home-page/sections/experience/experience.component';
 import { PortfolioComponent } from './pages/home-page/sections/portfolio/portfolio.component';
 import { SkillsComponent } from './pages/home-page/sections/skills/skills.component';
-import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
+import { ProjectPageComponent } from './pages/project-page/project-page.component';
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -14,8 +14,9 @@ export const routes: Routes = [
   { path: 'skills', component: SkillsComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'blog', component: BlogPageComponent },
-  { path: 'projects', component: ProjectsPageComponent },
+  { path: 'project', component: ProjectPageComponent },
 
   { path: 'search/:searchTerm', component: PortfolioComponent },
   { path: 'tag/:tag', component: PortfolioComponent },
+  { path: 'project/:id', component: ProjectPageComponent },
 ];
