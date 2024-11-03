@@ -1,21 +1,45 @@
 <div class="project__container">
-  <article class="item">
-    <a routerLink="/project/{{ project.id }}" class="item__image-ibg">
-      <img [src]="project.img" alt="{{ project.name }}" />
-    </a>
-    <div class="item__body">
-      <h4 class="item__title">
-        <a href="{{ project.link }}" class="item__link-title"
-          >{{ project.name }} - {{ project.description }}
-        </a>
-      </h4>
+  <article class="project__body">
+    <div class="image">
+      <a routerLink="/project/{{ project.id }}" class="image__image-ibg">
+        <img [src]="project.img" alt="{{ project.name }}" />
+      </a>
+      <div class="image__body">
+        <h4 class="image__title title">
+          <a href="{{ project.link }}" class="image__link-title"
+            >{{ project.name }} - {{ project.description }}
+          </a>
+        </h4>
+        <a href="{{ project.link }}" class="image__link"
+          ><img src="assets/icons/link.svg" alt="link"
+        /></a>
+      </div>
     </div>
-    <div class="item__footer">
-      <span
-        *ngFor="let skill of project.stack"
-        class="item__category category-link"
-        >{{ skill }}</span
-      >
+    <div class="content">
+      <div class="content__block">
+        <div class="content__title">STACK</div>
+        <div class="items">
+          <div class="content__skill" *ngFor="let skill of project.stack">
+            {{ skill }}
+          </div>
+        </div>
+      </div>
+      <div class="content__block">
+        <div class="content__title">FEATURES</div>
+        <div class="items">
+          <div
+            class="content__feature"
+            *ngFor="let feature of project.features"
+          >
+            <div class="feature-mark">
+              <img src="assets/mark.svg" alt="mark" />
+            </div>
+            <div class="feature-text">
+              {{ feature }}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </article>
 </div>
