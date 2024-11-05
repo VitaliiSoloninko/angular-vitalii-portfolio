@@ -22,9 +22,11 @@ $mobileSmall: 479.98px;
     gap: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    min-height: 80px;
-    @media (max-width: 991.98px) {
-      min-height: 60px;
+    height: 80px;
+    @media (max-width: $mobile) {
+      height: 60px;
+      padding-top: 0.1rem;
+      padding-bottom: 0.1rem;
     }
   }
 
@@ -76,7 +78,7 @@ $mobileSmall: 479.98px;
   &__icon {
   }
 
-  // .menu__body
+  // .menu__body // mobile
   &__body {
     @media (max-width: $mobile) {
       position: fixed;
@@ -85,11 +87,11 @@ $mobileSmall: 479.98px;
       align-items: center;
       bottom: 0;
       right: -100%;
-      width: 60%;
-      height: 93%;
+      width: 50%;
+      height: calc(100% - 66px);
       overflow: auto;
       transition: all 0.3s ease 0s;
-      background-color: var(--purple-color);
+      background-color: rgb(126, 116, 241, 0.8);
       padding: 90px 15px 15px 15px;
       border-radius: 1rem 0 0 1rem;
       &::before {
@@ -146,7 +148,7 @@ $mobileSmall: 479.98px;
     }
     @media (max-width: $mobile) {
       color: var(--white-color);
-      font-size: 32px;
+      font-size: 28px;
     }
     &._navigator-active {
       text-decoration: underline;
@@ -158,8 +160,8 @@ $mobileSmall: 479.98px;
 .icon-menu {
   display: none;
   @media (max-width: $mobile) {
-    display: block;
     position: relative;
+    display: block;
     width: 30px;
     height: 18px;
     flex: 0 0 30px;
