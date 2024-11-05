@@ -11,15 +11,6 @@ $mobileSmall: 479.98px;
   }
 }
 
-.items {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  @media (max-width: $mobile) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 .project__body {
   display: grid;
   gap: 2rem;
@@ -107,6 +98,15 @@ $mobileSmall: 479.98px;
     }
   }
 
+  .items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   &__skill {
     border: solid 1px #232e35;
     border-radius: 0.3rem;
@@ -129,6 +129,8 @@ $mobileSmall: 479.98px;
     display: flex;
     gap: 10px;
     align-items: center;
+    font-size: medium;
+    line-height: 1.2;
   }
 }
 
@@ -137,7 +139,7 @@ $mobileSmall: 479.98px;
   display: flex;
   height: 26px;
   width: 26px;
-  display: flex;
+  flex: 0 0 26px;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
