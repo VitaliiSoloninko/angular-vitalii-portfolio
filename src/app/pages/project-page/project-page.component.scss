@@ -102,7 +102,7 @@ $mobileSmall: 479.98px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    @media (max-width: $mobile) {
+    @media (max-width: 1200px) {
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -148,6 +148,51 @@ $mobileSmall: 479.98px;
   @media (any-hover: hover) {
     &:hover {
       opacity: 1;
+    }
+  }
+}
+
+.button {
+  background-color: var(--purple-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  height: 46px;
+  width: 90%;
+  border-radius: 8px;
+  color: var(--white-color);
+  transition: background-color 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--purple-hover-color);
+    }
+  }
+}
+
+.button-blocks {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: $mobile) {
+    grid-template-columns: auto;
+  }
+}
+
+.button-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-dark {
+  background-color: var(--grey-color);
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--main-color);
     }
   }
 }
