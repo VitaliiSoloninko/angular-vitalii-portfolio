@@ -6,6 +6,8 @@ export const projects: Project[] = [
     name: 'Tik Talk (Angular)',
     description: 'Programmers network',
     img: 'assets/portfolio/tiktalk.jpg',
+    gitHubDev: 'https://github.com/VitaliiSoloninko/angular-tik-talk',
+    gitHubBuild: 'https://github.com/VitaliiSoloninko/angular-tik-talk',
     link: 'https://tik-talk-network.web.app',
     stack: ['Angular', 'TypeScript', 'Web Application', 'SCSS'],
     features: [
@@ -29,6 +31,9 @@ export const projects: Project[] = [
     name: 'Portfolio (Angular)',
     description: 'My works',
     img: 'assets/portfolio/portfolio.jpg',
+    gitHubDev: 'https://github.com/VitaliiSoloninko/angular-vitalii-portfolio',
+    gitHubBuild:
+      'https://github.com/VitaliiSoloninko/angular-vitalii-portfolio',
     link: 'https://soloninko-portfolio.web.app/',
     stack: ['Angular', 'TypeScript', 'Responsive Web Design', 'SCSS'],
     features: [
@@ -44,7 +49,9 @@ export const projects: Project[] = [
     name: 'Food Mine (Angular)',
     description: 'Food cafe',
     img: 'assets/portfolio/foodmine.jpg',
-    link: 'https://github.com/VitaliiSoloninko/angular-food-cafe',
+    gitHubDev: 'https://github.com/VitaliiSoloninko/angular-food-mine',
+    gitHubBuild: 'https://github.com/VitaliiSoloninko/angular-food-mine',
+    link: 'https://github.com/VitaliiSoloninko/angular-food-mine',
     stack: [
       'Angular',
       'TypeScript',
@@ -70,6 +77,8 @@ export const projects: Project[] = [
     name: 'HomePro (JavaScript)',
     description: 'Home services',
     img: 'assets/portfolio/homepro.jpg',
+    gitHubDev: 'https://github.com/VitaliiSoloninko/homepro-dev',
+    gitHubBuild: 'https://github.com/VitaliiSoloninko/homepro',
     link: 'https://vitaliisoloninko.github.io/homepro/',
     stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack', 'Responsive Web Design'],
     features: [
@@ -86,6 +95,8 @@ export const projects: Project[] = [
     name: 'Furino (JavaScript)',
     description: 'Furniture shop',
     img: 'assets/portfolio/furino.jpg',
+    gitHubDev: 'https://github.com/VitaliiSoloninko/funiro-dev',
+    gitHubBuild: 'https://github.com/VitaliiSoloninko/furino',
     link: 'https://vitaliisoloninko.github.io/furino/',
     stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack', 'Responsive Web Design'],
     features: ['Spoilers', 'Slider swiper', 'Gallery', 'Responsive images'],
@@ -95,6 +106,8 @@ export const projects: Project[] = [
     name: 'FarmVest (JavaScript)',
     description: 'Investment company',
     img: 'assets/portfolio/farmvest.jpg',
+    gitHubDev: 'https://github.com/VitaliiSoloninko/farmvest-dev',
+    gitHubBuild: 'https://github.com/VitaliiSoloninko/farmvest',
     link: 'https://vitaliisoloninko.github.io/farmvest/',
     stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack', 'Responsive Web Design'],
     features: [
@@ -110,6 +123,8 @@ export const projects: Project[] = [
     name: 'TeaLand (JavaScript)',
     description: 'Cafe',
     img: 'assets/portfolio/tealand.jpg',
+    gitHubDev: 'https://github.com/VitaliiSoloninko/tealand-dev',
+    gitHubBuild: 'https://github.com/VitaliiSoloninko/tealand',
     link: 'https://vitaliisoloninko.github.io/tealand/',
     stack: ['JavaScript', 'SCSS', 'GULP', 'Webpack', 'Responsive Web Design'],
     features: ['Background image', 'Slider swiper', 'Responsive images'],
@@ -119,6 +134,8 @@ export const projects: Project[] = [
     name: 'Growfy (Layout)',
     description: 'Marketing agency',
     img: 'assets/portfolio/growfy.jpg',
+    gitHubDev: 'https://github.com/VitaliiSoloninko/growfy',
+    gitHubBuild: 'https://github.com/VitaliiSoloninko/growfy',
     link: 'https://vitaliisoloninko.github.io/growfy/',
     stack: ['JavaScript', 'CSS', 'HTML', 'Responsive Web Design'],
     features: ['Animation', 'Navigation by id', 'Responsive images'],
@@ -128,7 +145,9 @@ export const projects: Project[] = [
     name: 'Rhythm (Layout)',
     description: 'Guitar shop',
     img: 'assets/portfolio/guitar.jpg',
-    link: 'https://vitaliisoloninko.github.io/guitar/',
+    gitHubDev: 'https://github.com/VitaliiSoloninko/rhythm',
+    gitHubBuild: 'https://github.com/VitaliiSoloninko/rhythm',
+    link: 'https://vitaliisoloninko.github.io/rhythm/',
     stack: ['JavaScript', 'CSS', 'HTML', 'Responsive Web Design'],
     features: ['Slider swiper', 'Responsive images'],
   },
@@ -137,6 +156,8 @@ export const projects: Project[] = [
     name: 'Relvise (Layout)',
     description: 'Finance and Consultancy',
     img: 'assets/portfolio/relvise.jpg',
+    gitHubDev: 'https://github.com/VitaliiSoloninko/relvise',
+    gitHubBuild: 'https://github.com/VitaliiSoloninko/relvise',
     link: 'https://vitaliisoloninko.github.io/relvise/',
     stack: ['JavaScript', 'CSS', 'HTML', 'Responsive Web Design'],
     features: ['Background picture', 'Responsive images'],
@@ -146,6 +167,8 @@ export const projects: Project[] = [
     name: 'SmartSpace (Layout)',
     description: 'Real Estate',
     img: 'assets/portfolio/smartspace.jpg',
+    gitHubDev: 'https://github.com/VitaliiSoloninko/smartspace',
+    gitHubBuild: 'https://github.com/VitaliiSoloninko/smartspace',
     link: 'https://vitaliisoloninko.github.io/smartspace/',
     stack: ['JavaScript', 'CSS', 'HTML', 'Responsive Web Design'],
     features: ['Filtration', 'Hover animation', 'Tabs', 'Responsive images'],
@@ -155,7 +178,11 @@ export const projects: Project[] = [
     name: 'NestJS',
     description: 'Full REST API',
     img: 'assets/portfolio/nestjs-full.jpg',
-    link: 'https://github.com/VitaliiSoloninko/nestjs-full-rest-api',
+    gitHubDev:
+      'https://github.com/VitaliiSoloninko/nestjs-rest-api-postgresql-full',
+    gitHubBuild:
+      'https://github.com/VitaliiSoloninko/nestjs-rest-api-postgresql-full',
+    link: 'https://github.com/VitaliiSoloninko/nestjs-rest-api-postgresql-full',
     stack: [
       'Backend',
       'Node.js',
@@ -186,7 +213,10 @@ export const projects: Project[] = [
     name: 'NestJS',
     description: 'REST API CRUD',
     img: 'assets/portfolio/nestjs-crud.jpg',
-    link: 'https://github.com/VitaliiSoloninko/nest-rest-api-template-dev',
+    gitHubDev: 'https://github.com/VitaliiSoloninko/nest-rest-api-mongodb-crud',
+    gitHubBuild:
+      'https://github.com/VitaliiSoloninko/nest-rest-api-mongodb-crud',
+    link: 'https://github.com/VitaliiSoloninko/nest-rest-api-mongodb-crud',
     stack: [
       'Backend',
       'Node.js',
@@ -210,7 +240,11 @@ export const projects: Project[] = [
     name: 'Express.js',
     description: 'Online store REST API',
     img: 'assets/portfolio/express.jpg',
-    link: 'https://github.com/VitaliiSoloninko/online-store-express-rest-api',
+    gitHubDev:
+      'https://github.com/VitaliiSoloninko/expressjs-online-store-rest-api-full',
+    gitHubBuild:
+      'https://github.com/VitaliiSoloninko/expressjs-online-store-rest-api-full',
+    link: 'https://github.com/VitaliiSoloninko/expressjs-online-store-rest-api-full',
     stack: [
       ' Backend ',
       '	Node js	',

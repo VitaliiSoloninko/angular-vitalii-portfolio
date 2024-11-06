@@ -1,7 +1,7 @@
 <div class="project__container">
   <article class="project__body">
     <div class="image">
-      <a routerLink="/project/{{ project.id }}" class="image__image-ibg">
+      <a href="{{ project.link }}" class="image__image-ibg">
         <img [src]="project.img" alt="{{ project.name }}" />
       </a>
       <div class="image__body">
@@ -16,12 +16,12 @@
       </div>
       <div class="button-blocks">
         <div class="button-block">
-          <a href="{{ project.link }}" class="button button-dark"
+          <a href="{{ project.gitHubDev }}" class="button button-dark"
             >GitHub develop</a
           >
         </div>
         <div class="button-block">
-          <a href="{{ project.link }}" class="button button-dark"
+          <a href="{{ project.gitHubBuild }}" class="button button-dark"
             >GitHub production</a
           >
         </div>
