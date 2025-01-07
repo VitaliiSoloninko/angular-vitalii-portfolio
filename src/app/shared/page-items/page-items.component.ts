@@ -1,18 +1,17 @@
-import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Project } from '../../data/project.model';
 import { ProjectService } from '../../services/project.service';
-import { PageItemsComponent } from '../../shared/page-items/page-items.component';
+import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-project-page',
+  selector: 'app-page-items',
   standalone: true,
-  imports: [NgFor, RouterLink, PageItemsComponent],
-  templateUrl: './project-page.component.html',
-  styleUrl: './project-page.component.scss',
+  imports: [NgFor],
+  templateUrl: './page-items.component.html',
+  styleUrl: './page-items.component.scss',
 })
-export class ProjectPageComponent {
+export class PageItemsComponent {
   project!: Project;
   projects: any;
 

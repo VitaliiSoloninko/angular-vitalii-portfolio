@@ -3,9 +3,10 @@ export class Project {
   name!: string;
   description!: string;
   img!: string;
-  gitHubDev!: string;
-  gitHubBuild!: string;
-  link!: string;
+  gitHub!: string;
+  site!: string;
+  category!: string;
   stack!: string[];
   features!: string[];
+  pages!: string[];
 }

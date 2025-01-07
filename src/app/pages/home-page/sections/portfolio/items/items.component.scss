@@ -50,19 +50,21 @@ $mobileSmall: 479.98px;
     padding: 20px 24px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     gap: 16px;
     flex: 1 1 auto;
   }
 
   // .item-portfolio__title
   &__title {
-    flex: 1 1 100%;
+    display: flex;
+    gap: 4px;
   }
 
   // .item-portfolio__link-title
   &__link-title {
     color: #232e35;
+    text-transform: uppercase;
     line-height: 1.1;
     font-weight: 500;
     @media (any-hover: hover) {
@@ -96,6 +98,17 @@ $mobileSmall: 479.98px;
         color: var(--purple-color);
       }
     }
+  }
+
+  &__fullstack {
+    background-color: var(--purple-light-color);
+    border-radius: 0.3rem;
+    font-size: 16px;
+    padding: 0.3rem 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
 

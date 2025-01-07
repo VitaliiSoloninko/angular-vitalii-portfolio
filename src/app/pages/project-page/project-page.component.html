@@ -1,61 +1,74 @@
-<div class="project__container">
-  <article class="project__body">
-    <div class="image">
-      <a href="{{ project.link }}" class="image__image-ibg">
-        <img [src]="project.img" alt="{{ project.name }}" />
-      </a>
-      <div class="image__body">
-        <h4 class="image__title title">
-          <a href="{{ project.link }}" class="image__link-title"
-            >{{ project.name }} - {{ project.description }}
-          </a>
-        </h4>
-        <a href="{{ project.link }}" class="image__link"
-          ><img src="assets/icons/link.svg" alt="link"
-        /></a>
-      </div>
-      <div class="button-blocks">
-        <div class="button-block">
-          <a href="{{ project.gitHubDev }}" class="button button-dark"
-            >GitHub develop</a
-          >
-        </div>
-        <div class="button-block">
-          <a href="{{ project.gitHubBuild }}" class="button button-dark"
-            >GitHub production</a
-          >
-        </div>
-        <div class="button-block">
-          <a href="{{ project.link }}" class="button">View site</a>
-        </div>
-      </div>
-    </div>
+<div class="container">
+  <app-page-items>+</app-page-items>
 
-    <div class="content">
-      <div class="content__block">
-        <div class="content__title">STACK</div>
-        <div class="items">
-          <div class="content__skill" *ngFor="let skill of project.stack">
-            {{ skill }}
+  <div class="project__container">
+    <article class="project__body">
+      <div class="image">
+        <a href="{{ project.site }}" class="image__image-ibg">
+          <img [src]="project.img" alt="{{ project.name }}" />
+        </a>
+        <div class="image__body">
+          <h4 class="image__title title">
+            <div class="image__site-title">
+              {{ project.name }}
+            </div>
+            <div class="description">{{ project.description }}</div>
+          </h4>
+          <div class="content__category">{{ project.category }}</div>
+        </div>
+        <div class="button-blocks">
+          <div class="button-block">
+            <a href="{{ project.gitHub }}" class="button button-dark">
+              <img src="assets/svg/github.svg" alt="GitHub" />
+              <span>GitHub</span>
+            </a>
+          </div>
+          <div class="button-block">
+            <a href="{{ project.site }}" class="button">
+              <img src="assets/svg/link.svg" alt="Link" />
+              <span>View site</span>
+            </a>
           </div>
         </div>
       </div>
-      <div class="content__block">
-        <div class="content__title">FEATURES</div>
-        <div class="items">
-          <div
-            class="content__feature"
-            *ngFor="let feature of project.features"
-          >
-            <div class="feature-mark">
-              <img src="assets/mark.svg" alt="mark" />
+
+      <div class="content">
+        <div class="content__block">
+          <div class="content__title">
+            <div class="content__title-icon">
+              <img src="assets/svg/stack.svg" alt="Stack" />
             </div>
-            <div class="feature-text">
-              {{ feature }}
+            <div class="content__title-text">STACK</div>
+          </div>
+          <div class="items">
+            <div class="content__skill" *ngFor="let skill of project.stack">
+              {{ skill }}
+            </div>
+          </div>
+        </div>
+
+        <div class="content__block">
+          <div class="content__title">
+            <div class="content__title-icon">
+              <img src="assets/svg/component.svg" alt="FEATURES" />
+            </div>
+            <div class="content__title-text">FEATURES</div>
+          </div>
+          <div class="items">
+            <div
+              class="content__feature"
+              *ngFor="let feature of project.features"
+            >
+              <div class="feature-mark">
+                <img src="assets/mark.svg" alt="mark" />
+              </div>
+              <div class="feature-text">
+                {{ feature }}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </article>
+    </article>
+  </div>
 </div>

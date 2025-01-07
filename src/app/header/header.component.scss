@@ -8,8 +8,8 @@ $mobileSmall: 479.98px;
   top: 0;
   left: 0;
   z-index: 100;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
   padding-left: 1rem;
   padding-right: 1rem;
   background-color: rgba(230, 230, 230, 0.75);
@@ -20,13 +20,11 @@ $mobileSmall: 479.98px;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    height: 80px;
+    padding: 4px 0;
+    height: 70px;
     @media (max-width: $mobile) {
       height: 60px;
-      padding-top: 0.1rem;
-      padding-bottom: 0.1rem;
+      padding: 4px 0;
     }
   }
 
@@ -48,7 +46,7 @@ $mobileSmall: 479.98px;
     border-radius: 8px;
     font-weight: 500;
     font-size: 14px;
-    padding: 15px 24px;
+    padding: 14px 24px;
     transition: all 0.3s ease 0s;
     @media (any-hover: hover) {
       &:hover {

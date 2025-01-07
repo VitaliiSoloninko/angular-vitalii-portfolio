@@ -17,9 +17,6 @@
       background-color: var(--grey-light-color);
     }
   }
-  &:not(:last-child) {
-    margin-bottom: em(9, 12);
-  }
 
   // .title__value
   &__value {

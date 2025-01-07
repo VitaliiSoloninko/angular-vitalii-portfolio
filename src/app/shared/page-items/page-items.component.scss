@@ -1,0 +1,23 @@
+.page-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+  row-gap: 0.8rem;
+  margin-bottom: 1.3rem;
+}
+.page-item {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.1);
+  padding: 10px 16px;
+  border-radius: 60px;
+}
+.item-icon {
+}
+.item-text {
+}
