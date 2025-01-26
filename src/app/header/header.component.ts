@@ -29,9 +29,5 @@ export class HeaderComponent {
       name: 'Skills',
       link: 'skills',
     },
-    {
-      name: 'Contacts',
-      link: 'contacts',
-    },
   ];
 }
