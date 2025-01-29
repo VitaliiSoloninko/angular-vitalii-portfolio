@@ -1,4 +1,8 @@
 import { Routes } from '@angular/router';
+import { AdminPageComponent } from './pages/admin-page/admin-page.component';
+import { ArticlesComponent } from './pages/admin-page/articles/articles.component';
+import { CreateArticleComponent } from './pages/admin-page/articles/create-article/create-article.component';
+import { UpdateArticleComponent } from './pages/admin-page/articles/update-article/update-article.component';
 import { BlogPageComponent } from './pages/blog-page/blog-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ContactsComponent } from './pages/home-page/sections/contacts/contacts.component';
@@ -15,6 +19,10 @@ export const routes: Routes = [
   { path: 'contacts', component: ContactsComponent },
   { path: 'blog', component: BlogPageComponent },
   { path: 'project', component: ProjectPageComponent },
+  { path: 'admin', component: AdminPageComponent },
+  { path: 'admin/articles', component: ArticlesComponent },
+  { path: 'admin/articles/create', component: CreateArticleComponent },
+  { path: 'admin/articles/update', component: UpdateArticleComponent },
 
   { path: 'search/:searchTerm', component: PortfolioComponent },
   { path: 'tag/:tag', component: PortfolioComponent },
