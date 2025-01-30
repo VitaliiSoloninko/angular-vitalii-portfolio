@@ -3,11 +3,11 @@ import { Project } from './project.model';
 export const projects: Project[] = [
   {
     id: '1',
-    name: 'Food mine',
+    name: 'Delicious food',
     description: 'Online food delivery',
     img: 'assets/portfolio/foodmine.jpg',
     gitHub: 'https://github.com/VitaliiSoloninko/angular-food-mine',
-    site: 'https://my-food-mine.web.app/',
+    site: 'https://delicious-food-de.web.app',
     category: 'Fullstack',
     stack: [
       'Angular',

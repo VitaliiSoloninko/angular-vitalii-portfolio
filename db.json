@@ -2,11 +2,15 @@
   "articles": [
     {
       "id": "1",
-      "name": "Angular GRUD Operation (foods)",
+      "title": "Angular GRUD Operation (foods)",
       "stack": "Angular, TypeScript, Bootstrap, JSON Server",
       "features": "Standalone, CRUD Operation, Create, GetAll, GetById, Update, Delete, Service, Router, ActivatedRoute, HTTP Client, Food page, Create, Page, Update page",
-      "gitHub": "...",
-      "site": "..."
+      "description": "",
+      "img": "",
+      "gitHub": "",
+      "site": "",
+      "category": "",
+      "data": ""
     }
   ]
 }
