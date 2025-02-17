@@ -30,18 +30,18 @@ export class SkillsComponent {
   education = [
     {
       year: '09/2008 - 06/2009',
-      level: `Master's degree (Civil engineer)`,
-      institution: `National university of water and environmental engineering, Rivne, Ukraine`,
+      level: `Bauingenieur, Spezialist`,
+      institution: `Nationale Universität des Wasser- und Natur Managements, Riwne, Ukraine`,
     },
     {
-      year: '09/2004 - 06/2008',
-      level: `Bachelor's degree (Civil engineer)`,
-      institution: `National university of water and environmental engineering, Rivne, Ukraine`,
+      year: '09/2004 - 07/2008',
+      level: `Bauingenieur, Bachelor`,
+      institution: `Nationale Universität des Wasser- und Natur Managements, Riwne, Ukraine`,
     },
     {
-      year: '09/1993 - 06/2004',
-      level: `Diploma's degree (High school)`,
-      institution: `High school, Kvasilov, Ukraine`,
+      year: '09/1997 - 06/2004',
+      level: `Abitur`,
+      institution: `Kvasyliv-Gymnasium in Kvasyliv, Ukraine`,
     },
   ];
 
@@ -49,10 +49,13 @@ export class SkillsComponent {
     'Angular',
     'TypeScript',
     'JavaScript',
-    'CSS/SCSS',
+    'SCSS',
+    'CSS',
     'HTML',
     'Responsive Web Design',
     'Web Application',
+    'Web Development',
+    'Single Page Application',
   ];
 
   additionalSkills = [
@@ -60,14 +63,21 @@ export class SkillsComponent {
     'Frontend Design',
     'User Interface (UI)',
     'User Experience (UX)',
-    'Git/GitHub',
+    'Graphic Design',
+    'E-Commerce',
+    'Git',
+    'GitHub',
   ];
 
   backendSkills = [
-    'NestJS',
+    'Node.js',
     'Express.js',
+    'NestJS',
+    'TypeScript',
     'REST API',
+    'Databases',
     'MongoDB',
+    'NoSQL',
     'Mongoose',
     'PostgreSQL',
     'Sequelize',
