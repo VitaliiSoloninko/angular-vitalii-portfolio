@@ -40,7 +40,4 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-.firebase/
-.firebase/hosting.ZGlzdC9hbmd1bGFyLXZpdGFsaWktcG9ydGZvbGlvL2Jyb3dzZXI.cache
-.firebase/hosting
-.firebase/
+.firebase/*
