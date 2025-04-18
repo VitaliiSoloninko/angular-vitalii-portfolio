@@ -1,11 +1,12 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { Blog } from '../../data/blog.model';
+import { ArticlesComponent } from '../../shared/articles/articles.component';
 
 @Component({
   selector: 'app-blog-page',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, ArticlesComponent],
   templateUrl: './blog-page.component.html',
   styleUrl: './blog-page.component.scss',
 })

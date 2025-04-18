@@ -47,6 +47,10 @@ $mobileSmall: em(479.98);
   }
 }
 
+.center {
+  text-align: center;
+}
+
 [class*="__container"] {
   min-height: 100%;
   @if ($maxWidthContainer>0) {

@@ -60,7 +60,7 @@ export const projects: Project[] = [
   },
   {
     id: '2',
-    name: 'Leckeres Essen',
+    name: 'Leckeres Schwerin Essen',
     description: 'Online-Lieferung von Lebensmitteln',
     img: 'assets/portfolio/foodmine.jpg',
     gitHub: 'https://github.com/VitaliiSoloninko/angular-food-mine',
@@ -110,7 +110,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: '4',
+    id: '3',
     name: 'Netzwerk-Tik',
     description: 'Kommunikationsnetzwerk',
     img: 'assets/portfolio/tiktalk.jpg',
@@ -141,7 +141,7 @@ export const projects: Project[] = [
     pages: ['Anmeldeseite', 'Suchseite', 'Profilseite', 'Einstellungsseite'],
   },
   {
-    id: '5',
+    id: '4',
     name: 'Mein Portfolio',
     description: 'Meine Projekte',
     img: 'assets/portfolio/portfolio.jpg',
@@ -192,7 +192,7 @@ export const projects: Project[] = [
   //   ],
   // },
   {
-    id: '6',
+    id: '5',
     name: 'Furino',
     description: 'Möbelgeschäft',
     img: 'assets/portfolio/furino.jpg',
@@ -217,7 +217,7 @@ export const projects: Project[] = [
     pages: ['Zielseite'],
   },
   {
-    id: '7',
+    id: '6',
     name: 'HomePro',
     description: 'Heimservice',
     img: 'assets/portfolio/homepro.jpg',
@@ -237,7 +237,7 @@ export const projects: Project[] = [
     pages: ['Zielseite'],
   },
   {
-    id: '8',
+    id: '7',
     name: 'FarmVest',
     description: 'Investmentgesellschaft',
     img: 'assets/portfolio/farmvest.jpg',
@@ -255,7 +255,7 @@ export const projects: Project[] = [
     pages: ['Zielseite'],
   },
   {
-    id: '9',
+    id: '8',
     name: 'TeaLand',
     description: 'Cafe',
     img: 'assets/portfolio/tealand.jpg',
@@ -267,7 +267,7 @@ export const projects: Project[] = [
     pages: ['Zielseite'],
   },
   {
-    id: '10',
+    id: '9',
     name: 'Growfy',
     description: 'Marketingagentur',
     img: 'assets/portfolio/growfy.jpg',
@@ -284,7 +284,7 @@ export const projects: Project[] = [
     pages: ['Zielseite'],
   },
   {
-    id: '11',
+    id: '10',
     name: 'Rhythm',
     description: 'Gitarrenladen',
     img: 'assets/portfolio/guitar.jpg',
@@ -296,7 +296,7 @@ export const projects: Project[] = [
     pages: ['Zielseite'],
   },
   {
-    id: '12',
+    id: '11',
     name: 'Relvise',
     description: 'Finanzen / Beratung',
     img: 'assets/portfolio/relvise.jpg',
@@ -312,7 +312,7 @@ export const projects: Project[] = [
     pages: ['Zielseite'],
   },
   {
-    id: '13',
+    id: '12',
     name: 'SmartSpace',
     description: 'Immobilie',
     img: 'assets/portfolio/smartspace.jpg',
@@ -330,7 +330,7 @@ export const projects: Project[] = [
     pages: ['Zielseite'],
   },
   {
-    id: '14',
+    id: '13',
     name: 'Backend für Blog (NestJS)',
     description: 'Full REST API',
     img: 'assets/portfolio/nestjs-full.jpg',
@@ -364,7 +364,7 @@ export const projects: Project[] = [
     pages: [],
   },
   {
-    id: '15',
+    id: '14',
     name: 'CRUD operation (NestJS)',
     description: 'REST API',
     img: 'assets/portfolio/nestjs-crud.jpg',
@@ -383,7 +383,7 @@ export const projects: Project[] = [
     pages: [],
   },
   {
-    id: '16',
+    id: '15',
     name: 'Online-Shop (Express.js)',
     description: 'REST API',
     img: 'assets/portfolio/express.jpg',
