@@ -51,6 +51,24 @@ $mobileSmall: em(479.98);
   text-align: center;
 }
 
+.btn {
+  background-color: var(--purple-color);
+  padding: 0.2rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.125rem;
+  width: 100%;
+  border-radius: 8px;
+  color: var(--white-color);
+  transition: background-color 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--purple-hover-color);
+    }
+  }
+}
+
 [class*="__container"] {
   min-height: 100%;
   @if ($maxWidthContainer>0) {

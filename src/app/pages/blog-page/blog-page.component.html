@@ -1,27 +1,5 @@
-<section data-fp-section class="page__blog blog">
+<section data-fp-section class="blog">
   <div class="blog__container">
-    <div class="blog__title title">
-      <div class="title__label">MY ARTICLES</div>
-      <h2 class="title__value">Personal Blog</h2>
-    </div>
-    <div class="blog__items">
-      <article class="blog__item item-blog" *ngFor="let blog of blogs">
-        <a href="" class="item-blog__image-ibg">
-          <img [src]="blog.img" alt="{{ blog.title }}" />
-        </a>
-        <div class="item-blog__body">
-          <h4 class="item-blog__title">
-            <a href="" class="item-blog__title">{{ blog.title }}</a>
-          </h4>
-          <div class="item-blog__date date">{{ blog.date }}</div>
-          <div class="item-blog__text text">
-            {{ blog.description }}
-          </div>
-          <a href="" class="item-blog__link">Continue Reading</a>
-        </div>
-      </article>
-    </div>
+    <app-articles></app-articles>
   </div>
 </section>
-
-<app-articles></app-articles>

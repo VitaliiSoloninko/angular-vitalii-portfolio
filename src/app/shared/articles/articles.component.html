@@ -1,6 +1,10 @@
-<div class="center">
-  <app-title
-    [subtitle]="'MY ARTICLES'"
-    [title]="'Angular basic constructs'"
-  ></app-title>
+<app-title
+  [subtitle]="'MY ARTICLES'"
+  [title]="'Angular basic logic constructs'"
+></app-title>
+
+<div class="items">
+  @for (article of articles; track $index) {
+  <app-article-item [article]="article"></app-article-item>
+  }
 </div>
