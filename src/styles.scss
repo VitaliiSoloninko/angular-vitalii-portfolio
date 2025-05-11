@@ -51,6 +51,10 @@ $mobileSmall: em(479.98);
   text-align: center;
 }
 
+.title {
+  line-height: 1.5;
+}
+
 .btn {
   background-color: var(--purple-color);
   padding: 0.2rem 1.5rem;

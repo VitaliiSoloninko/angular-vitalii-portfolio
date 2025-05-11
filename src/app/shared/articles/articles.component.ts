@@ -3,16 +3,26 @@ import { Component } from '@angular/core';
 import { IArticle } from '../../../models/IArticle';
 import { TitleComponent } from '../title/title.component';
 import { ArticleItemComponent } from './article-item/article-item.component';
+import { ArticleListComponent } from './article-list/article-list.component';
+import { ArticleTitleComponent } from './article-title/article-title.component';
 
 @Component({
   selector: 'app-articles',
   standalone: true,
-  imports: [TitleComponent, ArticleItemComponent, CommonModule],
+  imports: [
+    TitleComponent,
+    ArticleItemComponent,
+    CommonModule,
+    ArticleListComponent,
+    ArticleTitleComponent,
+  ],
   templateUrl: './articles.component.html',
   styleUrl: './articles.component.scss',
 })
 export class ArticlesComponent {
-  articles: IArticle[] = [
+  title: string = '123';
+
+  angularBasic: IArticle[] = [
     {
       id: 1,
       title: 'Basic counter',
@@ -43,12 +53,85 @@ export class ArticlesComponent {
       stack: ['Angular 14+'],
       features: ['RxJS'],
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
       img: 'assets/blog/03.jpg',
       gitHub: '',
       site: '',
       category: ['Logic', 'Basic'],
       date: '20 Mart 2025',
+    },
+  ];
+
+  readonly templateUrl = 'assets/angular-templates';
+
+  angularTemplates: IArticle[] = [
+    {
+      id: 1,
+      title: 'Authentication (Login and Registration)',
+      stack: ['Angular', 'Version 17+'],
+      features: ['Reactive Forms'],
+      description:
+        'Good registration and login page template with beautiful design and responsive forms',
+      img: `${this.templateUrl}/login.jpg`,
+      gitHub: '',
+      site: '',
+      category: ['Template', 'Layout'],
+      date: '22 January 2025',
+    },
+    {
+      id: 2,
+      title: 'GRUD operations',
+      stack: ['Angular', 'Version 17+', 'Bootstrap', 'JSON Server'],
+      features: ['GRUD', 'Create', 'Read', 'Update', 'Delete'],
+      description:
+        'Basic project to test all GRUD operations, with JSON server',
+      img: `${this.templateUrl}/crud.jpg`,
+      gitHub: '',
+      site: '',
+      category: ['Logic', 'Basic'],
+      date: '31 January 2025',
+    },
+    {
+      id: 3,
+      title: 'Reactive Forms',
+      stack: ['Angular', 'Version 17+'],
+      features: [
+        'Login',
+        'Sing up',
+        'Validators',
+        'Custom Validators',
+        'Async Validators',
+        'save to localStorage',
+        'get from localStorage',
+        'Form Groups',
+        'Form Arrays',
+        'show error message',
+        'equal passwords',
+      ],
+      description:
+        'Basic project with 2 pages for working with REACTIVE forms and all their features',
+      img: `${this.templateUrl}/reactive-forms.jpg`,
+      gitHub: '',
+      site: '',
+      category: ['Template'],
+      date: '19 September 2024',
+    },
+    {
+      id: 4,
+      title: 'Driven Forms',
+      stack: ['Angular', 'Version 17+'],
+      features: [
+        'Login',
+        'Validators',
+        'save to localStorage',
+        'get from localStorage',
+      ],
+      description: 'Basic project for working with DRIVEN forms',
+      img: `${this.templateUrl}/driven-form.jpg`,
+      gitHub: '',
+      site: '',
+      category: ['Template'],
+      date: '14 September 2024',
     },
   ];
 }

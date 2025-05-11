@@ -7,7 +7,7 @@
       (click)="selectTab(tabs[0].id)"
     >
       <div class="navigation-career__text">
-        <div>Seit 04/2022</div>
+        <div>Seit 05/2022</div>
       </div>
       <div class="navigation-career__arrow">
         <img src="assets/icons/arrow-16.svg" alt="l" />
@@ -20,7 +20,7 @@
       (click)="selectTab(tabs[1].id)"
     >
       <div class="navigation-career__text">
-        <div>04/2019 - 03/2022</div>
+        <div>01/2021 – 03/2022</div>
       </div>
       <div class="navigation-career__arrow">
         <img src="assets/icons/arrow-16.svg" alt="l" />
@@ -33,7 +33,33 @@
       (click)="selectTab(tabs[2].id)"
     >
       <div class="navigation-career__text">
-        <div>01/2012 - 03/2019</div>
+        <div>04/2019 – 12/2020</div>
+      </div>
+      <div class="navigation-career__arrow">
+        <img src="assets/icons/arrow-16.svg" alt="l" />
+      </div>
+    </li>
+    <li
+      class="navigation-career__title"
+      id="{{ tabs[3].id }}"
+      [class.tab-active]="selectedTab === 4"
+      (click)="selectTab(tabs[3].id)"
+    >
+      <div class="navigation-career__text">
+        <div>09/2011 – 03/2019</div>
+      </div>
+      <div class="navigation-career__arrow">
+        <img src="assets/icons/arrow-16.svg" alt="l" />
+      </div>
+    </li>
+    <li
+      class="navigation-career__title"
+      id="{{ tabs[4].id }}"
+      [class.tab-active]="selectedTab === 5"
+      (click)="selectTab(tabs[4].id)"
+    >
+      <div class="navigation-career__text">
+        <div>09/2009 – 08/2011</div>
       </div>
       <div class="navigation-career__arrow">
         <img src="assets/icons/arrow-16.svg" alt="l" />
@@ -48,11 +74,11 @@
           <div class="content-career__title">
             Frontend Entwickler
             <div class="content-career__link-title">
-              (Kurse, Selbststudium, Freiberufler)
+              Freiberufler, Projekte - soloninko-portfolio.web.app
             </div>
           </div>
           <div class="content-career__location">Schwerin, Deutschland</div>
-          <div class="content-career__time">Seit 04/2022</div>
+          <div class="content-career__time">Seit 05/2022</div>
           <div class="content-career__categories">
             <div class="category-link">Angular</div>
             <div class="category-link">Type Script</div>
@@ -64,17 +90,19 @@
         <div class="content-career__main">
           <ul class="content-career__list list-content-career">
             <li class="list-content-career__item">
-              Angular-Projekte unterschiedlicher Komplexität einschließlich
-              Fullstack-Projekten mit REST API
+              Komplexe Frontend Projekte unterschiedlicher Komplexität
             </li>
             <li class="list-content-career__item">
-              Komplex JavaScript-Projekte
+              Fullstack Projekte: Frontend - Angular, TypeScript Backend -
+              Nest.js, Express.js, REST-API Datenbanken - PostgreSQL, MongoDB.
             </li>
             <li class="list-content-career__item">
-              Landingpages JavaScript-Projekte mit adaptivem Design für alle
-              Geräte (Responsive Web Design, UX, UI)
+              JavaScript-Projekte (Webpack, GULP)
             </li>
-            <li class="list-content-career__item">Using different features.</li>
+            <li class="list-content-career__item">
+              Landingpages JavaScript mit adaptivem Design (Responsive Web
+              Design, UX, UI)
+            </li>
           </ul>
         </div>
       </div>
@@ -84,14 +112,15 @@
       <div class="content-career__body">
         <div class="content-career__header">
           <div class="content-career__title">
-            IT-Bildungsentwickler und UX/UI Spezialist
+            Frontend Entwickler
             <div class="content-career__link-title">
-              (Bildungszentrum „Grand“)
+              Bildungszentrum „Grand“
             </div>
           </div>
           <div class="content-career__location">Riwne, Ukraine</div>
-          <div class="content-career__time">04/2019 - 03/2022</div>
+          <div class="content-career__time">01/2021 – 03/2022</div>
           <div class="content-career__categories">
+            <div class="category-link">Java Script</div>
             <div class="category-link">UX/UI</div>
             <div class="category-link">Design</div>
             <div class="category-link">Web design</div>
@@ -100,11 +129,12 @@
         <div class="content-career__main">
           <ul class="content-career__list list-content-career">
             <li class="list-content-career__item">
-              Zusammenarbeit mit der Programmierabteilung und Verantwortung für
-              den UX/UI-Anteil der Programme.
+              Entwicklung der Hauptwebsite des Unternehmens und interner
+              Websites für interne Zwecke
             </li>
             <li class="list-content-career__item">
-              Verantwortlich für UX-UI-Design und Schulungsmaterialien.
+              Tests, Interaktive Anleitungen, Arbeiten mit Formularen,
+              Statistiken
             </li>
           </ul>
         </div>
@@ -115,35 +145,97 @@
       <div class="content-career__body">
         <div class="content-career__header">
           <div class="content-career__title">
-            Informatiker
+            Designer
             <div class="content-career__link-title">
-              (Bildungszentrum „Grand“)
+              Bildungszentrum „Grand“
             </div>
           </div>
           <div class="content-career__location">Riwne, Ukraine</div>
-          <div class="content-career__time">09/2009 - 03/2019</div>
+          <div class="content-career__time">04/2019 – 12/2020</div>
           <div class="content-career__categories">
             <div class="category-link">Web design</div>
             <div class="category-link">Design UX/UI</div>
-            <div class="category-link">Office</div>
-            <div class="category-link">3D</div>
-            <div class="category-link">Video editing</div>
+            <div class="category-link">Adobe Photoshop</div>
+            <div class="category-link">Adobe Illustrator</div>
+            <div class="category-link">Figma</div>
           </div>
         </div>
         <div class="content-career__main">
           <ul class="content-career__list list-content-career">
             <li class="list-content-career__item">
-              Unterrichten von Studierenden und Unterrichtsmaterialien in
-              verschiedenen IT-Bereichen
+              Verantwortlich für den UX/UI-Design und der Lehrmaterialien.
             </li>
             <li class="list-content-career__item">
-              Unterstützung bei der Entwicklung neuer Lehrmaterialien
-              (Webdesign, Design, UX/UI)
+              Zusammenarbeit mit der Programmierabteilung und Verantwortung für
+              den UX/UI-Teil aller Programme.
+            </li>
+            <li class="list-content-career__item">
+              Projektplanung in Jira (Kanban, Scrum)
             </li>
           </ul>
         </div>
       </div>
     </ng-container>
-    }}
+    }} @switch (selectedTab) { @case (tabs[3].id) {
+    <ng-container>
+      <div class="content-career__body">
+        <div class="content-career__header">
+          <div class="content-career__title">
+            IT-Entwickler und Lehrer für das Fach Informatik
+            <div class="content-career__link-title">
+              Bildungszentrum „Grand“
+            </div>
+          </div>
+          <div class="content-career__location">Riwne, Ukraine</div>
+          <div class="content-career__time">09/2011 – 03/2019</div>
+          <div class="content-career__categories">
+            <div class="category-link">Web design</div>
+            <div class="category-link">Design UX/UI</div>
+            <div class="category-link">Adobe Photoshop</div>
+            <div class="category-link">Adobe Illustrator</div>
+            <div class="category-link">Figma</div>
+          </div>
+        </div>
+        <div class="content-career__main">
+          <ul class="content-career__list list-content-career">
+            <li class="list-content-career__item">
+              Entwicklung neuer Lehrmaterialien mit dem Team Web design, Design,
+              UX/UI, MS Office - Gesamtpaket Grundlegende Programmierkurse
+            </li>
+            <li class="list-content-career__item">
+              Unterricht der Klassen 5 bis 11
+            </li>
+          </ul>
+        </div>
+      </div> </ng-container
+    >}} @switch (selectedTab) { @case (tabs[4].id) {
+    <ng-container>
+      <div class="content-career__body">
+        <div class="content-career__header">
+          <div class="content-career__title">
+            Lehrer für das Fach Informatik
+            <div class="content-career__link-title">
+              Bildungszentrum „Grand“
+            </div>
+          </div>
+          <div class="content-career__location">Riwne, Ukraine</div>
+          <div class="content-career__time">09/2009 – 08/2011</div>
+          <div class="content-career__categories">
+            <div class="category-link">Web design</div>
+            <div class="category-link">Design UX/UI</div>
+            <div class="category-link">Adobe Photoshop</div>
+            <div class="category-link">Adobe Illustrator</div>
+            <div class="category-link">Figma</div>
+          </div>
+        </div>
+        <div class="content-career__main">
+          <ul class="content-career__list list-content-career">
+            <li class="list-content-career__item">
+              Unterricht der Klassen 5 bis 11
+            </li>
+          </ul>
+        </div>
+      </div> </ng-container
+    >}}
   </div>
 </div>

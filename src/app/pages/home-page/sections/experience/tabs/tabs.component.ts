@@ -18,6 +18,12 @@ export class TabsComponent {
     {
       id: 3,
     },
+    {
+      id: 4,
+    },
+    {
+      id: 5,
+    },
   ];
   selectedTab: number = 1;
   selectTab(tabId: number): void {

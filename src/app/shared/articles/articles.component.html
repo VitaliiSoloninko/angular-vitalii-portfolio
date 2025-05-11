@@ -1,10 +1,7 @@
-<app-title
-  [subtitle]="'MY ARTICLES'"
-  [title]="'Angular basic logic constructs'"
-></app-title>
+<input type="text" [value]="title" />
 
-<div class="items">
-  @for (article of articles; track $index) {
-  <app-article-item [article]="article"></app-article-item>
-  }
-</div>
+<app-article-title [title]="'Angular'" [subtitle]="'My templates'" />
+<app-article-list [articles]="angularTemplates" />
+
+<app-article-title [title]="'Angular'" [subtitle]="'basic logic'" />
+<app-article-list [articles]="angularBasic" />
