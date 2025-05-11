@@ -73,6 +73,13 @@ $mobileSmall: em(479.98);
   }
 }
 
+.mb16 {
+  margin-bottom: 1rem;
+}
+.mt16 {
+  margin-top: 1rem;
+}
+
 [class*="__container"] {
   min-height: 100%;
   @if ($maxWidthContainer>0) {

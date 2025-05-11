@@ -1,5 +1,6 @@
 .page-items {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -12,12 +13,12 @@
   flex-wrap: nowrap;
   gap: 0.5rem;
   align-items: center;
-  justify-content: center;
   background-color: rgb(0, 0, 0, 0.1);
   padding: 10px 16px;
   border-radius: 60px;
-}
-.item-icon {
-}
-.item-text {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: rgb(0, 0, 0, 0.2);
+  }
 }
