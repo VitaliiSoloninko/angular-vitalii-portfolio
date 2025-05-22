@@ -1,7 +1,28 @@
-<input type="text" [value]="title" />
+<app-article-title title="Blog" subtitle="My Angular templates" />
 
-<app-article-title [title]="'Angular'" [subtitle]="'My templates'" />
-<app-article-list [articles]="angularTemplates" />
+<app-article-list [articles]="displayedArticles" />
 
-<app-article-title [title]="'Angular'" [subtitle]="'basic logic'" />
-<app-article-list [articles]="angularBasic" />
+<div class="pagination">
+  <button
+    *ngIf="currentPage > 1"
+    (click)="goToPage(currentPage - 1)"
+    class="pagination-button"
+  >
+    Previous
+  </button>
+
+  <span class="pagination-info">
+    Page {{ currentPage }} of {{ totalPages }}
+  </span>
+
+  <button
+    *ngIf="currentPage < totalPages"
+    (click)="goToPage(currentPage + 1)"
+    class="pagination-button"
+  >
+    Next
+  </button>
+</div>
+
+<!-- <app-article-title [title]="'Angular'" [subtitle]="'basic logic'" />
+<app-article-list [articles]="angularBasic" /> -->

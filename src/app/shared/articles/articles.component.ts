@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule, NgIf } from '@angular/common';
+import { Component, Input } from '@angular/core';
 import { IArticle } from '../../../models/IArticle';
 import { TitleComponent } from '../title/title.component';
 import { ArticleItemComponent } from './article-item/article-item.component';
@@ -15,12 +15,106 @@ import { ArticleTitleComponent } from './article-title/article-title.component';
     CommonModule,
     ArticleListComponent,
     ArticleTitleComponent,
+    NgIf,
   ],
   templateUrl: './articles.component.html',
   styleUrl: './articles.component.scss',
 })
 export class ArticlesComponent {
-  title: string = '123';
+  readonly templateUrl = 'assets/angular-templates';
+
+  @Input() articles: IArticle[] = [];
+  displayedArticles: IArticle[] = [];
+  articlesPerPage = 3;
+  currentPage = 1;
+
+  get totalPages(): number {
+    return Math.ceil(this.angularTemplates.length / this.articlesPerPage);
+  }
+
+  ngOnInit() {
+    this.updateDisplayedArticles();
+  }
+
+  updateDisplayedArticles() {
+    const startIndex = (this.currentPage - 1) * this.articlesPerPage;
+    const endIndex = startIndex + this.articlesPerPage;
+    this.displayedArticles = this.angularTemplates.slice(startIndex, endIndex);
+  }
+
+  goToPage(page: number) {
+    this.currentPage = page;
+    this.updateDisplayedArticles();
+  }
+
+  angularTemplates: IArticle[] = [
+    {
+      id: 1,
+      title: 'Login and Registration',
+      stack: ['Angular', 'Version 17+'],
+      features: ['Reactive Forms'],
+      description: 'Registration and login page template with design and forms',
+      img: `${this.templateUrl}/login.jpg`,
+      gitHub: '',
+      site: '',
+      category: ['Template', 'Layout'],
+      date: '22 January 2025',
+    },
+    {
+      id: 2,
+      title: 'GRUD operations',
+      stack: ['Angular', 'Version 17+', 'Bootstrap', 'JSON Server'],
+      features: ['GRUD', 'Create', 'Read', 'Update', 'Delete'],
+      description:
+        'Basic project to test all GRUD operations, with JSON server',
+      img: `${this.templateUrl}/crud.jpg`,
+      gitHub: '',
+      site: '',
+      category: ['Logic', 'Basic'],
+      date: '31 January 2025',
+    },
+    {
+      id: 3,
+      title: 'Reactive Forms',
+      stack: ['Angular', 'Version 17+'],
+      features: [
+        'Login',
+        'Sing up',
+        'Validators',
+        'Custom Validators',
+        'Async Validators',
+        'save to localStorage',
+        'get from localStorage',
+        'Form Groups',
+        'Form Arrays',
+        'show error message',
+        'equal passwords',
+      ],
+      description: 'REACTIVE forms and all their features',
+      img: `${this.templateUrl}/reactive-forms.jpg`,
+      gitHub: '',
+      site: '',
+      category: ['Template'],
+      date: '19 September 2024',
+    },
+    {
+      id: 4,
+      title: 'Driven Forms',
+      stack: ['Angular', 'Version 17+'],
+      features: [
+        'Login',
+        'Validators',
+        'save to localStorage',
+        'get from localStorage',
+      ],
+      description: 'Basic project for working with DRIVEN forms',
+      img: `${this.templateUrl}/driven-form.jpg`,
+      gitHub: '',
+      site: '',
+      category: ['Template'],
+      date: '14 September 2024',
+    },
+  ];
 
   angularBasic: IArticle[] = [
     {
@@ -59,79 +153,6 @@ export class ArticlesComponent {
       site: '',
       category: ['Logic', 'Basic'],
       date: '20 Mart 2025',
-    },
-  ];
-
-  readonly templateUrl = 'assets/angular-templates';
-
-  angularTemplates: IArticle[] = [
-    {
-      id: 1,
-      title: 'Authentication (Login and Registration)',
-      stack: ['Angular', 'Version 17+'],
-      features: ['Reactive Forms'],
-      description:
-        'Good registration and login page template with beautiful design and responsive forms',
-      img: `${this.templateUrl}/login.jpg`,
-      gitHub: '',
-      site: '',
-      category: ['Template', 'Layout'],
-      date: '22 January 2025',
-    },
-    {
-      id: 2,
-      title: 'GRUD operations',
-      stack: ['Angular', 'Version 17+', 'Bootstrap', 'JSON Server'],
-      features: ['GRUD', 'Create', 'Read', 'Update', 'Delete'],
-      description:
-        'Basic project to test all GRUD operations, with JSON server',
-      img: `${this.templateUrl}/crud.jpg`,
-      gitHub: '',
-      site: '',
-      category: ['Logic', 'Basic'],
-      date: '31 January 2025',
-    },
-    {
-      id: 3,
-      title: 'Reactive Forms',
-      stack: ['Angular', 'Version 17+'],
-      features: [
-        'Login',
-        'Sing up',
-        'Validators',
-        'Custom Validators',
-        'Async Validators',
-        'save to localStorage',
-        'get from localStorage',
-        'Form Groups',
-        'Form Arrays',
-        'show error message',
-        'equal passwords',
-      ],
-      description:
-        'Basic project with 2 pages for working with REACTIVE forms and all their features',
-      img: `${this.templateUrl}/reactive-forms.jpg`,
-      gitHub: '',
-      site: '',
-      category: ['Template'],
-      date: '19 September 2024',
-    },
-    {
-      id: 4,
-      title: 'Driven Forms',
-      stack: ['Angular', 'Version 17+'],
-      features: [
-        'Login',
-        'Validators',
-        'save to localStorage',
-        'get from localStorage',
-      ],
-      description: 'Basic project for working with DRIVEN forms',
-      img: `${this.templateUrl}/driven-form.jpg`,
-      gitHub: '',
-      site: '',
-      category: ['Template'],
-      date: '14 September 2024',
     },
   ];
 }
