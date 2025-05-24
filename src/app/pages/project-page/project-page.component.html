@@ -1,5 +1,22 @@
 <div class="container">
   <div class="project__container">
+    <div class="nav-bar">
+      <div class="nav-dots">
+        <span
+          *ngFor="let p of projects; let i = index"
+          class="dot"
+          [class.active]="project.id == p.id"
+        ></span>
+      </div>
+      <div class="nav-arrows">
+        <button type="button" class="arrow" (click)="goToPrevProject()">
+          <img src="/assets/svg/arrow-left.svg" alt="left" />
+        </button>
+        <button type="button" class="arrow" (click)="goToNextProject()">
+          <img src="/assets/svg/arrow-right.svg" alt="right" />
+        </button>
+      </div>
+    </div>
     <article class="project__body">
       <div class="image">
         <a href="{{ project.site }}" class="image__image-ibg">
