@@ -1,7 +1,7 @@
 <app-tags></app-tags>
 
 <div class="items">
-  <article class="item" *ngFor="let project of projects">
+  <article class="item" *ngFor="let project of displayedProjects">
     <a routerLink="/project/{{ project.id }}" class="item__image-ibg">
       <img [src]="project.img" alt="{{ project.name }}" />
     </a>
@@ -21,6 +21,13 @@
       >
     </div>
   </article>
+</div>
+
+<div
+  class="show-more-wrapper"
+  *ngIf="displayedProjects.length < projects.length"
+>
+  <button class="show-more-btn" (click)="showMore()">Show more</button>
 </div>
 
 <!-- <div class="projects">
