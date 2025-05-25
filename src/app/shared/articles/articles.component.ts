@@ -5,6 +5,8 @@ import { TitleComponent } from '../title/title.component';
 import { ArticleItemComponent } from './article-item/article-item.component';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleTitleComponent } from './article-title/article-title.component';
+import { ArrowLeftComponent } from '../arrow-left/arrow-left.component';
+import { ArrowRightComponent } from '../arrow-right/arrow-right.component';
 
 @Component({
   selector: 'app-articles',
@@ -16,6 +18,8 @@ import { ArticleTitleComponent } from './article-title/article-title.component';
     ArticleListComponent,
     ArticleTitleComponent,
     NgIf,
+    ArrowLeftComponent,
+    ArrowRightComponent,
   ],
   templateUrl: './articles.component.html',
   styleUrl: './articles.component.scss',

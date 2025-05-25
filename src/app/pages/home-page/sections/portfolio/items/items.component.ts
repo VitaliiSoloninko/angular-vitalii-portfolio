@@ -15,7 +15,7 @@ import { TagsComponent } from '../../../../../shared/tags/tags.component';
 export class ItemsComponent {
   projects: Project[] = [];
   displayedProjects: Project[] = [];
-  showCount = 3;
+  showCount = 6;
 
   constructor(
     private projectService: ProjectService,

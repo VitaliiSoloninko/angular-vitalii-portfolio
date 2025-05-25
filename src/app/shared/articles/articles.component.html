@@ -3,25 +3,16 @@
 <app-article-list [articles]="displayedArticles" />
 
 <div class="pagination">
-  <button
-    *ngIf="currentPage > 1"
-    (click)="goToPage(currentPage - 1)"
-    class="pagination-button"
-  >
-    Previous
-  </button>
+  <app-arrow-left *ngIf="currentPage > 1" (click)="goToPage(currentPage - 1)" />
 
   <span class="pagination-info">
-    Page {{ currentPage }} of {{ totalPages }}
+    Seite {{ currentPage }} von {{ totalPages }}
   </span>
 
-  <button
+  <app-arrow-right
     *ngIf="currentPage < totalPages"
     (click)="goToPage(currentPage + 1)"
-    class="pagination-button"
-  >
-    Next
-  </button>
+  />
 </div>
 
 <!-- <app-article-title [title]="'Angular'" [subtitle]="'basic logic'" />

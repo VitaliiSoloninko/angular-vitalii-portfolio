@@ -1,0 +1,12 @@
+.arrow {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--purple-medium-color);
+  border-radius: 1rem;
+  transition: background-color 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--purple-hover-color);
+    }
+  }
+}

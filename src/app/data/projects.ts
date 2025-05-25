@@ -164,6 +164,8 @@ export const projects: Project[] = [
       'Routing',
       'Navigation',
       'Reactive forms',
+      'Pagination',
+      'Show more',
     ],
     pages: ['Homepage', 'Projektseite', 'Blogseite'],
   },
