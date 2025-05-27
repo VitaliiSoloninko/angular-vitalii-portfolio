@@ -35,7 +35,7 @@ export class ItemsComponent {
   }
 
   showMore() {
-    this.showCount += 3;
+    this.showCount += 6;
     this.displayedProjects = this.projects.slice(0, this.showCount);
   }
 }
