@@ -2,64 +2,13 @@
   <ul class="career__navigation navigation-career">
     <li
       class="navigation-career__title"
-      id="{{ tabs[0].id }}"
-      [class.tab-active]="selectedTab === 1"
-      (click)="selectTab(tabs[0].id)"
+      *ngFor="let tab of tabs"
+      [id]="tab.id"
+      [class.tab-active]="selectedTab === tab.id"
+      (click)="selectTab(tab.id)"
     >
       <div class="navigation-career__text">
-        <div>Seit 05/2022</div>
-      </div>
-      <div class="navigation-career__arrow">
-        <img src="assets/icons/arrow.svg" alt="l" />
-      </div>
-    </li>
-    <li
-      class="navigation-career__title"
-      id="{{ tabs[1].id }}"
-      [class.tab-active]="selectedTab === 2"
-      (click)="selectTab(tabs[1].id)"
-    >
-      <div class="navigation-career__text">
-        <div>01/2021 – 03/2022</div>
-      </div>
-      <div class="navigation-career__arrow">
-        <img src="assets/icons/arrow.svg" alt="l" />
-      </div>
-    </li>
-    <li
-      class="navigation-career__title"
-      id="{{ tabs[2].id }}"
-      [class.tab-active]="selectedTab === 3"
-      (click)="selectTab(tabs[2].id)"
-    >
-      <div class="navigation-career__text">
-        <div>04/2019 – 12/2020</div>
-      </div>
-      <div class="navigation-career__arrow">
-        <img src="assets/icons/arrow.svg" alt="l" />
-      </div>
-    </li>
-    <li
-      class="navigation-career__title"
-      id="{{ tabs[3].id }}"
-      [class.tab-active]="selectedTab === 4"
-      (click)="selectTab(tabs[3].id)"
-    >
-      <div class="navigation-career__text">
-        <div>09/2011 – 03/2019</div>
-      </div>
-      <div class="navigation-career__arrow">
-        <img src="assets/icons/arrow.svg" alt="l" />
-      </div>
-    </li>
-    <li
-      class="navigation-career__title"
-      id="{{ tabs[4].id }}"
-      [class.tab-active]="selectedTab === 5"
-      (click)="selectTab(tabs[4].id)"
-    >
-      <div class="navigation-career__text">
-        <div>09/2009 – 08/2011</div>
+        <div>{{ tab.period }}</div>
       </div>
       <div class="navigation-career__arrow">
         <img src="assets/icons/arrow.svg" alt="l" />
@@ -67,175 +16,36 @@
     </li>
   </ul>
   <div data-tabs-body class="career__content content-career">
-    @switch (selectedTab) { @case (tabs[0].id) {
-    <ng-container>
-      <div class="content-career__body">
-        <div class="content-career__header">
-          <div class="content-career__title">
-            Frontend Entwickler
-            <div class="content-career__link-title">
-              Freiberufler, Projekte - soloninko-portfolio.web.app
+    <ng-container *ngFor="let tab of tabs">
+      <ng-container *ngIf="selectedTab === tab.id">
+        <div class="content-career__body">
+          <div class="content-career__header">
+            <div class="content-career__title">
+              {{ tab.title }}
+              <div class="content-career__link-title">
+                {{ tab.linkTitle }}
+              </div>
+            </div>
+            <div class="content-career__location">{{ tab.location }}</div>
+            <div class="content-career__time">{{ tab.time }}</div>
+            <div class="content-career__categories">
+              <div class="category-link" *ngFor="let cat of tab.categories">
+                {{ cat }}
+              </div>
             </div>
           </div>
-          <div class="content-career__location">Schwerin, Deutschland</div>
-          <div class="content-career__time">Seit 05/2022</div>
-          <div class="content-career__categories">
-            <div class="category-link">Angular</div>
-            <div class="category-link">Type Script</div>
-            <div class="category-link">Java Script</div>
-            <div class="category-link">Nest.JS</div>
-            <div class="category-link">Express.js</div>
+          <div class="content-career__main">
+            <ul class="content-career__list list-content-career">
+              <li
+                class="list-content-career__item"
+                *ngFor="let item of tab.list"
+              >
+                {{ item }}
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="content-career__main">
-          <ul class="content-career__list list-content-career">
-            <li class="list-content-career__item">
-              Komplexe Frontend Projekte unterschiedlicher Komplexität
-            </li>
-            <li class="list-content-career__item">
-              Fullstack Projekte: Frontend - Angular, TypeScript Backend -
-              Nest.js, Express.js, REST-API Datenbanken - PostgreSQL, MongoDB.
-            </li>
-            <li class="list-content-career__item">
-              JavaScript-Projekte (Webpack, GULP)
-            </li>
-            <li class="list-content-career__item">
-              Landingpages JavaScript mit adaptivem Design (Responsive Web
-              Design, UX, UI)
-            </li>
-          </ul>
-        </div>
-      </div>
+      </ng-container>
     </ng-container>
-    }} @switch (selectedTab) { @case (tabs[1].id) {
-    <ng-container>
-      <div class="content-career__body">
-        <div class="content-career__header">
-          <div class="content-career__title">
-            Frontend Entwickler
-            <div class="content-career__link-title">
-              Bildungszentrum „Grand“
-            </div>
-          </div>
-          <div class="content-career__location">Riwne, Ukraine</div>
-          <div class="content-career__time">01/2021 – 03/2022</div>
-          <div class="content-career__categories">
-            <div class="category-link">Java Script</div>
-            <div class="category-link">UX/UI</div>
-            <div class="category-link">Design</div>
-            <div class="category-link">Web design</div>
-          </div>
-        </div>
-        <div class="content-career__main">
-          <ul class="content-career__list list-content-career">
-            <li class="list-content-career__item">
-              Entwicklung der Hauptwebsite des Unternehmens und interner
-              Websites für interne Zwecke
-            </li>
-            <li class="list-content-career__item">
-              Tests, Interaktive Anleitungen, Arbeiten mit Formularen,
-              Statistiken
-            </li>
-          </ul>
-        </div>
-      </div>
-    </ng-container>
-    }} @switch (selectedTab) { @case (tabs[2].id) {
-    <ng-container>
-      <div class="content-career__body">
-        <div class="content-career__header">
-          <div class="content-career__title">
-            Designer
-            <div class="content-career__link-title">
-              Bildungszentrum „Grand“
-            </div>
-          </div>
-          <div class="content-career__location">Riwne, Ukraine</div>
-          <div class="content-career__time">04/2019 – 12/2020</div>
-          <div class="content-career__categories">
-            <div class="category-link">Web design</div>
-            <div class="category-link">Design UX/UI</div>
-            <div class="category-link">Adobe Photoshop</div>
-            <div class="category-link">Adobe Illustrator</div>
-            <div class="category-link">Figma</div>
-          </div>
-        </div>
-        <div class="content-career__main">
-          <ul class="content-career__list list-content-career">
-            <li class="list-content-career__item">
-              Verantwortlich für den UX/UI-Design und der Lehrmaterialien.
-            </li>
-            <li class="list-content-career__item">
-              Zusammenarbeit mit der Programmierabteilung und Verantwortung für
-              den UX/UI-Teil aller Programme.
-            </li>
-            <li class="list-content-career__item">
-              Projektplanung in Jira (Kanban, Scrum)
-            </li>
-          </ul>
-        </div>
-      </div>
-    </ng-container>
-    }} @switch (selectedTab) { @case (tabs[3].id) {
-    <ng-container>
-      <div class="content-career__body">
-        <div class="content-career__header">
-          <div class="content-career__title">
-            IT-Entwickler und Lehrer für das Fach Informatik
-            <div class="content-career__link-title">
-              Bildungszentrum „Grand“
-            </div>
-          </div>
-          <div class="content-career__location">Riwne, Ukraine</div>
-          <div class="content-career__time">09/2011 – 03/2019</div>
-          <div class="content-career__categories">
-            <div class="category-link">Web design</div>
-            <div class="category-link">Design UX/UI</div>
-            <div class="category-link">Adobe Photoshop</div>
-            <div class="category-link">Adobe Illustrator</div>
-            <div class="category-link">Figma</div>
-          </div>
-        </div>
-        <div class="content-career__main">
-          <ul class="content-career__list list-content-career">
-            <li class="list-content-career__item">
-              Entwicklung neuer Lehrmaterialien mit dem Team Web design, Design,
-              UX/UI, MS Office - Gesamtpaket Grundlegende Programmierkurse
-            </li>
-            <li class="list-content-career__item">
-              Unterricht der Klassen 5 bis 11
-            </li>
-          </ul>
-        </div>
-      </div> </ng-container
-    >}} @switch (selectedTab) { @case (tabs[4].id) {
-    <ng-container>
-      <div class="content-career__body">
-        <div class="content-career__header">
-          <div class="content-career__title">
-            Lehrer für das Fach Informatik
-            <div class="content-career__link-title">
-              Bildungszentrum „Grand“
-            </div>
-          </div>
-          <div class="content-career__location">Riwne, Ukraine</div>
-          <div class="content-career__time">09/2009 – 08/2011</div>
-          <div class="content-career__categories">
-            <div class="category-link">Web design</div>
-            <div class="category-link">Design UX/UI</div>
-            <div class="category-link">Adobe Photoshop</div>
-            <div class="category-link">Adobe Illustrator</div>
-            <div class="category-link">Figma</div>
-          </div>
-        </div>
-        <div class="content-career__main">
-          <ul class="content-career__list list-content-career">
-            <li class="list-content-career__item">
-              Unterricht der Klassen 5 bis 11
-            </li>
-          </ul>
-        </div>
-      </div> </ng-container
-    >}}
   </div>
 </div>

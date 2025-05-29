@@ -1,32 +1,21 @@
+import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
+import { CareerTab } from '../../../../../data/carrer.model';
+import { CAREER_TABS } from '../../../../../data/carrers';
 
 @Component({
   selector: 'app-tabs',
   standalone: true,
-  imports: [],
+  imports: [NgFor, NgIf],
   templateUrl: './tabs.component.html',
   styleUrl: './tabs.component.scss',
 })
 export class TabsComponent {
-  tabs: any = [
-    {
-      id: 1,
-    },
-    {
-      id: 2,
-    },
-    {
-      id: 3,
-    },
-    {
-      id: 4,
-    },
-    {
-      id: 5,
-    },
-  ];
-  selectedTab: number = 1;
-  selectTab(tabId: number): void {
-    this.selectedTab = tabId;
+  tabs: CareerTab[] = CAREER_TABS;
+
+  selectedTab = this.tabs[0]?.id ?? 1;
+
+  selectTab(id: number) {
+    this.selectedTab = id;
   }
 }

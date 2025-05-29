@@ -111,7 +111,7 @@ export const projects: Project[] = [
     description: 'Eis Cafe in Schwerin',
     img: 'assets/portfolio/casablanca.jpg',
     gitHub: 'https://github.com/VitaliiSoloninko/angular-eiscafe-casablanca',
-    site: 'https://icecasablanca.web.app/',
+    site: 'https://eiscafe-casablanca.web.app/',
     category: 'Frontend',
     stack: ['Angular', 'TypeScript', 'SCSS', 'Lucide'],
     features: ['Routing', 'SVG sprites', 'Custom font', 'PWA'],
