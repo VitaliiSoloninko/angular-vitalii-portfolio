@@ -27,9 +27,8 @@ export class ProjectService {
   getAllProjectsByTag(tag: string): Project[] {
     return tag == 'All'
       ? this.getAll()
-      : this.getAll().filter((project) => project.stack.includes(tag));
+      : this.getAll().filter((project) => project.category.includes(tag));
   }
-
   getProjectById(projectId: string): Project {
     return (
       this.getAll().find((project) => project.id == projectId) ?? new Project()

@@ -55,18 +55,23 @@ $mobileSmall: 479.98px;
     &__text {
     }
     &__arrow {
-      transition: transform 0.3s;
+      transition: transform 0.3s, color 0.3s;
     }
 
     &.tab-active {
       color: #fff;
       background-color: var(--purple-color);
+
+      .navigation-career__title__arrow,
+      .navigation-career__arrow {
+        transform: rotate(90deg);
+      }
     }
   }
 }
 .content-career {
   // .content-career__body
-
+  display: flex;
   &__body {
     ._tab-spoller & {
       padding: 15px 0;

@@ -1,8 +1,8 @@
 import { Tag } from './tag.interface';
 
 export const tags: Tag[] = [
-  { name: 'Alle Projekte', count: 16, link: 'All' },
-  { name: 'Angular', count: 4, link: 'Angular' },
-  { name: 'JavaScript', count: 8, link: 'JavaScript' },
-  { name: 'Backend', count: 3, link: 'Backend' },
+  { name: 'Alle Projekte', link: 'All' },
+  { name: 'Frontend', link: 'Frontend' },
+  { name: 'Fullstack', link: 'Fullstack' },
+  { name: 'Backend', link: 'Backend' },
 ];

@@ -4,8 +4,8 @@ export const CAREER_TABS: CareerTab[] = [
   {
     id: 1,
     period: 'Seit 05/2022',
-    title: 'Frontend Entwickler',
-    linkTitle: 'Freiberufler, Projekte - soloninko-portfolio.web.app',
+    title: 'Selbständiger Frontend Entwickler',
+    linkTitle: 'Projekte/Portfolio - soloninko-portfolio.web.app',
     location: 'Schwerin, Deutschland',
     time: 'Seit 05/2022',
     categories: [

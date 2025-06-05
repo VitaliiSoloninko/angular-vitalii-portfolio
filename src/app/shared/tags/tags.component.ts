@@ -12,9 +12,22 @@ import { ProjectService } from '../../services/project.service';
   styleUrl: './tags.component.scss',
 })
 export class TagsComponent {
-  tags?: Tag[];
+  tagsWithCount?: Array<Tag & { count: number }> = [];
 
-  constructor(projectService: ProjectService) {
-    this.tags = projectService.getAllTags();
+  constructor(private projectService: ProjectService) {
+    const tags = this.projectService.getAllTags();
+    const projects = this.projectService.getAll();
+
+    this.tagsWithCount = tags.map((tag) => ({
+      ...tag,
+      count:
+        tag.link === 'All'
+          ? projects.length
+          : projects.filter((project) =>
+              Array.isArray(project.category)
+                ? project.category.includes(tag.link)
+                : project.category === tag.link
+            ).length,
+    }));
   }
 }

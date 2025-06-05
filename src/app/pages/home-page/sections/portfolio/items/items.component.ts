@@ -22,11 +22,7 @@ export class ItemsComponent {
     activatedRoute: ActivatedRoute
   ) {
     activatedRoute.params.subscribe((params) => {
-      if (params.searchTerm)
-        this.projects = this.projectService.getAllProjectsBySearchTerm(
-          params.searchTerm
-        );
-      else if (params.tag)
+      if (params.tag)
         this.projects = this.projectService.getAllProjectsByTag(params.tag);
       else this.projects = projectService.getAll();
 
