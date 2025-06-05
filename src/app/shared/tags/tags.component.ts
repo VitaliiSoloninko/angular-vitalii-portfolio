@@ -13,6 +13,7 @@ import { ProjectService } from '../../services/project.service';
 })
 export class TagsComponent {
   tagsWithCount?: Array<Tag & { count: number }> = [];
+  selectedTag: string = 'All';
 
   constructor(private projectService: ProjectService) {
     const tags = this.projectService.getAllTags();
@@ -29,5 +30,9 @@ export class TagsComponent {
                 : project.category === tag.link
             ).length,
     }));
+  }
+
+  selectTag(tagLink: string) {
+    this.selectedTag = tagLink;
   }
 }
