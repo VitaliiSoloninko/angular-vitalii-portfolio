@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IArticle } from '../../../../models/IArticle';
+import { IArticle } from '../../../data/article.model';
 
 @Component({
   selector: 'app-article-item',

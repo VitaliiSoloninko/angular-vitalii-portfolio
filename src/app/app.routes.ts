@@ -15,10 +15,10 @@ export const routes: Routes = [
   { path: 'skills', component: SkillsComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'blog', component: BlogPageComponent },
-  { path: 'project', component: ProjectPageComponent },
   { path: 'admin', component: AdminPageComponent },
 
   { path: 'search/:searchTerm', component: PortfolioComponent },
   { path: 'tag/:tag', component: PortfolioComponent },
   { path: 'project/:id', component: ProjectPageComponent },
+  { path: 'blog-article/:id', component: BlogPageComponent },
 ];
