@@ -1,28 +1,36 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Project } from '../../data/project.model';
-import { ProjectService } from '../../services/project.service';
+import { IArticle } from '../../data/article.model';
+import { ArticleService } from '../../services/article.service';
 
 @Component({
   selector: 'app-blog-article-page',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './blog-article-page.component.html',
   styleUrl: './blog-article-page.component.scss',
 })
 export class BlogArticlePageComponent {
-  project!: Project;
-  projects: Project[] = [];
+  article!: IArticle;
+  articles: IArticle[] = [];
 
   constructor(
     activatedRoute: ActivatedRoute,
     private router: Router,
-    private projectService: ProjectService
+    private articleService: ArticleService
   ) {
-    this.projects = this.projectService.getAll();
+    this.articles = this.articleService.getAll();
     activatedRoute.params.subscribe((params) => {
-      if (params.id)
-        this.project = this.projectService.getProjectById(params.id);
+      if (params.id) {
+        const foundArticle = this.articleService.getArticleById(params.id);
+        if (foundArticle) {
+          this.article = foundArticle;
+        } else {
+          // Handle not found case, e.g., navigate away or set a default value
+          // this.router.navigate(['/not-found']);
+        }
+      }
     });
   }
 }

@@ -1,1 +1,72 @@
-<p>blog-article-page works!</p>
+<div class="container">
+  <div class="article__container">
+    <article class="article__body">
+      <div class="image">
+        <a href="{{ article.site }}" class="image__image-ibg">
+          <img [src]="article.img" alt="{{ article.title }}" />
+        </a>
+        <div class="image__body">
+          <h4 class="image__title title">
+            <div class="image__site-title">
+              {{ article.title }}
+            </div>
+            <div class="description">{{ article.description }}</div>
+          </h4>
+          <div class="content__category">{{ article.category }}</div>
+        </div>
+        <div class="button-blocks">
+          <div class="button-block">
+            <a href="{{ article.gitHub }}" class="button button-dark">
+              <img src="assets/svg/github.svg" alt="GitHub" />
+              <span>GitHub</span>
+            </a>
+          </div>
+          <div class="button-block">
+            <a href="{{ article.site }}" class="button">
+              <img src="assets/svg/link.svg" alt="Link" />
+              <span>View site</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="content__block">
+          <div class="content__title">
+            <div class="content__title-icon">
+              <img src="assets/svg/stack.svg" alt="Stack" />
+            </div>
+            <div class="content__title-text">STACK</div>
+          </div>
+          <div class="items">
+            <div class="content__skill" *ngFor="let skill of article.stack">
+              {{ skill }}
+            </div>
+          </div>
+        </div>
+
+        <div class="content__block">
+          <div class="content__title">
+            <div class="content__title-icon">
+              <img src="assets/svg/component.svg" alt="FEATURES" />
+            </div>
+            <div class="content__title-text">FEATURES</div>
+          </div>
+          <div class="items">
+            <div
+              class="content__feature"
+              *ngFor="let feature of article.features"
+            >
+              <div class="feature-mark">
+                <img src="assets/mark.svg" alt="mark" />
+              </div>
+              <div class="feature-text">
+                {{ feature }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>

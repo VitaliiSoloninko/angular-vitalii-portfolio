@@ -14,6 +14,12 @@ export class ProjectService {
     return projects;
   }
 
+  getProjectById(projectId: string): Project {
+    return (
+      this.getAll().find((project) => project.id == projectId) ?? new Project()
+    );
+  }
+
   getAllProjectsBySearchTerm(searchTerm: string) {
     return this.getAll().filter((project) =>
       project.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -28,10 +34,5 @@ export class ProjectService {
     return tag == 'All'
       ? this.getAll()
       : this.getAll().filter((project) => project.category.includes(tag));
-  }
-  getProjectById(projectId: string): Project {
-    return (
-      this.getAll().find((project) => project.id == projectId) ?? new Project()
-    );
   }
 }

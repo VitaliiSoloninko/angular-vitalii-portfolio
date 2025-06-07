@@ -1,5 +1,5 @@
 export interface IArticle {
-  id: number;
+  id: number | undefined;
   title: string;
   stack: string[];
   features: string[];

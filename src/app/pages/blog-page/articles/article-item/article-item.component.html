@@ -1,5 +1,5 @@
 <article class="article-item">
-  <a href="" class="image">
+  <a routerLink="/blog-article/{{ article.id }}" class="image">
     <img [src]="article.img" alt="{{ article.title }}" />
   </a>
   <div class="body">
@@ -8,6 +8,8 @@
     </strong>
     <div class="date">{{ article.date }}</div>
     <div class="text">{{ article.description }}</div>
-    <button class="btn btn-dark button">Weiterlesen</button>
+    <a routerLink="/blog-article/{{ article.id }}">
+      <button class="btn btn-dark button">Weiterlesen</button>
+    </a>
   </div>
 </article>

@@ -7,6 +7,7 @@ import { ExperienceComponent } from './pages/home-page/sections/experience/exper
 import { PortfolioComponent } from './pages/home-page/sections/portfolio/portfolio.component';
 import { SkillsComponent } from './pages/home-page/sections/skills/skills.component';
 import { ProjectPageComponent } from './pages/project-page/project-page.component';
+import { BlogArticlePageComponent } from './pages/blog-article-page/blog-article-page.component';
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -20,5 +21,5 @@ export const routes: Routes = [
   { path: 'search/:searchTerm', component: PortfolioComponent },
   { path: 'tag/:tag', component: PortfolioComponent },
   { path: 'project/:id', component: ProjectPageComponent },
-  { path: 'blog-article/:id', component: BlogPageComponent },
+  { path: 'blog-article/:id', component: BlogArticlePageComponent },
 ];

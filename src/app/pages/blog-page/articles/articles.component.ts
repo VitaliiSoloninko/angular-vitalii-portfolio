@@ -1,10 +1,10 @@
 import { CommonModule, NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { IArticle } from '../../data/article.model';
-import { ArticleService } from '../../services/article.service';
-import { ArrowLeftComponent } from '../arrow-left/arrow-left.component';
-import { ArrowRightComponent } from '../arrow-right/arrow-right.component';
-import { TitleComponent } from '../title/title.component';
+import { IArticle } from '../../../data/article.model';
+import { ArticleService } from '../../../services/article.service';
+import { ArrowLeftComponent } from '../../../shared/arrow-left/arrow-left.component';
+import { ArrowRightComponent } from '../../../shared/arrow-right/arrow-right.component';
+import { TitleComponent } from '../../../shared/title/title.component';
 import { ArticleItemComponent } from './article-item/article-item.component';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleTitleComponent } from './article-title/article-title.component';

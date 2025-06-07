@@ -11,4 +11,8 @@ export class ArticleService {
   getAll(): IArticle[] {
     return articles;
   }
+
+  getArticleById(articleId: number): IArticle | undefined {
+    return this.getAll().find((article) => article.id == articleId);
+  }
 }
