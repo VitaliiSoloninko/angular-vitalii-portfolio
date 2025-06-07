@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { IArticle } from '../../../../data/article.model';
+import { IArticle } from '../../../../models/article.model';
 import { ArticleService } from '../../../../services/article.service';
 
 @Component({

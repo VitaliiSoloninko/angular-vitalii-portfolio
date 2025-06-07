@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IArticle } from '../../data/article.model';
+import { IArticle } from '../../models/article.model';
 import { ArticleService } from '../../services/article.service';
 
 @Component({

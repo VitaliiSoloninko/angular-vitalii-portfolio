@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Project } from '../data/project.model';
 import { projects } from '../data/projects';
-import { Tag } from '../data/tag.interface';
 import { tags } from '../data/tags';
+import { Project } from '../models/project.model';
+import { Tag } from '../models/tag.interface';
 
 @Injectable({
   providedIn: 'root',

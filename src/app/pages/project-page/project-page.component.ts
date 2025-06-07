@@ -1,7 +1,7 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { Project } from '../../data/project.model';
+import { Project } from '../../models/project.model';
 import { ProjectService } from '../../services/project.service';
 import { PageItemsComponent } from '../../shared/page-items/page-items.component';
 

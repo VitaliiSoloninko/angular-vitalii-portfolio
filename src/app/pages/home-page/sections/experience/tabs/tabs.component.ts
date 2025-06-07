@@ -1,7 +1,7 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { CareerTab } from '../../../../../data/carrer.model';
 import { CAREER_TABS } from '../../../../../data/carrers';
+import { CareerTab } from '../../../../../models/carrer.model';
 
 @Component({
   selector: 'app-tabs',

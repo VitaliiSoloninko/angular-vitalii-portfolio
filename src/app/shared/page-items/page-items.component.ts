@@ -1,8 +1,8 @@
+import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Project } from '../../data/project.model';
+import { Project } from '../../models/project.model';
 import { ProjectService } from '../../services/project.service';
-import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-page-items',

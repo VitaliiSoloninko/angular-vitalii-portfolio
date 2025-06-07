@@ -1,7 +1,7 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Tag } from '../../data/tag.interface';
+import { Tag } from '../../models/tag.interface';
 import { ProjectService } from '../../services/project.service';
 
 @Component({

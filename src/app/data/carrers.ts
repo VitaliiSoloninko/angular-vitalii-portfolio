@@ -1,4 +1,4 @@
-import { CareerTab } from './carrer.model';
+import { CareerTab } from '../models/carrer.model';
 
 export const CAREER_TABS: CareerTab[] = [
   {

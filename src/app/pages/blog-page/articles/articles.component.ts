@@ -1,6 +1,6 @@
 import { CommonModule, NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { IArticle } from '../../../data/article.model';
+import { IArticle } from '../../../models/article.model';
 import { ArticleService } from '../../../services/article.service';
 import { ArrowLeftComponent } from '../../../shared/arrow-left/arrow-left.component';
 import { ArrowRightComponent } from '../../../shared/arrow-right/arrow-right.component';
