@@ -1,9 +1,9 @@
 <div class="nav-bar">
   <div class="nav-dots">
     <span
-      *ngFor="let p of projects; let i = index"
+      *ngFor="let item of items; let i = index"
       class="dot"
-      [class.active]="project.id == p.id"
+      [class.active]="activeItem?.id == item.id"
     ></span>
   </div>
   <div class="nav-arrows">

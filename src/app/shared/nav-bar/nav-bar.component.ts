@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Project } from '../../models/project.model';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,13 +9,20 @@ import { Project } from '../../models/project.model';
   styleUrl: './nav-bar.component.scss',
 })
 export class NavBarComponent {
-  @Input() projects: Project[] = [];
-  @Input() project!: Project;
+  @Input() projects: any[] = [];
+  @Input() project!: any;
   @Input() articles: any[] = [];
-  @Input() article: any;
+  @Input() article!: any;
 
   @Output() prev = new EventEmitter<void>();
   @Output() next = new EventEmitter<void>();
+
+  get items() {
+    return this.projects.length ? this.projects : this.articles;
+  }
+  get activeItem() {
+    return this.projects.length ? this.project : this.article;
+  }
 
   onPrev() {
     this.prev.emit();

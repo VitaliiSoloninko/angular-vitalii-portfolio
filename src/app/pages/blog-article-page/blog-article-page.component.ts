@@ -35,19 +35,19 @@ export class BlogArticlePageComponent {
     });
   }
 
-  goToPrevProject() {
+  navigateTo(direction: number) {
     const currentId = Number(this.article.id);
     const ids = this.articles.map((p) => Number(p.id));
     const idx = ids.indexOf(currentId);
-    const prevIdx = (idx - 1 + ids.length) % ids.length;
+    const prevIdx = (idx + direction + ids.length) % ids.length;
     this.router.navigate(['/blog-article', ids[prevIdx]]);
   }
 
-  goToNextProject() {
-    const currentId = Number(this.article.id);
-    const ids = this.articles.map((p) => Number(p.id));
-    const idx = ids.indexOf(currentId);
-    const nextIdx = (idx + 1) % ids.length;
-    this.router.navigate(['/blog-article', ids[nextIdx]]);
+  goToPrev() {
+    this.navigateTo(-1);
+  }
+
+  goToNext() {
+    this.navigateTo(1);
   }
 }

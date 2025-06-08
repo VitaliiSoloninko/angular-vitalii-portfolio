@@ -4,8 +4,8 @@
       *ngIf="projects?.length && project"
       [projects]="projects"
       [project]="project"
-      (prev)="goToPrevProject()"
-      (next)="goToNextProject()"
+      (prev)="goToPrev()"
+      (next)="goToNext()"
     ></app-nav-bar>
 
     <article class="project__body">
