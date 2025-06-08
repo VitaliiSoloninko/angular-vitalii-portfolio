@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IArticle } from '../../models/article.model';
 import { ArticleService } from '../../services/article.service';
+import { NavBarComponent } from '../../shared/nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-blog-article-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NavBarComponent],
   templateUrl: './blog-article-page.component.html',
   styleUrl: './blog-article-page.component.scss',
 })
@@ -32,5 +33,21 @@ export class BlogArticlePageComponent {
         }
       }
     });
+  }
+
+  goToPrevProject() {
+    const currentId = Number(this.article.id);
+    const ids = this.articles.map((p) => Number(p.id));
+    const idx = ids.indexOf(currentId);
+    const prevIdx = (idx - 1 + ids.length) % ids.length;
+    this.router.navigate(['/blog-article', ids[prevIdx]]);
+  }
+
+  goToNextProject() {
+    const currentId = Number(this.article.id);
+    const ids = this.articles.map((p) => Number(p.id));
+    const idx = ids.indexOf(currentId);
+    const nextIdx = (idx + 1) % ids.length;
+    this.router.navigate(['/blog-article', ids[nextIdx]]);
   }
 }
