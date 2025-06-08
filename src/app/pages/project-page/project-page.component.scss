@@ -2,56 +2,6 @@ $tablet: 991.98px;
 $mobile: 767.98px;
 $mobileSmall: 479.98px;
 
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-
-.nav-dots {
-  display: flex;
-  gap: 0.6rem;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.dot {
-  width: 0.8rem;
-  height: 0.8rem;
-  border-radius: 50%;
-  background: var(--grey-light-color);
-  transition: all 0.3s ease 0s;
-  display: inline-block;
-}
-
-.dot.active {
-  background: var(--purple-color);
-  width: 1.3rem;
-  border-radius: 0.6rem;
-}
-
-.nav-arrows {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.arrow {
-  width: 2.5rem;
-  height: 2.5rem;
-  background-color: var(--purple-medium-color);
-  border-radius: 1rem;
-  transition: background-color 0.3s ease 0s;
-  @media (any-hover: hover) {
-    &:hover {
-      background-color: var(--purple-hover-color);
-    }
-  }
-}
-
 /* Project Page Styles */
 
 .container {

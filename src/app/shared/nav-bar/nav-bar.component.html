@@ -1,0 +1,17 @@
+<div class="nav-bar">
+  <div class="nav-dots">
+    <span
+      *ngFor="let p of projects; let i = index"
+      class="dot"
+      [class.active]="project.id == p.id"
+    ></span>
+  </div>
+  <div class="nav-arrows">
+    <button type="button" class="arrow" (click)="onPrev()">
+      <img src="/assets/svg/arrow-left.svg" alt="left" />
+    </button>
+    <button type="button" class="arrow" (click)="onNext()">
+      <img src="/assets/svg/arrow-right.svg" alt="right" />
+    </button>
+  </div>
+</div>

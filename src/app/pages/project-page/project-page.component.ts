@@ -1,14 +1,15 @@
-import { NgFor } from '@angular/common';
+import { CommonModule, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Project } from '../../models/project.model';
 import { ProjectService } from '../../services/project.service';
+import { NavBarComponent } from '../../shared/nav-bar/nav-bar.component';
 import { PageItemsComponent } from '../../shared/page-items/page-items.component';
 
 @Component({
   selector: 'app-project-page',
   standalone: true,
-  imports: [NgFor, RouterLink, PageItemsComponent],
+  imports: [PageItemsComponent, NavBarComponent, CommonModule],
   templateUrl: './project-page.component.html',
   styleUrl: './project-page.component.scss',
 })
