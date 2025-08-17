@@ -1,0 +1,221 @@
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+/* Project Page Styles */
+
+.container {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  @media (max-width: $mobile) {
+    padding-top: 90px;
+    padding-bottom: 30px;
+  }
+}
+
+.project__body {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.image {
+  border: 1px solid var(--grey-light-color);
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__image-ibg {
+    overflow: hidden;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    transition: opacity 0.8s ease 0s;
+    img {
+      max-width: 800px;
+      width: 100%;
+      object-position: top;
+      transition: transform 0.8s ease 0s;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 1;
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+    @media (any-hover: none) {
+      opacity: 1;
+    }
+  }
+
+  &__body {
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__site-title {
+    text-transform: uppercase;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  @media (max-width: $mobile) {
+    font-size: 1.1rem;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 16px 20px;
+    border: 1px solid var(--grey-light-color);
+    border-radius: 8px;
+  }
+
+  &__title {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    color: #232e35;
+    line-height: 1.1;
+    font-size: 1.2rem;
+    font-weight: 500;
+    @media (max-width: $mobile) {
+      font-size: 1.1rem;
+    }
+  }
+
+  .items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__skill {
+    border: solid 1px #232e35;
+    border-radius: 0.3rem;
+    font-size: 14px;
+    padding: 0.3rem 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--purple-color);
+        color: var(--white-color);
+        border: solid 1px var(--purple-color);
+      }
+    }
+  }
+  &__category {
+    background-color: var(--purple-light-color);
+    border-radius: 0.3rem;
+    font-size: 16px;
+    padding: 0.3rem 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  &__feature {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: medium;
+    line-height: 1.2;
+  }
+}
+
+.feature-mark {
+  background-color: var(--purple-color);
+  display: flex;
+  height: 26px;
+  width: 26px;
+  flex: 0 0 26px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  opacity: 0.8;
+  transition: all 0.4s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.button {
+  background-color: var(--purple-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  height: 46px;
+  width: 90%;
+  border-radius: 8px;
+  color: var(--white-color);
+  transition: background-color 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--purple-hover-color);
+    }
+  }
+}
+
+.button-blocks {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 16px;
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: $mobile) {
+    grid-template-columns: auto;
+  }
+}
+
+.button-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.button-dark {
+  background-color: var(--grey-color);
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--main-color);
+    }
+  }
+}

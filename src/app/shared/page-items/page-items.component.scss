@@ -1,0 +1,32 @@
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+.page-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+  row-gap: 0.8rem;
+  margin-bottom: 1.3rem;
+  @media (max-width: $mobile) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.page-item {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.1);
+  padding: 10px 16px;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: rgb(0, 0, 0, 0.2);
+  }
+}

@@ -14,24 +14,24 @@ export class HeaderComponent {
 
   menuItems = [
     {
-      name: 'About me',
-      link: '#',
+      name: 'Startseite',
+      link: '',
     },
     {
       name: 'Portfolio',
-      link: '#',
+      link: 'portfolio',
     },
     {
-      name: 'Experience',
-      link: '#',
+      name: 'Berufserfahrung',
+      link: 'experience',
     },
     {
-      name: 'Skills',
-      link: '#',
+      name: 'Fähigkeiten',
+      link: 'skills',
     },
     {
-      name: 'Contacts',
-      link: '#',
+      name: 'Blog',
+      link: '/blog',
     },
   ];
 }

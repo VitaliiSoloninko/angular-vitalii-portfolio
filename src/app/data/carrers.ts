@@ -1,0 +1,93 @@
+import { CareerTab } from '../models/carrer.model';
+
+export const CAREER_TABS: CareerTab[] = [
+  {
+    id: 1,
+    period: 'Seit 05/2022',
+    title: 'Selbständiger Frontend Entwickler',
+    linkTitle: 'Projekte/Portfolio - soloninko-portfolio.web.app',
+    location: 'Schwerin, Deutschland',
+    time: 'Seit 05/2022',
+    categories: [
+      'Angular',
+      'Type Script',
+      'Java Script',
+      'Nest.JS',
+      'Express.js',
+    ],
+    list: [
+      'Komplexe Frontend Projekte unterschiedlicher Komplexität',
+      'Fullstack Projekte: Frontend - Angular, TypeScript Backend - Nest.js, Express.js, REST-API Datenbanken - PostgreSQL, MongoDB.',
+      'JavaScript-Projekte (Webpack, GULP)',
+      'Landingpages JavaScript mit adaptivem Design (Responsive Web Design, UX, UI)',
+    ],
+  },
+  {
+    id: 2,
+    period: '01/2021 – 03/2022',
+    title: 'Frontend Entwickler',
+    linkTitle: 'Bildungszentrum „Grand“',
+    location: 'Riwne, Ukraine',
+    time: '01/2021 – 03/2022',
+    categories: ['Java Script', 'UX/UI', 'Design', 'Web design'],
+    list: [
+      'Entwicklung der Hauptwebsite des Unternehmens und interner Websites für interne Zwecke',
+      'Tests, Interaktive Anleitungen, Arbeiten mit Formularen, Statistiken',
+    ],
+  },
+  {
+    id: 3,
+    period: '04/2019 – 12/2020',
+    title: 'Designer',
+    linkTitle: 'Bildungszentrum „Grand“',
+    location: 'Riwne, Ukraine',
+    time: '04/2019 – 12/2020',
+    categories: [
+      'Web design',
+      'Design UX/UI',
+      'Adobe Photoshop',
+      'Adobe Illustrator',
+      'Figma',
+    ],
+    list: [
+      'Verantwortlich für den UX/UI-Design und der Lehrmaterialien.',
+      'Zusammenarbeit mit der Programmierabteilung und Verantwortung für den UX/UI-Teil aller Programme.',
+      'Projektplanung in Jira (Kanban, Scrum)',
+    ],
+  },
+  {
+    id: 4,
+    period: '09/2011 – 03/2019',
+    title: 'IT-Entwickler und Lehrer für das Fach Informatik',
+    linkTitle: 'Bildungszentrum „Grand“',
+    location: 'Riwne, Ukraine',
+    time: '09/2011 – 03/2019',
+    categories: [
+      'Web design',
+      'Design UX/UI',
+      'Adobe Photoshop',
+      'Adobe Illustrator',
+      'Figma',
+    ],
+    list: [
+      'Entwicklung neuer Lehrmaterialien mit dem Team Web design, Design, UX/UI, MS Office - Gesamtpaket Grundlegende Programmierkurse',
+      'Unterricht der Klassen 5 bis 11',
+    ],
+  },
+  {
+    id: 5,
+    period: '09/2009 – 08/2011',
+    title: 'Lehrer für das Fach Informatik',
+    linkTitle: 'Bildungszentrum „Grand“',
+    location: 'Riwne, Ukraine',
+    time: '09/2009 – 08/2011',
+    categories: [
+      'Web design',
+      'Design UX/UI',
+      'Adobe Photoshop',
+      'Adobe Illustrator',
+      'Figma',
+    ],
+    list: ['Unterricht der Klassen 5 bis 11'],
+  },
+];

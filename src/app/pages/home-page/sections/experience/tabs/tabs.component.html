@@ -1,0 +1,51 @@
+<div class="career__body">
+  <ul class="career__navigation navigation-career">
+    <li
+      class="navigation-career__title"
+      *ngFor="let tab of tabs"
+      [id]="tab.id"
+      [class.tab-active]="selectedTab === tab.id"
+      (click)="selectTab(tab.id)"
+    >
+      <div class="navigation-career__text">
+        <div>{{ tab.period }}</div>
+      </div>
+      <div class="navigation-career__arrow">
+        <img src="assets/icons/arrow.svg" alt="l" />
+      </div>
+    </li>
+  </ul>
+  <div data-tabs-body class="career__content content-career">
+    <ng-container *ngFor="let tab of tabs">
+      <ng-container *ngIf="selectedTab === tab.id">
+        <div class="content-career__body">
+          <div class="content-career__header">
+            <div class="content-career__title">
+              {{ tab.title }}
+              <div class="content-career__link-title">
+                {{ tab.linkTitle }}
+              </div>
+            </div>
+            <div class="content-career__location">{{ tab.location }}</div>
+            <div class="content-career__time">{{ tab.time }}</div>
+            <div class="content-career__categories">
+              <div class="category-link" *ngFor="let cat of tab.categories">
+                {{ cat }}
+              </div>
+            </div>
+          </div>
+          <div class="content-career__main">
+            <ul class="content-career__list list-content-career">
+              <li
+                class="list-content-career__item"
+                *ngFor="let item of tab.list"
+              >
+                {{ item }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

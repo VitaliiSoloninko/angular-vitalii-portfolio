@@ -1,0 +1,66 @@
+<section class="skills">
+  <div class="skills__container">
+    <div class="skills__body">
+      <div class="skills__education">
+        <div class="skills__title title">
+          <h2 class="title__value">Studium</h2>
+        </div>
+
+        <div class="title__label">Universität</div>
+        <div class="skills__timeline timeline">
+          <div class="timeline__item" *ngFor="let item of education">
+            <div class="timeline__content">
+              <div class="timeline__date">{{ item.year }}</div>
+              <div class="timeline__level">{{ item.level }}</div>
+            </div>
+            <div class="timeline__institution">
+              {{ item.institution }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skills__content content-skills">
+        <div class="skills__title title">
+          <h2 class="title__value">Fähigkeiten</h2>
+        </div>
+        <div class="title__label">Frontend Fähigkeiten</div>
+        <div class="content-skills__items">
+          <div
+            class="content-skills__item"
+            *ngFor="let skill of frontendSkills"
+          >
+            <div class="content-skills__label content-skills__label--purple">
+              {{ skill }}
+            </div>
+            <div
+              class="content-skills__line content-skills__line--purple"
+            ></div>
+          </div>
+          <div
+            class="content-skills__item"
+            *ngFor="let skill of additionalSkills"
+          >
+            <div class="content-skills__label">{{ skill }}</div>
+            <div class="content-skills__line"></div>
+          </div>
+        </div>
+        <div class="title__label">Backend Fähigkeiten</div>
+        <div class="content-skills__padding">
+          <div class="content-skills__items">
+            <div
+              class="content-skills__item"
+              *ngFor="let skill of backendSkills"
+            >
+              <div class="content-skills__label content-skills__label--dark">
+                {{ skill }}
+              </div>
+              <div
+                class="content-skills__line content-skills__line--dark"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

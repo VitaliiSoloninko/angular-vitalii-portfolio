@@ -8,8 +8,8 @@ $mobileSmall: 479.98px;
   top: 0;
   left: 0;
   z-index: 100;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
   padding-left: 1rem;
   padding-right: 1rem;
   background-color: rgba(230, 230, 230, 0.75);
@@ -20,11 +20,11 @@ $mobileSmall: 479.98px;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    min-height: 80px;
-    @media (max-width: 991.98px) {
-      min-height: 60px;
+    padding: 4px 0;
+    height: 70px;
+    @media (max-width: $mobile) {
+      height: 60px;
+      padding: 4px 0;
     }
   }
 
@@ -46,7 +46,7 @@ $mobileSmall: 479.98px;
     border-radius: 8px;
     font-weight: 500;
     font-size: 14px;
-    padding: 15px 24px;
+    padding: 14px 24px;
     transition: all 0.3s ease 0s;
     @media (any-hover: hover) {
       &:hover {
@@ -76,21 +76,22 @@ $mobileSmall: 479.98px;
   &__icon {
   }
 
-  // .menu__body
+  // .menu__body // mobile
   &__body {
     @media (max-width: $mobile) {
       position: fixed;
       display: flex;
       justify-content: end;
       align-items: center;
-      top: 0;
+      bottom: 0;
       right: -100%;
-      width: 70%;
-      height: 100%;
+      width: 60%;
+      height: calc(100% - 66px);
       overflow: auto;
       transition: all 0.3s ease 0s;
-      background-color: var(--purple-color);
+      background-color: rgb(126, 116, 241, 0.8);
       padding: 90px 15px 15px 15px;
+      border-radius: 1rem 0 0 1rem;
       &::before {
         content: "";
         position: fixed;
@@ -99,7 +100,6 @@ $mobileSmall: 479.98px;
         transition: all 0.4s ease 0s;
         width: 100%;
         height: 67px;
-        background-color: var(--purple-medium-color);
         z-index: 2;
       }
       .menu-open & {
@@ -146,7 +146,7 @@ $mobileSmall: 479.98px;
     }
     @media (max-width: $mobile) {
       color: var(--white-color);
-      font-size: 32px;
+      font-size: 28px;
     }
     &._navigator-active {
       text-decoration: underline;
@@ -158,8 +158,8 @@ $mobileSmall: 479.98px;
 .icon-menu {
   display: none;
   @media (max-width: $mobile) {
-    display: block;
     position: relative;
+    display: block;
     width: 30px;
     height: 18px;
     flex: 0 0 30px;

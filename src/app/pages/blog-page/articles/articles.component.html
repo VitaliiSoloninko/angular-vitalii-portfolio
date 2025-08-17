@@ -1,0 +1,16 @@
+<app-article-title title="Blog" subtitle="My Angular templates" />
+
+<app-article-list [articles]="displayedArticles" />
+
+<div class="pagination">
+  <app-arrow-left *ngIf="currentPage > 1" (click)="goToPage(currentPage - 1)" />
+
+  <span class="pagination-info">
+    Seite {{ currentPage }} von {{ totalPages }}
+  </span>
+
+  <app-arrow-right
+    *ngIf="currentPage < totalPages"
+    (click)="goToPage(currentPage + 1)"
+  />
+</div>
