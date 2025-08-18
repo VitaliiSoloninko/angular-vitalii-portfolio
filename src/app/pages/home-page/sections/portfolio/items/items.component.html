@@ -1,7 +1,8 @@
 <app-tags (tagSelected)="onTagSelected($event)"></app-tags>
 
 <div class="items">
-  <article class="item" *ngFor="let project of displayedProjects">
+  @for (project of displayedProjects; track $index) {
+  <article class="item">
     <a routerLink="/project/{{ project.id }}" class="item__image-ibg">
       <img [src]="project.img" alt="{{ project.name }}" />
     </a>
@@ -14,18 +15,16 @@
       <div class="item__fullstack">{{ project.category }}</div>
     </div>
     <div class="item__footer">
-      <span
-        *ngFor="let skill of project.stack"
-        class="item__category category-link"
-        >{{ skill }}</span
-      >
+      @for (skill of project.stack; track skill) {
+      <span class="item__category category-link">{{ skill }}</span>
+      }
     </div>
   </article>
+  }
 </div>
 
-<div
-  class="show-more-wrapper"
-  *ngIf="displayedProjects.length < filteredProjects.length"
->
+@if (displayedProjects.length < filteredProjects.length) {
+<div class="show-more-wrapper">
   <button class="btn" (click)="showMore()">Mehr anzeigen</button>
 </div>
+}

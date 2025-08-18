@@ -1,4 +1,3 @@
-import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Project } from '../../../../../models/project.model';
@@ -8,7 +7,7 @@ import { TagsComponent } from '../../../../../shared/tags/tags.component';
 @Component({
   selector: 'app-items',
   standalone: true,
-  imports: [NgFor, NgIf, RouterLink, TagsComponent],
+  imports: [RouterLink, TagsComponent],
   templateUrl: './items.component.html',
   styleUrl: './items.component.scss',
 })
