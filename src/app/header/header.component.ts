@@ -17,7 +17,7 @@ export class HeaderComponent {
 
   menuItems = [
     {
-      name: 'Startseite',
+      name: 'Über mich',
       link: '#about',
     },
     {
