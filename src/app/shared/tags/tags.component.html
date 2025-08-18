@@ -2,7 +2,6 @@
   <a
     class="tag"
     *ngFor="let tag of tagsWithCount"
-    routerLink="/tag/{{ tag.link }}"
     [class.active]="selectedTag === tag.link"
     (click)="selectTag(tag.link)"
   >

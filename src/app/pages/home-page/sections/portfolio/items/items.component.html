@@ -1,4 +1,4 @@
-<app-tags></app-tags>
+<app-tags (tagSelected)="onTagSelected($event)"></app-tags>
 
 <div class="items">
   <article class="item" *ngFor="let project of displayedProjects">
@@ -25,27 +25,7 @@
 
 <div
   class="show-more-wrapper"
-  *ngIf="displayedProjects.length < projects.length"
+  *ngIf="displayedProjects.length < filteredProjects.length"
 >
   <button class="btn" (click)="showMore()">Mehr anzeigen</button>
 </div>
-
-<!-- <div class="projects">
-  <div class="item mb16" *ngFor="let project of projects">
-    <div class="bold">PROJEKTNAME: {{ project.name }}</div>
-    <div>
-      BESCHREIBUNG: <span>{{ project.description }}</span>
-    </div>
-    <div>KATEGORIE: {{ project.category }}</div>
-    <div>
-      STAPEL:
-      <span *ngFor="let skill of project.stack">• {{ skill }} </span>
-    </div>
-    <div>
-      MERKMALE:
-      <span *ngFor="let feature of project.features">• {{ feature }} </span>
-    </div>
-    <div>WEBSEITE: {{ project.site }}</div>
-    <div>GITHUB: {{ project.gitHub }}</div>
-  </div>
-</div> -->

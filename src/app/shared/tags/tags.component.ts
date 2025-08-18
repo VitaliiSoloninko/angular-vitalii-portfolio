@@ -1,5 +1,5 @@
 import { NgFor, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Tag } from '../../models/tag.interface';
 import { ProjectService } from '../../services/project.service';
@@ -7,11 +7,13 @@ import { ProjectService } from '../../services/project.service';
 @Component({
   selector: 'app-tags',
   standalone: true,
-  imports: [NgIf, NgFor, RouterLink],
+  imports: [NgIf, NgFor],
   templateUrl: './tags.component.html',
   styleUrl: './tags.component.scss',
 })
 export class TagsComponent {
+  @Output() tagSelected = new EventEmitter<string>();
+
   tagsWithCount?: Array<Tag & { count: number }> = [];
   selectedTag: string = 'All';
 
@@ -34,5 +36,6 @@ export class TagsComponent {
 
   selectTag(tagLink: string) {
     this.selectedTag = tagLink;
+    this.tagSelected.emit(tagLink);
   }
 }
