@@ -5,9 +5,12 @@
       <nav class="menu__body">
         <ul class="menu__list">
           <li class="menu__item" *ngFor="let menuItem of menuItems">
-            <a routerLink="{{ menuItem.link }}" class="menu__link">{{
-              menuItem.name
-            }}</a>
+            <a
+              href="{{ menuItem.link }}"
+              class="menu__link"
+              (click)="closeMenu()"
+              >{{ menuItem.name }}</a
+            >
           </li>
         </ul>
       </nav>

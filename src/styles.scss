@@ -6,6 +6,11 @@
 @import url("https://fonts.googleapis.com/css?family=Inter:regular,500&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:500,700&display=swap");
 
+// anchor navigation
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Inter;
   font-size: medium;

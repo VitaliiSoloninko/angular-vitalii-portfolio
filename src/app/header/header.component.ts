@@ -1,37 +1,36 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, NgFor],
+  imports: [NgFor],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
   openMenu = false;
 
+  closeMenu() {
+    this.openMenu = false;
+  }
+
   menuItems = [
     {
       name: 'Startseite',
-      link: '',
+      link: '#about',
     },
     {
       name: 'Portfolio',
-      link: 'portfolio',
+      link: '#portfolio',
     },
     {
       name: 'Berufserfahrung',
-      link: 'experience',
+      link: '#experience',
     },
     {
       name: 'Fähigkeiten',
-      link: 'skills',
-    },
-    {
-      name: 'Blog',
-      link: '/blog',
+      link: '#skills',
     },
   ];
 }
