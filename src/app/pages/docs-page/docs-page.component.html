@@ -1,0 +1,36 @@
+<div class="docs-layout">
+  <!-- Мобильная шапка -->
+  <header class="mobile-header">
+    <button
+      class="sidebar-toggle"
+      (click)="onSidebarToggle()"
+      [attr.aria-expanded]="(sidebarOpen$ | async) ?? false"
+    >
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    <div class="mobile-title">Documentation</div>
+  </header>
+
+  <!-- Боковое меню -->
+  <app-docs-sidebar
+    [isOpen]="(sidebarOpen$ | async) ?? false"
+    (close)="onSidebarClose()"
+    (toggle)="onSidebarToggle()"
+  >
+  </app-docs-sidebar>
+
+  <!-- Основной контент -->
+  <main class="main-content">
+    <!-- Контент -->
+    <app-docs-content></app-docs-content>
+  </main>
+
+  <!-- Оверлей для мобильных -->
+  <div
+    class="sidebar-overlay"
+    [class.-visible]="(sidebarOpen$ | async) ?? false"
+    (click)="onSidebarClose()"
+  ></div>
+</div>

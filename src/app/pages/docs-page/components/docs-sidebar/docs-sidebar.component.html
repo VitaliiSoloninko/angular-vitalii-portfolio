@@ -1,0 +1,51 @@
+<aside class="sidebar" [class.-open]="isOpen">
+  <div class="sidebar-header">
+    <h1 class="sidebar-title">Documentation</h1>
+    <button class="close-btn" (click)="onClose()" aria-label="Close sidebar">
+      ×
+    </button>
+  </div>
+
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      <li
+        class="nav-item"
+        *ngFor="let item of menuItems"
+        [class.-has-children]="item.children?.length"
+      >
+        <div
+          class="nav-link"
+          [class.-active]="isActiveRoute(item.route)"
+          [class.-expanded]="item.expanded"
+          (click)="onNavClick(item)"
+        >
+          <span class="nav-text">{{ item.title }}</span>
+
+          <span *ngIf="item.children?.length" class="nav-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16">
+              <path
+                d="M6 4l4 4-4 4"
+                stroke="currentColor"
+                stroke-width="1.5"
+                fill="none"
+              />
+            </svg>
+          </span>
+        </div>
+
+        <!-- Подменю -->
+        <ul class="nav-submenu" *ngIf="item.children?.length && item.expanded">
+          <li class="nav-subitem" *ngFor="let child of item.children">
+            <a
+              class="nav-sublink"
+              [class.-active]="isActiveRoute(child.route)"
+              (click)="onNavClick(child)"
+            >
+              {{ child.title }}
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</aside>
