@@ -1,0 +1,46 @@
+<div class="docs-universal">
+  <h1>{{ title }}</h1>
+
+  <section class="section" *ngFor="let section of sections">
+    <h2>{{ section.title }}</h2>
+
+    <p *ngIf="section.description">{{ section.description }}</p>
+
+    <!-- Основные пункты секции -->
+    <ul class="custom-list" *ngIf="section.items && section.items.length">
+      <li *ngFor="let item of section.items">
+        <span [innerHTML]="item.text"></span>
+
+        <!-- Подпункты -->
+        <ul
+          class="custom-sublist"
+          *ngIf="item.subitems && item.subitems.length"
+        >
+          <li *ngFor="let subitem of item.subitems" [innerHTML]="subitem"></li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Подразделы (например Access Token, Refresh Token) -->
+    <div class="subsection" *ngFor="let subsection of section.subsections">
+      <h3>{{ subsection.title }}</h3>
+
+      <ul class="custom-list">
+        <li *ngFor="let item of subsection.items">
+          <span [innerHTML]="item.text"></span>
+
+          <!-- Подпункты в подразделах -->
+          <ul
+            class="custom-sublist"
+            *ngIf="item.subitems && item.subitems.length"
+          >
+            <li
+              *ngFor="let subitem of item.subitems"
+              [innerHTML]="subitem"
+            ></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>

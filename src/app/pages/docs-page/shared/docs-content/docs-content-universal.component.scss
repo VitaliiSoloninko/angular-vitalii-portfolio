@@ -1,0 +1,123 @@
+.docs-universal {
+  max-width: 800px;
+  line-height: 1.7;
+  color: #2d3748;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 1rem;
+  }
+
+  .section {
+    margin-bottom: 3rem;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+  }
+
+  .subsection {
+    margin-bottom: 2rem;
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #4a5568;
+      margin-bottom: 0.75rem;
+      margin-top: 1.5rem;
+    }
+  }
+
+  p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #4a5568;
+  }
+
+  // Основные маркированные списки
+  .custom-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+
+    li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+      line-height: 1.6;
+
+      // Фиолетовый кружочек
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.6rem;
+        width: 8px;
+        height: 8px;
+        background: #805ad5; // Фиолетовый цвет
+        border-radius: 50%;
+        transform: translateY(-50%);
+      }
+
+      :deep(strong) {
+        font-weight: 600;
+        color: #2d3748;
+      }
+    }
+  }
+
+  // Вложенные списки (подпункты)
+  .custom-sublist {
+    list-style: none;
+    padding-left: 0;
+    margin: 0.5rem 0 0 1rem;
+
+    li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+
+      // Маленький фиолетовый кружочек для подпунктов
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.6rem;
+        width: 6px;
+        height: 6px;
+        background: #9f7aea; // Светлее фиолетовый
+        border-radius: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  // Адаптивность
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    .section h2 {
+      font-size: 1.3rem;
+    }
+
+    .subsection h3 {
+      font-size: 1.1rem;
+    }
+
+    .custom-list li {
+      padding-left: 1.25rem;
+    }
+  }
+}
