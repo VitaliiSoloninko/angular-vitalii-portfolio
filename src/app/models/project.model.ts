@@ -9,4 +9,5 @@ export class Project {
   stack!: string[];
   features!: string[];
   pages!: string[];
+  descriptionItems?: string[];
 }

@@ -5,11 +5,17 @@ import { Project } from '../../models/project.model';
 import { ProjectService } from '../../services/project.service';
 import { NavBarComponent } from '../../shared/nav-bar/nav-bar.component';
 import { PageItemsComponent } from '../../shared/page-items/page-items.component';
+import { ProjectDescriptionComponent } from './components/project-description/project-description.component';
 
 @Component({
   selector: 'app-project-page',
   standalone: true,
-  imports: [PageItemsComponent, NavBarComponent, CommonModule],
+  imports: [
+    PageItemsComponent,
+    NavBarComponent,
+    CommonModule,
+    ProjectDescriptionComponent,
+  ],
   templateUrl: './project-page.component.html',
   styleUrl: './project-page.component.scss',
 })
