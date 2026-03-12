@@ -44,25 +44,6 @@
   }
 }
 
-.social {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  row-gap: 5px;
-  column-gap: 34px;
-  &__link {
-    display: block;
-    width: 22px;
-    height: 22px;
-    transition: color 0.3s ease 0s;
-    @media (any-hover: hover) {
-      &:hover {
-        color: var(--purple-color);
-      }
-    }
-  }
-}
-
 .category-link {
   display: inline-block;
   border: 1px solid var(--grey-color);

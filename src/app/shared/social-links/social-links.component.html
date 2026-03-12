@@ -1,0 +1,14 @@
+<ul class="social">
+  @for (link of socialLinks; track link.name) {
+    <li class="social__item">
+      <a
+        [href]="link.url"
+        class="social__link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img [src]="link.icon" [alt]="link.name" />
+      </a>
+    </li>
+  }
+</ul>
