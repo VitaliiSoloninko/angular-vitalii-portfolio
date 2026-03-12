@@ -1,0 +1,10 @@
+<div
+  class="category-badge"
+  [ngClass]="{
+    'category-badge--fullstack': category === 'Fullstack',
+    'category-badge--frontend': category === 'Frontend',
+    'category-badge--backend': category === 'Backend',
+  }"
+>
+  {{ category }}
+</div>

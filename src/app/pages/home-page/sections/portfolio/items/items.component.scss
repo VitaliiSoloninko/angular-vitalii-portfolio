@@ -82,10 +82,6 @@ $mobileSmall: 479.98px;
     gap: 10px;
   }
 
-  // .item-portfolio__category
-  &__category {
-  }
-
   // .item-portfolio__link
   &__link {
     font-size: 10px;
@@ -97,17 +93,6 @@ $mobileSmall: 479.98px;
         color: var(--purple-color);
       }
     }
-  }
-
-  &__fullstack {
-    background-color: var(--purple-light-color);
-    border-radius: 0.3rem;
-    font-size: 16px;
-    padding: 0.3rem 0.6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
   }
 }
 

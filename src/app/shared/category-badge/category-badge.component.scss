@@ -1,0 +1,24 @@
+.category-badge {
+  border-radius: 0.3rem;
+  padding: 0.3rem 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+
+  &--fullstack {
+    background-color: #dfdfdf;
+    color: #333;
+  }
+
+  &--frontend {
+    background-color: var(--purple-light-color);
+    color: #333;
+  }
+
+  &--backend {
+    background-color: #dcfce7;
+    color: #333;
+  }
+}

@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Project } from '../../../../../models/project.model';
 import { ProjectService } from '../../../../../services/project.service';
+import { CategoryBadgeComponent } from '../../../../../shared/category-badge/category-badge.component';
 import { TagsComponent } from '../../../../../shared/tags/tags.component';
 
 @Component({
   selector: 'app-items',
   standalone: true,
-  imports: [RouterLink, TagsComponent],
+  imports: [RouterLink, TagsComponent, CategoryBadgeComponent],
   templateUrl: './items.component.html',
   styleUrl: './items.component.scss',
 })
@@ -20,7 +21,7 @@ export class ItemsComponent {
 
   constructor(
     private projectService: ProjectService,
-    activatedRoute: ActivatedRoute
+    activatedRoute: ActivatedRoute,
   ) {
     this.allProjects = this.projectService.getAll();
     this.filteredProjects = this.allProjects;

@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Project } from '../../models/project.model';
 import { ProjectService } from '../../services/project.service';
+import { CategoryBadgeComponent } from '../../shared/category-badge/category-badge.component';
 import { NavBarComponent } from '../../shared/nav-bar/nav-bar.component';
 import { PageItemsComponent } from '../../shared/page-items/page-items.component';
 import { ProjectDescriptionComponent } from './components/project-description/project-description.component';
@@ -15,6 +16,7 @@ import { ProjectDescriptionComponent } from './components/project-description/pr
     NavBarComponent,
     CommonModule,
     ProjectDescriptionComponent,
+    CategoryBadgeComponent,
   ],
   templateUrl: './project-page.component.html',
   styleUrl: './project-page.component.scss',
@@ -26,7 +28,7 @@ export class ProjectPageComponent {
   constructor(
     activatedRoute: ActivatedRoute,
     private router: Router,
-    private projectService: ProjectService
+    private projectService: ProjectService,
   ) {
     this.projects = this.projectService.getAll();
     activatedRoute.params.subscribe((params) => {

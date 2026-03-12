@@ -20,7 +20,9 @@
             </div>
             <div class="description">{{ project.description }}</div>
           </h4>
-          <div class="content__category">{{ project.category }}</div>
+          <app-category-badge
+            [category]="project.category"
+          ></app-category-badge>
         </div>
         <div class="button-blocks">
           <div class="button-block">
