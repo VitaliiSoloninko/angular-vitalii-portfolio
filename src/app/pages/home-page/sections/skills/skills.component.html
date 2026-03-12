@@ -23,43 +23,24 @@
         <div class="skills__title title">
           <h2 class="title__value">Fähigkeiten</h2>
         </div>
-        <div class="title__label">Frontend Fähigkeiten</div>
-        <div class="content-skills__items">
-          <div
-            class="content-skills__item"
-            *ngFor="let skill of frontendSkills"
-          >
-            <div class="content-skills__label content-skills__label--purple">
-              {{ skill }}
-            </div>
-            <div
-              class="content-skills__line content-skills__line--purple"
-            ></div>
-          </div>
-          <div
-            class="content-skills__item"
-            *ngFor="let skill of additionalSkills"
-          >
-            <div class="content-skills__label">{{ skill }}</div>
-            <div class="content-skills__line"></div>
-          </div>
-        </div>
-        <div class="title__label">Backend Fähigkeiten</div>
-        <div class="content-skills__padding">
-          <div class="content-skills__items">
-            <div
-              class="content-skills__item"
-              *ngFor="let skill of backendSkills"
-            >
-              <div class="content-skills__label content-skills__label--dark">
-                {{ skill }}
-              </div>
-              <div
-                class="content-skills__line content-skills__line--dark"
-              ></div>
-            </div>
-          </div>
-        </div>
+
+        <app-skill-list
+          [title]="'Frontend Fähigkeiten'"
+          [skills]="frontendSkills"
+          [theme]="'purple'"
+        >
+        </app-skill-list>
+
+        <app-skill-list [skills]="additionalSkills" [theme]="'default'">
+        </app-skill-list>
+
+        <app-skill-list
+          [title]="'Backend Fähigkeiten'"
+          [skills]="backendSkills"
+          [theme]="'dark'"
+          [withPadding]="true"
+        >
+        </app-skill-list>
       </div>
     </div>
   </div>
