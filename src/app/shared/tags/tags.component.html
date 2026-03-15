@@ -1,15 +1,18 @@
-<div class="tags" *ngIf="tagsWithCount">
-  <a
-    class="tag"
-    *ngFor="let tag of tagsWithCount"
-    [class.active]="selectedTag === tag.link"
-    (click)="selectTag(tag.link)"
-  >
-    <div class="tag-row">
-      {{ tag.name }}
-      <div class="tag-count">
-        {{ tag.count }}
-      </div>
-    </div>
-  </a>
-</div>
+@if (tagsWithCount) {
+  <div class="tags">
+    @for (tag of tagsWithCount; track tag) {
+      <a
+        class="tag"
+        [class.active]="selectedTag === tag.link"
+        (click)="selectTag(tag.link)"
+        >
+        <div class="tag-row">
+          {{ tag.name }}
+          <div class="tag-count">
+            {{ tag.count }}
+          </div>
+        </div>
+      </a>
+    }
+  </div>
+}

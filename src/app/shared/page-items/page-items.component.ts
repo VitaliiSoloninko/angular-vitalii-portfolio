@@ -1,4 +1,4 @@
-import { NgFor } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Project } from '../../models/project.model';
@@ -6,7 +6,7 @@ import { ProjectService } from '../../services/project.service';
 
 @Component({
     selector: 'app-page-items',
-    imports: [NgFor],
+    imports: [],
     templateUrl: './page-items.component.html',
     styleUrl: './page-items.component.scss'
 })

@@ -4,26 +4,28 @@
     <div class="header__menu menu">
       <nav class="menu__body">
         <ul class="menu__list">
-          <li class="menu__item" *ngFor="let menuItem of menuItems">
-            <a
-              href="{{ menuItem.link }}"
-              class="menu__link"
-              (click)="closeMenu()"
-              >{{ menuItem.name }}</a
-            >
-          </li>
-        </ul>
-      </nav>
+          @for (menuItem of menuItems; track menuItem) {
+            <li class="menu__item">
+              <a
+                href="{{ menuItem.link }}"
+                class="menu__link"
+                (click)="closeMenu()"
+                >{{ menuItem.name }}</a
+                >
+              </li>
+            }
+          </ul>
+        </nav>
+      </div>
+      <div class="header__actions">
+        <!-- <a href="/Lebenslauf_Soloninko.pdf" class="header__button">Lebenslauf</a> -->
+        <button
+          type="button"
+          class="menu__icon icon-menu"
+          (click)="openMenu = !openMenu"
+          >
+          <span></span>
+        </button>
+      </div>
     </div>
-    <div class="header__actions">
-      <!-- <a href="/Lebenslauf_Soloninko.pdf" class="header__button">Lebenslauf</a> -->
-      <button
-        type="button"
-        class="menu__icon icon-menu"
-        (click)="openMenu = !openMenu"
-      >
-        <span></span>
-      </button>
-    </div>
-  </div>
-</header>
+  </header>

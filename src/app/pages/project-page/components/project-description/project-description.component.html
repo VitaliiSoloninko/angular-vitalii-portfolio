@@ -1,5 +1,7 @@
 <ul class="list-content">
-  <li class="list-content__item" *ngFor="let item of project.descriptionItems">
-    <span [innerHTML]="item"></span>
-  </li>
+  @for (item of project.descriptionItems; track item) {
+    <li class="list-content__item">
+      <span [innerHTML]="item"></span>
+    </li>
+  }
 </ul>

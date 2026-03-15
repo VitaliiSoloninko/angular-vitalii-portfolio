@@ -1,4 +1,4 @@
-import { CommonModule, NgIf } from '@angular/common';
+
 import { Component, Input } from '@angular/core';
 import { IArticle } from '../../../models/article.model';
 import { ArticleService } from '../../../services/article.service';
@@ -12,15 +12,13 @@ import { ArticleTitleComponent } from './article-title/article-title.component';
 @Component({
     selector: 'app-articles',
     imports: [
-        TitleComponent,
-        ArticleItemComponent,
-        CommonModule,
-        ArticleListComponent,
-        ArticleTitleComponent,
-        NgIf,
-        ArrowLeftComponent,
-        ArrowRightComponent,
-    ],
+    TitleComponent,
+    ArticleItemComponent,
+    ArticleListComponent,
+    ArticleTitleComponent,
+    ArrowLeftComponent,
+    ArrowRightComponent
+],
     templateUrl: './articles.component.html',
     styleUrl: './articles.component.scss'
 })

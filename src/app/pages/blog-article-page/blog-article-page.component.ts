@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IArticle } from '../../models/article.model';
@@ -7,7 +7,7 @@ import { NavBarComponent } from '../../shared/nav-bar/nav-bar.component';
 
 @Component({
     selector: 'app-blog-article-page',
-    imports: [CommonModule, NavBarComponent],
+    imports: [NavBarComponent],
     templateUrl: './blog-article-page.component.html',
     styleUrl: './blog-article-page.component.scss'
 })

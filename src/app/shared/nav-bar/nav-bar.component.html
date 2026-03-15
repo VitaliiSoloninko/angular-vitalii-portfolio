@@ -1,10 +1,11 @@
 <div class="nav-bar">
   <div class="nav-dots">
-    <span
-      *ngFor="let item of items; let i = index"
-      class="dot"
-      [class.active]="activeItem?.id == item.id"
-    ></span>
+    @for (item of items; track item; let i = $index) {
+      <span
+        class="dot"
+        [class.active]="activeItem?.id == item.id"
+      ></span>
+    }
   </div>
   <div class="nav-arrows">
     <button type="button" class="arrow" (click)="onPrev()">

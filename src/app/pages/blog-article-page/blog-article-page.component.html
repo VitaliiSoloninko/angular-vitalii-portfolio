@@ -1,12 +1,13 @@
 <div class="container">
   <div class="article__container">
-    <app-nav-bar
-      *ngIf="articles && articles.length > 0"
-      [articles]="articles"
-      [article]="article"
-      (prev)="goToPrev()"
-      (next)="goToNext()"
-    ></app-nav-bar>
+    @if (articles && articles.length > 0) {
+      <app-nav-bar
+        [articles]="articles"
+        [article]="article"
+        (prev)="goToPrev()"
+        (next)="goToNext()"
+      ></app-nav-bar>
+    }
 
     <article class="article__body">
       <div class="image">
@@ -47,9 +48,11 @@
             <div class="content__title-text">STACK</div>
           </div>
           <div class="items">
-            <div class="content__skill" *ngFor="let skill of article.stack">
-              {{ skill }}
-            </div>
+            @for (skill of article.stack; track skill) {
+              <div class="content__skill">
+                {{ skill }}
+              </div>
+            }
           </div>
         </div>
 
@@ -61,17 +64,18 @@
             <div class="content__title-text">FEATURES</div>
           </div>
           <div class="items">
-            <div
-              class="content__feature"
-              *ngFor="let feature of article.features"
-            >
-              <div class="feature-mark">
-                <img src="assets/mark.svg" alt="mark" />
+            @for (feature of article.features; track feature) {
+              <div
+                class="content__feature"
+                >
+                <div class="feature-mark">
+                  <img src="assets/mark.svg" alt="mark" />
+                </div>
+                <div class="feature-text">
+                  {{ feature }}
+                </div>
               </div>
-              <div class="feature-text">
-                {{ feature }}
-              </div>
-            </div>
+            }
           </div>
         </div>
       </div>

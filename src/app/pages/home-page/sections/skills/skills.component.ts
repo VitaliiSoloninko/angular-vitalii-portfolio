@@ -1,10 +1,10 @@
-import { NgFor } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { SkillListComponent } from '../../../../shared/skill-list/skill-list.component';
 
 @Component({
     selector: 'app-skills',
-    imports: [NgFor, SkillListComponent],
+    imports: [SkillListComponent],
     templateUrl: './skills.component.html',
     styleUrl: './skills.component.scss'
 })

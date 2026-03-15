@@ -1,4 +1,4 @@
-import { NgFor, NgIf } from '@angular/common';
+
 import { Component, EventEmitter, Output } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Tag } from '../../models/tag.interface';
@@ -6,7 +6,7 @@ import { ProjectService } from '../../services/project.service';
 
 @Component({
     selector: 'app-tags',
-    imports: [NgIf, NgFor],
+    imports: [],
     templateUrl: './tags.component.html',
     styleUrl: './tags.component.scss'
 })

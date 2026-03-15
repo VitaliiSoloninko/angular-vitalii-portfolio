@@ -1,11 +1,11 @@
-import { NgFor, NgIf } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { CAREER_TABS } from '../../../../../data/carrers';
 import { CareerTab } from '../../../../../models/carrer.model';
 
 @Component({
     selector: 'app-tabs',
-    imports: [NgFor, NgIf],
+    imports: [],
     templateUrl: './tabs.component.html',
     styleUrl: './tabs.component.scss'
 })

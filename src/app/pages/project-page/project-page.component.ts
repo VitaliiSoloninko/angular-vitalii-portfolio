@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Project } from '../../models/project.model';
@@ -11,12 +11,11 @@ import { ProjectDescriptionComponent } from './components/project-description/pr
 @Component({
     selector: 'app-project-page',
     imports: [
-        PageItemsComponent,
-        NavBarComponent,
-        CommonModule,
-        ProjectDescriptionComponent,
-        CategoryBadgeComponent,
-    ],
+    PageItemsComponent,
+    NavBarComponent,
+    ProjectDescriptionComponent,
+    CategoryBadgeComponent
+],
     templateUrl: './project-page.component.html',
     styleUrl: './project-page.component.scss'
 })

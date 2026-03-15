@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { Project } from '../../../../models/project.model';
 import { ActivatedRoute } from '@angular/router';
@@ -6,7 +6,7 @@ import { ProjectService } from '../../../../services/project.service';
 
 @Component({
     selector: 'app-project-description',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './project-description.component.html',
     styleUrl: './project-description.component.scss'
 })
