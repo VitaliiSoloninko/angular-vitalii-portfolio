@@ -3,11 +3,10 @@ import { Component } from '@angular/core';
 import { SkillListComponent } from '../../../../shared/skill-list/skill-list.component';
 
 @Component({
-  selector: 'app-skills',
-  standalone: true,
-  imports: [NgFor, SkillListComponent],
-  templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss',
+    selector: 'app-skills',
+    imports: [NgFor, SkillListComponent],
+    templateUrl: './skills.component.html',
+    styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
   language = [

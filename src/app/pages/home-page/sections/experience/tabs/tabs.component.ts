@@ -4,11 +4,10 @@ import { CAREER_TABS } from '../../../../../data/carrers';
 import { CareerTab } from '../../../../../models/carrer.model';
 
 @Component({
-  selector: 'app-tabs',
-  standalone: true,
-  imports: [NgFor, NgIf],
-  templateUrl: './tabs.component.html',
-  styleUrl: './tabs.component.scss',
+    selector: 'app-tabs',
+    imports: [NgFor, NgIf],
+    templateUrl: './tabs.component.html',
+    styleUrl: './tabs.component.scss'
 })
 export class TabsComponent {
   tabs: CareerTab[] = CAREER_TABS;

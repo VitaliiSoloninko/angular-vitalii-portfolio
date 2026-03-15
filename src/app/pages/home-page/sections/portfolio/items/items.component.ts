@@ -6,11 +6,10 @@ import { CategoryBadgeComponent } from '../../../../../shared/category-badge/cat
 import { TagsComponent } from '../../../../../shared/tags/tags.component';
 
 @Component({
-  selector: 'app-items',
-  standalone: true,
-  imports: [RouterLink, TagsComponent, CategoryBadgeComponent],
-  templateUrl: './items.component.html',
-  styleUrl: './items.component.scss',
+    selector: 'app-items',
+    imports: [RouterLink, TagsComponent, CategoryBadgeComponent],
+    templateUrl: './items.component.html',
+    styleUrl: './items.component.scss'
 })
 export class ItemsComponent {
   allProjects: Project[] = [];

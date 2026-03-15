@@ -5,11 +5,10 @@ import { Tag } from '../../models/tag.interface';
 import { ProjectService } from '../../services/project.service';
 
 @Component({
-  selector: 'app-tags',
-  standalone: true,
-  imports: [NgIf, NgFor],
-  templateUrl: './tags.component.html',
-  styleUrl: './tags.component.scss',
+    selector: 'app-tags',
+    imports: [NgIf, NgFor],
+    templateUrl: './tags.component.html',
+    styleUrl: './tags.component.scss'
 })
 export class TagsComponent {
   @Output() tagSelected = new EventEmitter<string>();

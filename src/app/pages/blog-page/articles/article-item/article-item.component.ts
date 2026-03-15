@@ -4,11 +4,10 @@ import { IArticle } from '../../../../models/article.model';
 import { ArticleService } from '../../../../services/article.service';
 
 @Component({
-  selector: 'app-article-item',
-  standalone: true,
-  imports: [RouterLink],
-  templateUrl: './article-item.component.html',
-  styleUrl: './article-item.component.scss',
+    selector: 'app-article-item',
+    imports: [RouterLink],
+    templateUrl: './article-item.component.html',
+    styleUrl: './article-item.component.scss'
 })
 export class ArticleItemComponent {
   @Input() article: IArticle = {} as IArticle;

@@ -2,11 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-nav-bar',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.scss',
+    selector: 'app-nav-bar',
+    imports: [CommonModule],
+    templateUrl: './nav-bar.component.html',
+    styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent {
   @Input() projects: any[] = [];

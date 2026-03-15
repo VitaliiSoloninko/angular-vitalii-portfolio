@@ -5,11 +5,10 @@ import { Project } from '../../models/project.model';
 import { ProjectService } from '../../services/project.service';
 
 @Component({
-  selector: 'app-page-items',
-  standalone: true,
-  imports: [NgFor],
-  templateUrl: './page-items.component.html',
-  styleUrl: './page-items.component.scss',
+    selector: 'app-page-items',
+    imports: [NgFor],
+    templateUrl: './page-items.component.html',
+    styleUrl: './page-items.component.scss'
 })
 export class PageItemsComponent {
   project!: Project;

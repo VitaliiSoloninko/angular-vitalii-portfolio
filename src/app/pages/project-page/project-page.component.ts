@@ -9,17 +9,16 @@ import { PageItemsComponent } from '../../shared/page-items/page-items.component
 import { ProjectDescriptionComponent } from './components/project-description/project-description.component';
 
 @Component({
-  selector: 'app-project-page',
-  standalone: true,
-  imports: [
-    PageItemsComponent,
-    NavBarComponent,
-    CommonModule,
-    ProjectDescriptionComponent,
-    CategoryBadgeComponent,
-  ],
-  templateUrl: './project-page.component.html',
-  styleUrl: './project-page.component.scss',
+    selector: 'app-project-page',
+    imports: [
+        PageItemsComponent,
+        NavBarComponent,
+        CommonModule,
+        ProjectDescriptionComponent,
+        CategoryBadgeComponent,
+    ],
+    templateUrl: './project-page.component.html',
+    styleUrl: './project-page.component.scss'
 })
 export class ProjectPageComponent {
   project!: Project;

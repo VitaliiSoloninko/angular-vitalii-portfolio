@@ -6,11 +6,10 @@ import { ArticleService } from '../../services/article.service';
 import { NavBarComponent } from '../../shared/nav-bar/nav-bar.component';
 
 @Component({
-  selector: 'app-blog-article-page',
-  standalone: true,
-  imports: [CommonModule, NavBarComponent],
-  templateUrl: './blog-article-page.component.html',
-  styleUrl: './blog-article-page.component.scss',
+    selector: 'app-blog-article-page',
+    imports: [CommonModule, NavBarComponent],
+    templateUrl: './blog-article-page.component.html',
+    styleUrl: './blog-article-page.component.scss'
 })
 export class BlogArticlePageComponent {
   article!: IArticle;

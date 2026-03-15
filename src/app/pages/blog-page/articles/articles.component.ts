@@ -10,20 +10,19 @@ import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleTitleComponent } from './article-title/article-title.component';
 
 @Component({
-  selector: 'app-articles',
-  standalone: true,
-  imports: [
-    TitleComponent,
-    ArticleItemComponent,
-    CommonModule,
-    ArticleListComponent,
-    ArticleTitleComponent,
-    NgIf,
-    ArrowLeftComponent,
-    ArrowRightComponent,
-  ],
-  templateUrl: './articles.component.html',
-  styleUrl: './articles.component.scss',
+    selector: 'app-articles',
+    imports: [
+        TitleComponent,
+        ArticleItemComponent,
+        CommonModule,
+        ArticleListComponent,
+        ArticleTitleComponent,
+        NgIf,
+        ArrowLeftComponent,
+        ArrowRightComponent,
+    ],
+    templateUrl: './articles.component.html',
+    styleUrl: './articles.component.scss'
 })
 export class ArticlesComponent {
   @Input() articles: IArticle[] = [];
