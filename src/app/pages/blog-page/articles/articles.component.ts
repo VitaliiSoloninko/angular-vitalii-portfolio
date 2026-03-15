@@ -3,16 +3,12 @@ import { Article } from '../../../core/models';
 import { ArticleService } from '../../../core/services';
 import { ArrowLeftComponent } from '../../../shared/arrow-left/arrow-left.component';
 import { ArrowRightComponent } from '../../../shared/arrow-right/arrow-right.component';
-import { TitleComponent } from '../../../shared/title/title.component';
-import { ArticleItemComponent } from './article-item/article-item.component';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleTitleComponent } from './article-title/article-title.component';
 
 @Component({
   selector: 'app-articles',
   imports: [
-    TitleComponent,
-    ArticleItemComponent,
     ArticleListComponent,
     ArticleTitleComponent,
     ArrowLeftComponent,

@@ -1,9 +1,12 @@
+@use "sass:math";
+
 //Підключення шрифту
 @mixin font($font_name, $file_name, $weight, $style) {
   @font-face {
     font-family: $font_name;
     font-display: swap;
-    src: url("../fonts/#{$file_name}.woff2") format("woff2"),
+    src:
+      url("../fonts/#{$file_name}.woff2") format("woff2"),
       url("../fonts/#{$file_name}.woff") format("woff");
     font-weight: #{$weight};
     font-style: #{$style};
@@ -76,7 +79,8 @@
   $flyValue: #{rem($yIntersection)}" + " #{$slope * 100}vw;
 
   // Отримання значення властивості
-  $propertyValue: #{"clamp(" rem($minSize) "," $flyValue "," rem($startSize) ")"};
+  $propertyValue: #{"clamp(" rem($minSize) "," $flyValue "," rem($startSize)
+    ")"};
   // Якщо негативні значення
   @if ($minSize > $startSize) {
     $propertyValue: #{"clamp("
@@ -103,10 +107,8 @@
     // Якщо не підтримується clamp();
     @supports not (#{$property}: $propertyValue) {
       #{$property}: calc(
-        #{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div(
-            $widthFrom,
-            16
-          ) - math.div($widthTo, 16)}
+        #{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) /
+          #{math.div($widthFrom, 16) - math.div($widthTo, 16)}
       );
     }
   }

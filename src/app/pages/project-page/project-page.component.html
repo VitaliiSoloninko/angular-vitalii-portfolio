@@ -1,6 +1,6 @@
 <div class="container">
   <div class="project__container">
-    @if (projects?.length && project) {
+    @if (projects.length && project) {
       <app-nav-bar
         [projects]="projects"
         [project]="project"
@@ -67,9 +67,7 @@
           </div>
           <div class="items">
             @for (feature of project.features; track feature) {
-              <div
-                class="content__feature"
-                >
+              <div class="content__feature">
                 <div class="feature-mark">
                   <img src="assets/mark.svg" alt="mark" />
                 </div>
