@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { articles } from '../data/articles';
-import { IArticle } from '../models/article.model';
+import { Article } from '../models/article.model';
 
 @Injectable({
   providedIn: 'root',
@@ -8,11 +8,11 @@ import { IArticle } from '../models/article.model';
 export class ArticleService {
   constructor() {}
 
-  getAll(): IArticle[] {
+  getAll(): Article[] {
     return articles;
   }
 
-  getArticleById(articleId: number): IArticle | undefined {
+  getArticleById(articleId: number): Article | undefined {
     return this.getAll().find((article) => article.id == articleId);
   }
 }

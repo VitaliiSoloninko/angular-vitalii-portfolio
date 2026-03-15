@@ -1,26 +1,25 @@
-
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IArticle } from '../../models/article.model';
-import { ArticleService } from '../../services/article.service';
+import { Article } from '../../core/models';
+import { ArticleService } from '../../core/services';
 import { NavBarComponent } from '../../shared/nav-bar/nav-bar.component';
 
 @Component({
-    selector: 'app-blog-article-page',
-    imports: [NavBarComponent],
-    templateUrl: './blog-article-page.component.html',
-    styleUrl: './blog-article-page.component.scss'
+  selector: 'app-blog-article-page',
+  imports: [NavBarComponent],
+  templateUrl: './blog-article-page.component.html',
+  styleUrl: './blog-article-page.component.scss',
 })
 export class BlogArticlePageComponent {
-  article!: IArticle;
-  articles: IArticle[] = [];
+  article!: Article;
+  articles: Article[] = [];
 
   constructor(
     activatedRoute: ActivatedRoute,
     private router: Router,
-    private articleService: ArticleService
+    private articleService: ArticleService,
   ) {
-    this.articles = this.articleService.getAll();
+    this.articles = this.articleService.articles();
     activatedRoute.params.subscribe((params) => {
       if (params.id) {
         const foundArticle = this.articleService.getArticleById(params.id);

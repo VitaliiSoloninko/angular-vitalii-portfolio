@@ -1,20 +1,20 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { IArticle } from '../../../../models/article.model';
-import { ArticleService } from '../../../../services/article.service';
+import { Article } from '../../../../core/models';
+import { ArticleService } from '../../../../core/services';
 
 @Component({
-    selector: 'app-article-item',
-    imports: [RouterLink],
-    templateUrl: './article-item.component.html',
-    styleUrl: './article-item.component.scss'
+  selector: 'app-article-item',
+  imports: [RouterLink],
+  templateUrl: './article-item.component.html',
+  styleUrl: './article-item.component.scss',
 })
 export class ArticleItemComponent {
-  @Input() article: IArticle = {} as IArticle;
+  @Input() article: Article = {} as Article;
 
   constructor(
     private articleService: ArticleService,
-    activatedRoute: ActivatedRoute
+    activatedRoute: ActivatedRoute,
   ) {
     activatedRoute.params.subscribe((params) => {
       if (params.id) {
@@ -22,7 +22,7 @@ export class ArticleItemComponent {
         if (foundArticle) {
           this.article = foundArticle;
         } else {
-          this.article = {} as IArticle; // or handle the error appropriately
+          this.article = {} as Article; // or handle the error appropriately
         }
       }
     });

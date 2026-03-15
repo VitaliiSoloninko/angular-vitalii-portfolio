@@ -1,4 +1,4 @@
-import { Tag } from '../models/tag.interface';
+import { Tag } from '../core/models';
 
 export const tags: Tag[] = [
   { name: 'Alle', link: 'All' },

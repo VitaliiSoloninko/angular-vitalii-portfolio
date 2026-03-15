@@ -1,6 +1,6 @@
-import { IArticle } from '../models/article.model';
+import { Article } from '../core/models';
 
-export const articles: IArticle[] = [
+export const articles: Article[] = [
   {
     id: 1,
     title: 'Login and Registration',

@@ -1,14 +1,13 @@
-
 import { Component } from '@angular/core';
-import { Project } from '../../../../models/project.model';
 import { ActivatedRoute } from '@angular/router';
-import { ProjectService } from '../../../../services/project.service';
+import { Project } from '../../../../core/models';
+import { ProjectService } from '../../../../core/services';
 
 @Component({
-    selector: 'app-project-description',
-    imports: [],
-    templateUrl: './project-description.component.html',
-    styleUrl: './project-description.component.scss'
+  selector: 'app-project-description',
+  imports: [],
+  templateUrl: './project-description.component.html',
+  styleUrl: './project-description.component.scss',
 })
 export class ProjectDescriptionComponent {
   project!: Project;

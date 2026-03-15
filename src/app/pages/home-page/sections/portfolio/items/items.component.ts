@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { Project } from '../../../../../models/project.model';
-import { ProjectService } from '../../../../../services/project.service';
+import { Project } from '../../../../../core/models';
+import { ProjectService } from '../../../../../core/services';
 import { CategoryBadgeComponent } from '../../../../../shared/category-badge/category-badge.component';
 import { TagsComponent } from '../../../../../shared/tags/tags.component';
 
 @Component({
-    selector: 'app-items',
-    imports: [RouterLink, TagsComponent, CategoryBadgeComponent],
-    templateUrl: './items.component.html',
-    styleUrl: './items.component.scss'
+  selector: 'app-items',
+  imports: [RouterLink, TagsComponent, CategoryBadgeComponent],
+  templateUrl: './items.component.html',
+  styleUrl: './items.component.scss',
 })
 export class ItemsComponent {
   allProjects: Project[] = [];
@@ -22,7 +22,7 @@ export class ItemsComponent {
     private projectService: ProjectService,
     activatedRoute: ActivatedRoute,
   ) {
-    this.allProjects = this.projectService.getAll();
+    this.allProjects = this.projectService.projects();
     this.filteredProjects = this.allProjects;
     this.displayedProjects = this.filteredProjects.slice(0, this.showCount);
   }
