@@ -18,7 +18,8 @@ export class PageItemsComponent {
 
   constructor() {
     this.activatedRoute.params.subscribe((params) => {
-      if (params['id']) this.project = this.projectService.getProjectById(params['id']);
+      if (params['id'])
+        this.project = this.projectService.getProjectById(params['id']);
     });
   }
 }

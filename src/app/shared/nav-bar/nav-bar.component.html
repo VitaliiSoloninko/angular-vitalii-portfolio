@@ -1,10 +1,7 @@
 <div class="nav-bar">
   <div class="nav-dots">
     @for (item of items(); track item; let i = $index) {
-      <span
-        class="dot"
-        [class.active]="activeItem()?.id == item.id"
-      ></span>
+      <span class="dot" [class.active]="activeItem()?.id == item.id"></span>
     }
   </div>
   <div class="nav-arrows">
