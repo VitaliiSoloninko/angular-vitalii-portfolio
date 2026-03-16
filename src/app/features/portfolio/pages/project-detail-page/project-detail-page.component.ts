@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, effect, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map } from 'rxjs';
@@ -35,6 +35,13 @@ export class ProjectDetailPageComponent {
     const id = this.projectId();
     return id ? this.projectService.getProjectById(id) : null;
   });
+
+  constructor() {
+    effect(() => {
+      this.projectId();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
   navigateTo(direction: number): void {
     const currentProject = this.project();
