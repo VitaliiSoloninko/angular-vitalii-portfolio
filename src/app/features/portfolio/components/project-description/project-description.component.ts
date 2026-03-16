@@ -16,7 +16,7 @@ export class ProjectDescriptionComponent {
 
   private readonly projectId = toSignal(
     this.route.params.pipe(map((params) => params['id'])),
-    { initialValue: '' }
+    { initialValue: '' },
   );
 
   readonly project = computed(() => {

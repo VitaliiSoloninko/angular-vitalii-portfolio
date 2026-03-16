@@ -6,7 +6,7 @@
         [id]="tab.id"
         [class.tab-active]="selectedTab() === tab.id"
         (click)="selectTab(tab.id)"
-        >
+      >
         <div class="navigation-career__text">
           <div>{{ tab.period }}</div>
         </div>
@@ -40,9 +40,7 @@
           <div class="content-career__main">
             <ul class="content-career__list list-content-career">
               @for (item of tab.list; track item) {
-                <li
-                  class="list-content-career__item"
-                  >
+                <li class="list-content-career__item">
                   {{ item }}
                 </li>
               }

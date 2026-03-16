@@ -10,7 +10,7 @@ export const routes: Routes = [
     path: 'project',
     loadChildren: () =>
       import('./features/portfolio/portfolio.routes').then(
-        (m) => m.PORTFOLIO_ROUTES
+        (m) => m.PORTFOLIO_ROUTES,
       ),
   },
   {

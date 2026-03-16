@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { Article } from '../../../../core/models';
+import { Component, input } from '@angular/core';
+import { Article } from '../../../../../core/models';
 import { ArticleItemComponent } from '../article-item/article-item.component';
 
 @Component({
@@ -9,5 +9,5 @@ import { ArticleItemComponent } from '../article-item/article-item.component';
   styleUrl: './article-list.component.scss',
 })
 export class ArticleListComponent {
-  @Input() articles: Article[] = [];
+  articles = input.required<Article[]>();
 }

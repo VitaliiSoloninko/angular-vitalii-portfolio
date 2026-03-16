@@ -1,4 +1,4 @@
-import { Component, computed, inject, signal, OnInit } from '@angular/core';
+import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { ArticleService } from '../../../../core/services';
 import { ArrowLeftComponent } from '../../../../shared/arrow-left/arrow-left.component';
 import { ArrowRightComponent } from '../../../../shared/arrow-right/arrow-right.component';
@@ -24,7 +24,7 @@ export class ArticlesComponent implements OnInit {
   readonly currentPage = signal<number>(1);
 
   readonly totalPages = computed(() =>
-    Math.ceil(this.articles().length / this.articlesPerPage)
+    Math.ceil(this.articles().length / this.articlesPerPage),
   );
 
   readonly displayedArticles = computed(() => {

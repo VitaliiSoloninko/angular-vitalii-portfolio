@@ -12,8 +12,6 @@
   </span>
 
   @if (currentPage() < totalPages()) {
-    <app-arrow-right
-      (click)="goToPage(currentPage() + 1)"
-      />
+    <app-arrow-right (click)="goToPage(currentPage() + 1)" />
   }
 </div>

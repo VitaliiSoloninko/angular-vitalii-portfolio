@@ -20,7 +20,7 @@ export class BlogArticlePageComponent {
 
   private readonly articleId = toSignal(
     this.route.params.pipe(map((params) => params['id'])),
-    { initialValue: '' }
+    { initialValue: '' },
   );
 
   readonly article = computed(() => {

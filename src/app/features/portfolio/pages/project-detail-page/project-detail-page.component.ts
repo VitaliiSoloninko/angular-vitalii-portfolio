@@ -1,6 +1,6 @@
-import { Component, computed, inject, signal } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, computed, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { ActivatedRoute, Router } from '@angular/router';
 import { map } from 'rxjs';
 import { ProjectService } from '../../../../core/services';
 import { CategoryBadgeComponent } from '../../../../shared/category-badge/category-badge.component';
@@ -28,7 +28,7 @@ export class ProjectDetailPageComponent {
 
   private readonly projectId = toSignal(
     this.route.params.pipe(map((params) => params['id'])),
-    { initialValue: '' }
+    { initialValue: '' },
   );
 
   readonly project = computed(() => {
