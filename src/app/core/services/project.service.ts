@@ -1,6 +1,6 @@
 import { computed, Injectable, signal } from '@angular/core';
-import { projects } from '../../data/projects';
-import { tags } from '../../data/tags';
+import { projects } from '../data/projects';
+import { tags } from '../data/tags';
 import { Project, Tag } from '../models';
 
 @Injectable({

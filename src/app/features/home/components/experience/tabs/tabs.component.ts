@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
+import { CAREER_TABS } from '../../../../../core/data/carrers';
 import { CareerTab } from '../../../../../core/models';
-import { CAREER_TABS } from '../../../../../data/carrers';
 
 @Component({
   selector: 'app-tabs',

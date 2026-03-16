@@ -1,5 +1,5 @@
 import { computed, Injectable, signal } from '@angular/core';
-import { articles } from '../../data/articles';
+import { articles } from '../data/articles';
 import { Article } from '../models';
 
 @Injectable({
