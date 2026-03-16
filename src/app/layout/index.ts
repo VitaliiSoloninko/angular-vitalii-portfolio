@@ -1,2 +1,3 @@
 // Layout module barrel export
-// Export layout components here
+export * from './footer/footer.component';
+export * from './header/header.component';

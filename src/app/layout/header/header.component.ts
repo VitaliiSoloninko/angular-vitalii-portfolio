@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MENU_ITEMS } from '../core/constants';
+import { MENU_ITEMS } from '../../core/constants';
 
 @Component({
   selector: 'app-header',
