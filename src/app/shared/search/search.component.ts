@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -9,10 +9,14 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './search.component.scss',
 })
 export class SearchComponent {
+  private activatedRoute = inject(ActivatedRoute);
+  private router = inject(Router);
+
   searchTerm = '';
-  constructor(activatedRoute: ActivatedRoute, private router: Router) {
-    activatedRoute.params.subscribe((params) => {
-      if (params.searchTerm) this.searchTerm = params.searchTerm;
+
+  constructor() {
+    this.activatedRoute.params.subscribe((params) => {
+      if (params['searchTerm']) this.searchTerm = params['searchTerm'];
     });
   }
 

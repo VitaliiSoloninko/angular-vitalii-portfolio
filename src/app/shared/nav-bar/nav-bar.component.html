@@ -1,9 +1,9 @@
 <div class="nav-bar">
   <div class="nav-dots">
-    @for (item of items; track item; let i = $index) {
+    @for (item of items(); track item; let i = $index) {
       <span
         class="dot"
-        [class.active]="activeItem?.id == item.id"
+        [class.active]="activeItem()?.id == item.id"
       ></span>
     }
   </div>

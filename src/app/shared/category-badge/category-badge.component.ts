@@ -1,12 +1,11 @@
-import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
     selector: 'app-category-badge',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './category-badge.component.html',
     styleUrl: './category-badge.component.scss'
 })
 export class CategoryBadgeComponent {
-  @Input() category: string = '';
+  category = input<string>('');
 }

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, inject, output } from '@angular/core';
 import { Tag } from '../../core/models';
 import { ProjectService } from '../../core/services';
 
@@ -9,12 +9,14 @@ import { ProjectService } from '../../core/services';
   styleUrl: './tags.component.scss',
 })
 export class TagsComponent {
-  @Output() tagSelected = new EventEmitter<string>();
+  private projectService = inject(ProjectService);
+
+  tagSelected = output<string>();
 
   tagsWithCount?: Array<Tag & { count: number }> = [];
   selectedTag: string = 'All';
 
-  constructor(private projectService: ProjectService) {
+  constructor() {
     const tags = this.projectService.tags();
     const projects = this.projectService.projects();
 

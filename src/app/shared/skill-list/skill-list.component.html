@@ -1,25 +1,25 @@
 <div class="skill-list">
-  @if (title) {
-    <div class="title__label">{{ title }}</div>
+  @if (title()) {
+    <div class="title__label">{{ title() }}</div>
   }
   <div
     class="skill-list__padding"
-    [class.skill-list__padding--active]="withPadding"
+    [class.skill-list__padding--active]="withPadding()"
     >
     <div class="skill-list__items">
-      @for (skill of skills; track skill) {
+      @for (skill of skills(); track skill) {
         <div class="skill-list__item">
           <div
             class="skill-list__label"
-            [class.skill-list__label--purple]="theme === 'purple'"
-            [class.skill-list__label--dark]="theme === 'dark'"
+            [class.skill-list__label--purple]="theme() === 'purple'"
+            [class.skill-list__label--dark]="theme() === 'dark'"
             >
             {{ skill }}
           </div>
           <div
             class="skill-list__line"
-            [class.skill-list__line--purple]="theme === 'purple'"
-            [class.skill-list__line--dark]="theme === 'dark'"
+            [class.skill-list__line--purple]="theme() === 'purple'"
+            [class.skill-list__line--dark]="theme() === 'dark'"
           ></div>
         </div>
       }

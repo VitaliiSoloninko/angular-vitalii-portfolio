@@ -1,5 +1,4 @@
-
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
     selector: 'app-skill-list',
@@ -8,8 +7,8 @@ import { Component, Input } from '@angular/core';
     styleUrl: './skill-list.component.scss'
 })
 export class SkillListComponent {
-  @Input() skills: string[] = [];
-  @Input() theme: 'purple' | 'dark' | 'default' = 'default';
-  @Input() title: string = '';
-  @Input() withPadding: boolean = false;
+  skills = input<string[]>([]);
+  theme = input<'purple' | 'dark' | 'default'>('default');
+  title = input<string>('');
+  withPadding = input<boolean>(false);
 }
