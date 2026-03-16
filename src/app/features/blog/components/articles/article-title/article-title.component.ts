@@ -1,12 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
-    selector: 'app-article-title',
-    imports: [],
-    templateUrl: './article-title.component.html',
-    styleUrl: './article-title.component.scss'
+  selector: 'app-article-title',
+  imports: [],
+  templateUrl: './article-title.component.html',
+  styleUrl: './article-title.component.scss',
 })
 export class ArticleTitleComponent {
-  @Input() title: string = '';
-  @Input() subtitle: string = '';
+  title = input<string>('');
+  subtitle = input<string>('');
 }

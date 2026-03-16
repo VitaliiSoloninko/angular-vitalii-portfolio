@@ -36,7 +36,7 @@ export class BlogArticlePageComponent {
     const ids = this.articles().map((a) => Number(a.id));
     const idx = ids.indexOf(currentId);
     const prevIdx = (idx + direction + ids.length) % ids.length;
-    this.router.navigate(['/blog-article', ids[prevIdx]]);
+    this.router.navigate(['/blog/article', ids[prevIdx]]);
   }
 
   goToPrev(): void {

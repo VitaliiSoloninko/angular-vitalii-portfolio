@@ -27,7 +27,7 @@ export const ROUTE_PATHS = {
   CONTACTS: 'contacts',
   BLOG: 'blog',
   PROJECT: 'project',
-  BLOG_ARTICLE: 'blog-article',
+  BLOG_ARTICLE: 'blog/article',
   SEARCH: 'search',
   TAG: 'tag',
 } as const;
