@@ -1,0 +1,49 @@
+<section class="skills">
+  <div class="skills__container">
+    <div class="skills__body">
+      <div class="skills__education">
+        <div class="skills__title title">
+          <h2 class="title__value">Studium</h2>
+        </div>
+
+        <div class="title__label">Universität</div>
+        <div class="skills__timeline timeline">
+          @for (item of education; track item) {
+            <div class="timeline__item">
+              <div class="timeline__content">
+                <div class="timeline__date">{{ item.year }}</div>
+                <div class="timeline__level">{{ item.level }}</div>
+              </div>
+              <div class="timeline__institution">
+                {{ item.institution }}
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+      <div class="skills__content content-skills">
+        <div class="skills__title title">
+          <h2 class="title__value">Fähigkeiten</h2>
+        </div>
+
+        <app-skill-list
+          [title]="'Frontend Fähigkeiten'"
+          [skills]="frontendSkills"
+          [theme]="'purple'"
+          >
+        </app-skill-list>
+
+        <app-skill-list [skills]="additionalSkills" [theme]="'default'">
+        </app-skill-list>
+
+        <app-skill-list
+          [title]="'Backend Fähigkeiten'"
+          [skills]="backendSkills"
+          [theme]="'dark'"
+          [withPadding]="true"
+          >
+        </app-skill-list>
+      </div>
+    </div>
+  </div>
+</section>

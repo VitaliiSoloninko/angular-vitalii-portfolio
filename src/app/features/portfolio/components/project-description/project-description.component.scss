@@ -1,0 +1,21 @@
+.list-content {
+  // .list-content-career__item
+  &__item {
+    padding-left: 28px;
+    color: var(--grey-color);
+    line-height: 1.2;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    &::before {
+      content: "";
+      background-color: #d9d9d9;
+      width: 10px;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      top: 8px;
+    }
+  }
+}
