@@ -1,0 +1,20 @@
+<div class="content__block">
+  <div class="content__title">
+    <div class="content__title-icon">
+      <img src="assets/svg/component.svg" alt="FEATURES" />
+    </div>
+    <div class="content__title-text">FEATURES</div>
+  </div>
+  <div class="items">
+    @for (feature of project()?.features; track feature) {
+      <div class="content__feature">
+        <div class="feature-mark">
+          <img src="assets/mark.svg" alt="mark" />
+        </div>
+        <div class="feature-text">
+          {{ feature }}
+        </div>
+      </div>
+    }
+  </div>
+</div>

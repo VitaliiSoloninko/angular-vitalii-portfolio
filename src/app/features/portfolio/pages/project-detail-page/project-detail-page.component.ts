@@ -3,18 +3,22 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map } from 'rxjs';
 import { ProjectService } from '../../../../core/services';
-import { CategoryBadgeComponent } from '../../../../shared/category-badge/category-badge.component';
 import { NavBarComponent } from '../../../../shared/nav-bar/nav-bar.component';
-import { PageItemsComponent } from '../../../../shared/page-items/page-items.component';
 import { ProjectDescriptionComponent } from '../../components/project-description/project-description.component';
+import { ProjectFeaturesComponent } from '../../components/project-features/project-features.component';
+import { ProjectHeroComponent } from '../../components/project-hero/project-hero.component';
+import { ProjectPagesComponent } from '../../components/project-pages/project-pages.component';
+import { ProjectStackComponent } from '../../components/project-stack/project-stack.component';
 
 @Component({
   selector: 'app-project-detail-page',
   imports: [
-    PageItemsComponent,
     NavBarComponent,
+    ProjectHeroComponent,
+    ProjectStackComponent,
+    ProjectFeaturesComponent,
+    ProjectPagesComponent,
     ProjectDescriptionComponent,
-    CategoryBadgeComponent,
   ],
   templateUrl: './project-detail-page.component.html',
   styleUrl: './project-detail-page.component.scss',

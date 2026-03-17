@@ -1,0 +1,15 @@
+<div class="content__block">
+  <div class="content__title">
+    <div class="content__title-icon">
+      <img src="assets/svg/stack.svg" alt="Stack" />
+    </div>
+    <div class="content__title-text">STACK</div>
+  </div>
+  <div class="items">
+    @for (skill of project()?.stack; track skill) {
+      <div class="content__skill">
+        {{ skill }}
+      </div>
+    }
+  </div>
+</div>

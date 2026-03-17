@@ -1,0 +1,100 @@
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+.image {
+  border: 1px solid var(--grey-light-color);
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__image-ibg {
+    overflow: hidden;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    transition: opacity 0.8s ease 0s;
+    img {
+      max-width: 800px;
+      width: 100%;
+      object-position: top;
+      transition: transform 0.8s ease 0s;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 1;
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+    @media (any-hover: none) {
+      opacity: 1;
+    }
+  }
+
+  &__body {
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__site-title {
+    text-transform: uppercase;
+  }
+}
+
+.button {
+  background-color: var(--purple-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  height: 46px;
+  width: 90%;
+  border-radius: 8px;
+  color: var(--white-color);
+  gap: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--purple-hover-color);
+    }
+  }
+}
+
+.button-dark {
+  background-color: var(--grey-color);
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--main-color);
+    }
+  }
+}
+
+.button-blocks {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 16px;
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: $mobile) {
+    grid-template-columns: auto;
+  }
+}
+
+.button-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

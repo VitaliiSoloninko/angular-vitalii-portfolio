@@ -1,0 +1,30 @@
+<div class="image">
+  <a href="{{ project()?.site }}" class="image__image-ibg">
+    <img [src]="project()?.img" alt="{{ project()?.name }}" />
+  </a>
+  <div class="image__body">
+    <h4 class="image__title title">
+      <div class="image__site-title">
+        {{ project()?.name }}
+      </div>
+      <div class="description">{{ project()?.description }}</div>
+    </h4>
+    <app-category-badge
+      [category]="project()?.category ?? ''"
+    ></app-category-badge>
+  </div>
+  <div class="button-blocks">
+    <div class="button-block">
+      <a href="{{ project()?.gitHub }}" class="button button-dark">
+        <img src="assets/svg/github.svg" alt="GitHub" />
+        <span>GitHub</span>
+      </a>
+    </div>
+    <div class="button-block">
+      <a href="{{ project()?.site }}" class="button">
+        <img src="assets/svg/link.svg" alt="Link" />
+        <span>View site</span>
+      </a>
+    </div>
+  </div>
+</div>
