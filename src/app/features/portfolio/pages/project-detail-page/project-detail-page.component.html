@@ -9,7 +9,7 @@
       ></app-nav-bar>
     }
 
-    <article class="project__body">
+    <article class="project__body mb16">
       <app-project-hero [project]="project()"></app-project-hero>
 
       <div class="content">
@@ -18,7 +18,9 @@
       </div>
     </article>
 
-    <app-project-pages [project]="project()"></app-project-pages>
+    <div class="mb16">
+      <app-project-pages [project]="project()"></app-project-pages>
+    </div>
 
     <app-project-description [project]="project()"></app-project-description>
   </div>
