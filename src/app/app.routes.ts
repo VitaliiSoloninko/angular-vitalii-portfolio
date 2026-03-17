@@ -9,9 +9,7 @@ export const routes: Routes = [
   {
     path: 'project',
     loadChildren: () =>
-      import('./features/portfolio/portfolio.routes').then(
-        (m) => m.PORTFOLIO_ROUTES,
-      ),
+      import('./features/project/project.routes').then((m) => m.PROJECT_ROUTES),
   },
   {
     path: 'blog',
