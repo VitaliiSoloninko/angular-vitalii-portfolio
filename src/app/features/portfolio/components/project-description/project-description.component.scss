@@ -1,3 +1,28 @@
+$tablet: 991.98px;
+$mobile: 767.98px;
+
+.content__block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 16px 20px;
+  border: 1px solid var(--grey-light-color);
+  border-radius: 8px;
+}
+
+.content__title {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  color: #232e35;
+  line-height: 1.1;
+  font-size: 1.2rem;
+  font-weight: 500;
+  @media (max-width: $mobile) {
+    font-size: 1.1rem;
+  }
+}
+
 .list-content {
   // .list-content-career__item
   &__item {
