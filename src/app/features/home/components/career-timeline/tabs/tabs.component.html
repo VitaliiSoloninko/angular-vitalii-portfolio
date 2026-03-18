@@ -1,0 +1,57 @@
+<div class="career-timeline__body">
+  <ul class="career-timeline__navigation navigation-career-timeline">
+    @for (tab of tabs; track tab) {
+      <li
+        class="navigation-career-timeline__title"
+        [id]="tab.id"
+        [class.tab-active]="selectedTab() === tab.id"
+        (click)="selectTab(tab.id)"
+      >
+        <div class="navigation-career-timeline__text">
+          <div>{{ tab.period }}</div>
+        </div>
+        <div class="navigation-career-timeline__arrow">
+          <img src="assets/icons/arrow.svg" alt="l" />
+        </div>
+      </li>
+    }
+  </ul>
+  <div data-tabs-body class="career-timeline__content content-career-timeline">
+    @for (tab of tabs; track tab) {
+      @if (selectedTab() === tab.id) {
+        <div class="content-career-timeline__body">
+          <div class="content-career-timeline__header">
+            <div class="content-career-timeline__title">
+              {{ tab.title }}
+              <div class="content-career-timeline__link-title">
+                {{ tab.linkTitle }}
+              </div>
+            </div>
+            <div class="content-career-timeline__location">
+              {{ tab.location }}
+            </div>
+            <div class="content-career-timeline__time">{{ tab.time }}</div>
+            <div class="content-career-timeline__categories">
+              @for (cat of tab.categories; track cat) {
+                <div class="category-link">
+                  {{ cat }}
+                </div>
+              }
+            </div>
+          </div>
+          <div class="content-career-timeline__main">
+            <ul
+              class="content-career-timeline__list list-content-career-timeline"
+            >
+              @for (item of tab.list; track item) {
+                <li class="list-content-career-timeline__item">
+                  {{ item }}
+                </li>
+              }
+            </ul>
+          </div>
+        </div>
+      }
+    }
+  </div>
+</div>

@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
-import { CAREER_TABS } from '../../../../../core/data/carrers';
-import { CareerTab } from '../../../../../core/models';
+import { CAREER_ITEMS } from '../../../../../core/data/career';
+import { CareerItem } from '../../../../../core/models';
 
 @Component({
   selector: 'app-tabs',
@@ -9,7 +9,7 @@ import { CareerTab } from '../../../../../core/models';
   styleUrl: './tabs.component.scss',
 })
 export class TabsComponent {
-  readonly tabs: CareerTab[] = CAREER_TABS;
+  readonly tabs: CareerItem[] = CAREER_ITEMS;
   readonly selectedTab = signal<number>(this.tabs[0]?.id ?? 1);
 
   selectTab(id: number): void {

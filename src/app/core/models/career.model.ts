@@ -1,4 +1,4 @@
-export interface CareerTab {
+export interface CareerItem {
   id: number;
   period: string;
   title: string;

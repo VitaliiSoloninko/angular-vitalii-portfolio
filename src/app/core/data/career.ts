@@ -1,6 +1,6 @@
-import { CareerTab } from '../models';
+import { CareerItem } from '../models';
 
-export const CAREER_TABS: CareerTab[] = [
+export const CAREER_ITEMS: CareerItem[] = [
   {
     id: 1,
     period: '01/2025 – 05/2025',
