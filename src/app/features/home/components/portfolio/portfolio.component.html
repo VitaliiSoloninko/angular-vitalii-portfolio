@@ -4,6 +4,15 @@
       <div class="title__label">Meine Projekte</div>
       <h2 class="title__value">Mein Portfolio</h2>
     </div>
-    <app-items></app-items>
+
+    <app-tags (tagSelected)="onTagSelected($event)"></app-tags>
+
+    <app-project-list [projects]="displayedProjects()"></app-project-list>
+
+    @if (displayedProjects().length < filteredProjects().length) {
+      <div class="show-more-wrapper">
+        <button class="btn" (click)="showMore()">Mehr anzeigen</button>
+      </div>
+    }
   </div>
 </section>

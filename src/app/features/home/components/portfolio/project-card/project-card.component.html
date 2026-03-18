@@ -1,0 +1,18 @@
+<article class="card">
+  <a routerLink="/project/{{ project().id }}" class="card__image-ibg">
+    <img [src]="project().img" [alt]="project().name" />
+  </a>
+  <div class="card__body">
+    <h4 class="card__title">
+      <div class="card__link-title">
+        {{ project().name }}
+      </div>
+    </h4>
+    <app-category-badge [category]="project().category"></app-category-badge>
+  </div>
+  <div class="card__footer">
+    @for (skill of project().stack; track skill) {
+      <span class="card__category category-link">{{ skill }}</span>
+    }
+  </div>
+</article>

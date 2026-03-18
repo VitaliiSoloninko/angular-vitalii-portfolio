@@ -1,0 +1,15 @@
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: $mobile) {
+    grid-template-columns: auto;
+  }
+}
