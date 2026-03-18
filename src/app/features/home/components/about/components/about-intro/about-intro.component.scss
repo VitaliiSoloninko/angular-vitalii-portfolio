@@ -1,0 +1,15 @@
+.about-intro {
+  // .about-intro__title
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // .about-intro__text
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}

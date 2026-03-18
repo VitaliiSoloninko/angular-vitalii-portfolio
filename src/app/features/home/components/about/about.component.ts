@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { SocialLinksComponent } from '../../../../shared/social-links/social-links.component';
-import { TitleComponent } from '../../../../shared';
+import { AboutImageComponent } from './components/about-image/about-image.component';
+import { AboutIntroComponent } from './components/about-intro/about-intro.component';
 
 @Component({
   selector: 'app-about',
-  imports: [SocialLinksComponent, TitleComponent],
+  imports: [AboutIntroComponent, AboutImageComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
 })

@@ -1,0 +1,12 @@
+<div class="about-intro">
+  <div class="about-intro__title title">
+    <app-title [subtitle]="subtitle()"></app-title>
+    <h1 class="title__value title__value_big">
+      {{ name() }} <span>{{ surname() }}</span>
+    </h1>
+  </div>
+  <div class="about-intro__text text">
+    <p [innerHTML]="description()"></p>
+  </div>
+  <app-social-links></app-social-links>
+</div>
