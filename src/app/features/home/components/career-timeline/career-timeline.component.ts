@@ -1,7 +1,7 @@
 import { Component, computed, signal } from '@angular/core';
 import { CAREER_ITEMS } from '../../../../core/data/career';
 import { CareerItem } from '../../../../core/models';
-import { TitleComponent } from '../../../../shared';
+import { ScrollAnimationDirective, TitleComponent } from '../../../../shared';
 import { CareerItemDetailComponent } from './career-item-detail/career-item-detail.component';
 import { CareerTimelineNavigationComponent } from './career-timeline-navigation/career-timeline-navigation.component';
 
@@ -11,6 +11,7 @@ import { CareerTimelineNavigationComponent } from './career-timeline-navigation/
     CareerTimelineNavigationComponent,
     CareerItemDetailComponent,
     TitleComponent,
+    ScrollAnimationDirective,
   ],
   templateUrl: './career-timeline.component.html',
   styleUrl: './career-timeline.component.scss',

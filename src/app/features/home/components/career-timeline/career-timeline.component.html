@@ -1,19 +1,27 @@
 <section class="career-timeline">
   <div class="career-timeline__container">
-    <div class="career-timeline__title title">
+    <div
+      class="career-timeline__title title"
+      appScrollAnimation
+      animationType="fade-up"
+    >
       <app-title
         [title]="'Beruflicher Werdegang'"
         [subtitle]="'Karriereweg'"
       ></app-title>
     </div>
     <div class="career-timeline__body">
-      <app-career-timeline-navigation
-        [items]="items"
-        [selectedId]="selectedId()"
-        (selected)="onSelectItem($event)"
-      />
+      <div appScrollAnimation animationType="fade-right">
+        <app-career-timeline-navigation
+          [items]="items"
+          [selectedId]="selectedId()"
+          (selected)="onSelectItem($event)"
+        />
+      </div>
       @if (selectedItem(); as item) {
-        <app-career-item-detail [item]="item" />
+        <div appScrollAnimation animationType="fade-left" [delay]="200">
+          <app-career-item-detail [item]="item" />
+        </div>
       }
     </div>
   </div>

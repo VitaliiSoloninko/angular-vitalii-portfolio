@@ -1,18 +1,24 @@
 <section class="portfolio">
   <div class="portfolio__container portfolio">
-    <div class="portfolio__title title">
+    <div
+      class="portfolio__title title"
+      appScrollAnimation
+      animationType="fade-up"
+    >
       <app-title
         [title]="'Mein Portfolio'"
         [subtitle]="'Meine Projekte'"
       ></app-title>
     </div>
 
-    <app-tags (tagSelected)="onTagSelected($event)"></app-tags>
+    <div appScrollAnimation animationType="fade-up" [delay]="0">
+      <app-tags (tagSelected)="onTagSelected($event)"></app-tags>
+    </div>
 
     <app-project-list [projects]="displayedProjects()"></app-project-list>
 
     @if (displayedProjects().length < filteredProjects().length) {
-      <div class="show-more-wrapper">
+      <div class="show-more-wrapper" appScrollAnimation animationType="fade-up">
         <button class="btn" (click)="showMore()">Mehr anzeigen</button>
       </div>
     }

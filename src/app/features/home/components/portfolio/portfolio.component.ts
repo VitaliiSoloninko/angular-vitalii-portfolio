@@ -1,12 +1,17 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { ProjectService } from '../../../../core/services';
+import { ScrollAnimationDirective, TitleComponent } from '../../../../shared';
 import { TagsComponent } from '../../../../shared/tags/tags.component';
 import { ProjectListComponent } from './project-list/project-list.component';
-import { TitleComponent } from '../../../../shared';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [TagsComponent, ProjectListComponent, TitleComponent],
+  imports: [
+    TagsComponent,
+    ProjectListComponent,
+    TitleComponent,
+    ScrollAnimationDirective,
+  ],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })

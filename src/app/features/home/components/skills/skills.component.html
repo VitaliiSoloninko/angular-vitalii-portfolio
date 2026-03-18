@@ -2,39 +2,58 @@
   <div class="skills__container">
     <div class="skills__body">
       <div class="skills__education">
-        <div class="skills__title title">
+        <div
+          class="skills__title title"
+          appScrollAnimation
+          animationType="fade-right"
+        >
           <app-title [title]="'Studium'" [subtitle]="'Universität'"></app-title>
         </div>
-        <div class="skills__timeline">
+        <div
+          class="skills__timeline"
+          appScrollAnimation
+          animationType="fade-right"
+          [delay]="100"
+        >
           <app-timeline [items]="education"></app-timeline>
         </div>
       </div>
       <div class="skills__content content-skills">
-        <div class="skills__title title">
+        <div
+          class="skills__title title"
+          appScrollAnimation
+          animationType="fade-left"
+        >
           <app-title [title]="'Fähigkeiten'" [subtitle]="'Skills'"></app-title>
         </div>
 
-        <app-skill-list
-          [title]="'Frontend '"
-          [skills]="frontendSkills"
-          [theme]="'purple'"
-        >
-        </app-skill-list>
+        <div appScrollAnimation animationType="fade-left" [delay]="100">
+          <app-skill-list
+            [title]="'Frontend '"
+            [skills]="frontendSkills"
+            [theme]="'purple'"
+          >
+          </app-skill-list>
+        </div>
 
-        <app-skill-list
-          [title]="'Backend '"
-          [skills]="backendSkills"
-          [theme]="'dark'"
-          [withPadding]="true"
-        >
-        </app-skill-list>
+        <div appScrollAnimation animationType="fade-left" [delay]="200">
+          <app-skill-list
+            [title]="'Backend '"
+            [skills]="backendSkills"
+            [theme]="'dark'"
+            [withPadding]="true"
+          >
+          </app-skill-list>
+        </div>
 
-        <app-skill-list
-          [title]="'Extra'"
-          [skills]="additionalSkills"
-          [theme]="'default'"
-        >
-        </app-skill-list>
+        <div appScrollAnimation animationType="fade-left" [delay]="300">
+          <app-skill-list
+            [title]="'Extra'"
+            [skills]="additionalSkills"
+            [theme]="'default'"
+          >
+          </app-skill-list>
+        </div>
       </div>
     </div>
   </div>

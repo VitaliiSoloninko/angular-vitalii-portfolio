@@ -1,8 +1,9 @@
 import { Component, input } from '@angular/core';
+import { ScrollAnimationDirective } from '../../../../../shared';
 
 @Component({
   selector: 'app-skill-list',
-  imports: [],
+  imports: [ScrollAnimationDirective],
   templateUrl: './skill-list.component.html',
   styleUrl: './skill-list.component.scss',
 })

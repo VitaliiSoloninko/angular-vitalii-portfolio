@@ -1,10 +1,10 @@
 // Shared module barrel export
 // Export shared components and UI elements here
 
-export * from '../features/home/components/skills/skill-list/skill-list.component';
 export * from './arrow-left/arrow-left.component';
 export * from './arrow-right/arrow-right.component';
 export * from './category-badge/category-badge.component';
+export * from './directives/scroll-animation.directive';
 export * from './nav-bar/nav-bar.component';
 export * from './search/search.component';
 export * from './social-links/social-links.component';

@@ -1,0 +1,94 @@
+// Scroll Animation Mixins
+@mixin scroll-animate-base {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.animate-in {
+    opacity: 1;
+  }
+}
+
+@mixin fade-up {
+  @include scroll-animate-base;
+  transform: translateY(50px);
+
+  &.animate-in {
+    transform: translateY(0);
+  }
+}
+
+@mixin fade-down {
+  @include scroll-animate-base;
+  transform: translateY(-50px);
+
+  &.animate-in {
+    transform: translateY(0);
+  }
+}
+
+@mixin fade-left {
+  @include scroll-animate-base;
+  transform: translateX(50px);
+
+  &.animate-in {
+    transform: translateX(0);
+  }
+}
+
+@mixin fade-right {
+  @include scroll-animate-base;
+  transform: translateX(-50px);
+
+  &.animate-in {
+    transform: translateX(0);
+  }
+}
+
+@mixin fade-in {
+  @include scroll-animate-base;
+}
+
+@mixin scale-in {
+  @include scroll-animate-base;
+  transform: scale(0.9);
+
+  &.animate-in {
+    transform: scale(1);
+  }
+}
+
+// Staggered Animation Mixin
+@mixin staggered-animation($items: 6, $delay: 100ms, $base-delay: 0ms) {
+  @for $i from 1 through $items {
+    &:nth-child(#{$i}) {
+      animation-delay: calc(#{$base-delay} + #{($i - 1) * $delay});
+    }
+  }
+}
+
+// Apply scroll animation classes
+.scroll-animate {
+  &.fade-up {
+    @include fade-up;
+  }
+
+  &.fade-down {
+    @include fade-down;
+  }
+
+  &.fade-left {
+    @include fade-left;
+  }
+
+  &.fade-right {
+    @include fade-right;
+  }
+
+  &.fade-in {
+    @include fade-in;
+  }
+
+  &.scale-in {
+    @include scale-in;
+  }
+}

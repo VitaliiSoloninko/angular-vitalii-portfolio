@@ -1,9 +1,18 @@
 <section class="main-section">
   <div class="main-section__container">
-    <div class="main-section__content">
+    <div
+      class="main-section__content"
+      appScrollAnimation
+      animationType="fade-right"
+    >
       <app-about-intro></app-about-intro>
     </div>
-    <div class="main-section__decor">
+    <div
+      class="main-section__decor"
+      appScrollAnimation
+      animationType="fade-left"
+      [delay]="200"
+    >
       <app-about-image></app-about-image>
     </div>
   </div>

@@ -1,10 +1,19 @@
 import { Component } from '@angular/core';
-import { TimelineComponent, TitleComponent } from '../../../../shared';
+import {
+  ScrollAnimationDirective,
+  TimelineComponent,
+  TitleComponent,
+} from '../../../../shared';
 import { SkillListComponent } from './skill-list/skill-list.component';
 
 @Component({
   selector: 'app-skills',
-  imports: [SkillListComponent, TimelineComponent, TitleComponent],
+  imports: [
+    SkillListComponent,
+    TimelineComponent,
+    TitleComponent,
+    ScrollAnimationDirective,
+  ],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })
