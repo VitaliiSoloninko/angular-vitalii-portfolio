@@ -7,8 +7,8 @@ import { Component, input } from '@angular/core';
   styleUrl: './skill-list.component.scss',
 })
 export class SkillListComponent {
+  title = input<string>('');
   skills = input<string[]>([]);
   theme = input<'purple' | 'dark' | 'default'>('default');
-  title = input<string>('');
   withPadding = input<boolean>(false);
 }

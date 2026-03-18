@@ -1,8 +1,24 @@
 $mobile: 767.98px;
 $mobileSmall: 479.98px;
 
-.title__label {
-  margin-bottom: 16px;
+.title {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 2; /* 24/12 */
+  letter-spacing: 0.5rem;
+  color: var(--grey-color);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  &::before {
+    content: "";
+    width: 1rem;
+    height: 0.125rem;
+    background-color: var(--grey-light-color);
+  }
 }
 
 .skill-list {

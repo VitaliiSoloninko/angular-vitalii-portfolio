@@ -1,8 +1,10 @@
 <section class="portfolio">
   <div class="portfolio__container portfolio">
     <div class="portfolio__title title">
-      <div class="title__label">Meine Projekte</div>
-      <h2 class="title__value">Mein Portfolio</h2>
+      <app-title
+        [title]="'Mein Portfolio'"
+        [subtitle]="'Meine Projekte'"
+      ></app-title>
     </div>
 
     <app-tags (tagSelected)="onTagSelected($event)"></app-tags>

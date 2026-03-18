@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { SkillListComponent } from '../../../../shared/skill-list/skill-list.component';
+import { TitleComponent } from '../../../../shared';
 
 @Component({
   selector: 'app-skills',
-  imports: [SkillListComponent],
+  imports: [SkillListComponent, TitleComponent],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })

@@ -3,10 +3,8 @@
     <div class="skills__body">
       <div class="skills__education">
         <div class="skills__title title">
-          <h2 class="title__value">Studium</h2>
+          <app-title [title]="'Studium'" [subtitle]="'Universität'"></app-title>
         </div>
-
-        <div class="title__label">Universität</div>
         <div class="skills__timeline timeline">
           @for (item of education; track item) {
             <div class="timeline__item">
@@ -23,25 +21,29 @@
       </div>
       <div class="skills__content content-skills">
         <div class="skills__title title">
-          <h2 class="title__value">Fähigkeiten</h2>
+          <app-title [title]="'Fähigkeiten'" [subtitle]="'Skills'"></app-title>
         </div>
 
         <app-skill-list
-          [title]="'Frontend Fähigkeiten'"
+          [title]="'Frontend '"
           [skills]="frontendSkills"
           [theme]="'purple'"
-          >
-        </app-skill-list>
-
-        <app-skill-list [skills]="additionalSkills" [theme]="'default'">
+        >
         </app-skill-list>
 
         <app-skill-list
-          [title]="'Backend Fähigkeiten'"
+          [title]="'Backend '"
           [skills]="backendSkills"
           [theme]="'dark'"
           [withPadding]="true"
-          >
+        >
+        </app-skill-list>
+
+        <app-skill-list
+          [title]="'Extra'"
+          [skills]="additionalSkills"
+          [theme]="'default'"
+        >
         </app-skill-list>
       </div>
     </div>

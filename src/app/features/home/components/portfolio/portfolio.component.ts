@@ -2,10 +2,11 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { ProjectService } from '../../../../core/services';
 import { TagsComponent } from '../../../../shared/tags/tags.component';
 import { ProjectListComponent } from './project-list/project-list.component';
+import { TitleComponent } from '../../../../shared';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [TagsComponent, ProjectListComponent],
+  imports: [TagsComponent, ProjectListComponent, TitleComponent],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })
