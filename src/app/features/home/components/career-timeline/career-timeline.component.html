@@ -6,6 +6,15 @@
         [subtitle]="'Karriereweg'"
       ></app-title>
     </div>
-    <app-tabs></app-tabs>
+    <div class="career-timeline__body">
+      <app-career-timeline-navigation
+        [items]="items"
+        [selectedId]="selectedId()"
+        (selected)="onSelectItem($event)"
+      />
+      @if (selectedItem(); as item) {
+        <app-career-item-detail [item]="item" />
+      }
+    </div>
   </div>
 </section>

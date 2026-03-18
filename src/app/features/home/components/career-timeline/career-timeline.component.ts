@@ -1,11 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
+import { CAREER_ITEMS } from '../../../../core/data/career';
+import { CareerItem } from '../../../../core/models';
 import { TitleComponent } from '../../../../shared';
-import { TabsComponent } from './tabs/tabs.component';
+import { CareerItemDetailComponent } from './career-item-detail/career-item-detail.component';
+import { CareerTimelineNavigationComponent } from './career-timeline-navigation/career-timeline-navigation.component';
 
 @Component({
   selector: 'app-career-timeline',
-  imports: [TabsComponent, TitleComponent],
+  imports: [
+    CareerTimelineNavigationComponent,
+    CareerItemDetailComponent,
+    TitleComponent,
+  ],
   templateUrl: './career-timeline.component.html',
   styleUrl: './career-timeline.component.scss',
 })
-export class CareerTimelineComponent {}
+export class CareerTimelineComponent {
+  readonly items: CareerItem[] = CAREER_ITEMS;
+  readonly selectedId = signal<number>(this.items[0]?.id ?? 1);
+
+  readonly selectedItem = computed(() =>
+    this.items.find((item) => item.id === this.selectedId()),
+  );
+
+  onSelectItem(id: number): void {
+    this.selectedId.set(id);
+  }
+}

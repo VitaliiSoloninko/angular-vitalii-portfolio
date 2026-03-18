@@ -1,0 +1,17 @@
+<ul class="career-timeline__navigation navigation-career-timeline">
+  @for (item of items(); track item.id) {
+    <li
+      class="navigation-career-timeline__title"
+      [id]="item.id"
+      [class.tab-active]="selectedId() === item.id"
+      (click)="onSelectItem(item.id)"
+    >
+      <div class="navigation-career-timeline__text">
+        <div>{{ item.period }}</div>
+      </div>
+      <div class="navigation-career-timeline__arrow">
+        <img src="assets/icons/arrow.svg" alt="arrow" />
+      </div>
+    </li>
+  }
+</ul>

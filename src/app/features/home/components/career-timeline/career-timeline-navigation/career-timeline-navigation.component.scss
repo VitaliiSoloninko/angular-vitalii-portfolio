@@ -1,0 +1,45 @@
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+.navigation-career-timeline {
+  display: grid;
+
+  &__title {
+    display: flex;
+    cursor: pointer;
+    width: 25rem;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease 0s;
+    padding: 0.8rem 1.5rem;
+    text-align: left;
+    line-height: 1.2;
+    background-color: var(--purple-medium-color);
+    border-radius: 8px;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+
+    &__arrow {
+      transition:
+        transform 0.3s,
+        color 0.3s;
+    }
+
+    &.tab-active {
+      color: #fff;
+      background-color: var(--purple-color);
+
+      .navigation-career-timeline__title__arrow,
+      .navigation-career-timeline__arrow {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
