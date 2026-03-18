@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { SkillListComponent } from '../../../../shared/skill-list/skill-list.component';
 import { TitleComponent } from '../../../../shared';
+import { SkillListComponent } from './skill-list/skill-list.component';
 
 @Component({
   selector: 'app-skills',
