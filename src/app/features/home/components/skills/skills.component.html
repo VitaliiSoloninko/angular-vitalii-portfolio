@@ -5,18 +5,8 @@
         <div class="skills__title title">
           <app-title [title]="'Studium'" [subtitle]="'Universität'"></app-title>
         </div>
-        <div class="skills__timeline timeline">
-          @for (item of education; track item) {
-            <div class="timeline__item">
-              <div class="timeline__content">
-                <div class="timeline__date">{{ item.year }}</div>
-                <div class="timeline__level">{{ item.level }}</div>
-              </div>
-              <div class="timeline__institution">
-                {{ item.institution }}
-              </div>
-            </div>
-          }
+        <div class="skills__timeline">
+          <app-timeline [items]="education"></app-timeline>
         </div>
       </div>
       <div class="skills__content content-skills">

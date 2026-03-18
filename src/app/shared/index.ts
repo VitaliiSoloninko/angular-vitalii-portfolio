@@ -9,4 +9,5 @@ export * from './nav-bar/nav-bar.component';
 export * from './search/search.component';
 export * from './social-links/social-links.component';
 export * from './tags/tags.component';
+export * from './timeline/timeline.component';
 export * from './title/title.component';
