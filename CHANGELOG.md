@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/VitaliiSoloninko/angular-vitalii-portfolio/compare/v0.0.1...v2.0.1) (2026-03-19)
+
 ### 0.0.1 (2026-03-19)
 
 
