@@ -1,55 +1,92 @@
-# Angular Vitalii Soloninko Portfolio
+# 🚀 Angular Vitalii Soloninko Portfolio
 
-A modern portfolio application built with Angular 18 to showcase projects and professional experience.
+Modern portfolio application built with **Angular 21**, **Signals**, and **SCSS**
 
-## 🚀 Features
+## ✨ Features
 
-- **Responsive Design** - adaptive layout for all devices
-- **Modern UI/UX** - using brand colors and styles
-- **Routing** - multi-page application with Angular Router
-- **Standalone Components** - modern Angular 18 architecture
-- **TypeScript** - full TypeScript support
-- **Modular Structure** - reusable components and services
+- **⚡ Angular 21** - with Signals and new Control Flow
+- **🎯 Feature-based Architecture** - scalable and maintainable structure
+- **🚀 Standalone Components** - full standalone architecture
+- **🔄 Signals** - reactive state management with Angular Signals
+- **🎨 SCSS** - modular styles with mixins and animations
+- **📱 Responsive Design** - optimized for all devices
+- **🎭 Scroll Animations** - intersection observer with fade, slide, and scale effects
 
-## 🛠 Technologies
+## 🛠 Tech Stack
 
-- **Angular 18** - main framework
-- **TypeScript** - typed JavaScript
-- **SCSS** - CSS preprocessor
-- **Standalone Components** - modern architecture without NgModules
-- **Angular Router** - routing
-- **RxJS** - reactive programming
+### Core Technologies
 
-## 📄 Main Pages
+- **[Angular 21](https://angular.dev)**
+- **[TypeScript 5.9](https://www.typescriptlang.org/)**
+- **[SCSS](https://sass-lang.com/)**
+- **[RxJS 7.8](https://rxjs.dev/)**
 
-- **Home** (`/`) - projects and experience overview
-- **Project** (`/project/:id`) - detailed project information
+### Angular Features
 
-## 🧩 Key Components
+- **Signals** - `input()`, `output()`, `computed()`, `signal()`
+- **Control Flow** - `@for`, `@if`, `@switch` syntax
+- **Standalone Components** - no NgModules
+- **Dependency Injection** - `inject()` function
+- **Router** - lazy loading with feature routes
+- **Directives** - custom scroll animation directive
 
-### Reusable Components
+### Development & Deployment
 
-- **NavBar** - universal navigation for projects/articles
-- **Tags** - filtering with dynamic counting
-- **PageItems** - related items display
+- **Angular CLI** - build and development tools
+- **Firebase Hosting** - production deployment
+- **Conventional Commits** - standardized commit messages
+
+## 🎯 Features Overview
+
+### 🏠 Home Page
+
+Multi-section landing page with scroll animations:
+
+- **About** - introduction with photo
+- **Portfolio** - filterable project showcase with tags
+- **Career Timeline** - professional experience with navigation
+- **Skills** - education and technical skills (Frontend, Backend, Extra)
+
+### 📂 Project Detail Page
+
+Comprehensive project information:
+
+- **Hero Section** - project title and main image
+- **Tech Stack** - technologies used with badges
+- **Features** - key features and functionality
+- **Pages** - project page screenshots
+- **Description** - detailed project description
+
+## 🎨 Animations
+
+Custom scroll animation system using **Intersection Observer API**:
+
+### Animation Types
+
+- **fade-up** - fade in from bottom
+- **fade-down** - fade in from top
+- **fade-left** - fade in from right
+- **fade-right** - fade in from left
+- **fade-in** - simple opacity fade
+- **scale-in** - scale from 90% to 100%
+
+### Usage
+
+```html
+<div appScrollAnimation animationType="fade-up" [delay]="200">Content</div>
+```
 
 ## 🚦 Getting Started
 
 ### Prerequisites
 
-- Node.js (v16 or higher)
-- npm or yarn
-- Angular CLI
+- **Node.js** (v18 or higher)
+- **npm** or **yarn**
+- **Angular CLI** (`npm install -g @angular/cli`)
 
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/angular-vitalii-portfolio.git
-
-# Navigate to project directory
-cd angular-vitalii-portfolio
-
 # Install dependencies
 npm install
 ```
@@ -57,62 +94,102 @@ npm install
 ### Development Server
 
 ```bash
+# Start development server
+npm start
+# or
 ng serve
 ```
 
-Navigate to `http://localhost:4200/`
+Navigate to `http://localhost:4200/`.
 
 ### Build for Production
 
 ```bash
+# Build for production
+npm run build
+# or
 ng build
 ```
 
 The build artifacts will be stored in the `dist/` directory.
 
-## 📱 Responsive Design
+## 📐 Architecture & Best Practices
 
-The project is fully adapted for:
+### Feature-Based Architecture
 
-- **Desktop** (1200px+)
-- **Tablet** (768px - 1199px)
-- **Mobile** (up to 767px)
+The project uses a **feature-based structure**, organizing code by business features rather than technical layers:
 
-## 🔧 Key Features
+- **`core/`** - singleton services, models, constants, and shared data
+- **`features/`** - lazy-loaded feature modules with their own routes
+- **`shared/`** - reusable components and directives used across features
+- **`layout/`** - app-wide layout components (header, footer)
 
-### Data Management
+### Git Commit Conventions
 
-- Service-based architecture
-- Static data management
-- Dynamic content loading
-- Type-safe data models
-
-### UI/UX Features
-
-- **Pagination** - "Show more" functionality for project lists
-- **Tag Filtering** - with dynamic counting
-- **Project Navigation** - dots indicator and arrow navigation
-- **Responsive Images** - optimized for all screen sizes
-- **Interactive Tabs** - for experience section
-
-## 🌐 Deployment
-
-The project is ready to deploy on any static hosting:
-
-- **GitHub Pages**
-- **Netlify**
-- **Vercel**
-- **Firebase Hosting** (configured)
-
-### Firebase Deployment
+Use **[Conventional Commits](https://www.conventionalcommits.org/)** format:
 
 ```bash
-ng build
+# Feature
+feat(home): add scroll animations to sections
+
+# Fix
+fix(portfolio): resolve tag filtering issue
+
+# Refactor
+refactor(signals): migrate components to signal inputs
+
+# Documentation
+docs(readme): update installation instructions
+
+# Style
+style(scss): improve button hover effects
+
+# Test
+test(service): add unit tests for ProjectService
+
+# Chore
+chore(deps): update Angular to version 21
+```
+
+## 🎨 Styling Guidelines
+
+### SCSS Structure
+
+- **`ui/null.scss`** - CSS reset and normalization
+- **`ui/mixins.scss`** - reusable SCSS mixins
+- **`ui/shared.scss`** - shared styles and variables
+- **`ui/animations.scss`** - animation mixins and classes
+
+## 📱 Responsive Design
+
+Breakpoints:
+
+- **Mobile**: `< 768px`
+- **Tablet**: `768px - 1199px`
+- **Desktop**: `≥ 1200px`
+
+## 🚀 Deployment
+
+### Firebase Hosting
+
+The project is configured for Firebase Hosting.
+
+```bash
+# Build the project
+npm run build
+
+# Deploy to Firebase
 firebase deploy
 ```
 
 ## 📞 Contact & Links
 
-- **Portfolio**: [soloninko-portfolio.web.app](https://soloninko-portfolio.web.app)
+- **Live Demo**: [soloninko-portfolio.web.app](https://soloninko-portfolio.web.app)
 
-**Made with ❤️ using Angular 18**
+## 📄 License
+
+This project is private and proprietary.
+
+---
+
+**Made with ❤️ using Angular 21, Signals, and SCSS**
